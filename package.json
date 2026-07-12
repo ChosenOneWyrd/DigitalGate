@@ -1,0 +1,23 @@
+{
+  "name": "digitalgate",
+  "version": "1.0.0",
+  "description": "This is a small static Digital Gate frontend.",
+  "main": "app_old.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChosenOneWyrd/DigitalGate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChosenOneWyrd/DigitalGate/issues"
+  },
+  "homepage": "https://github.com/ChosenOneWyrd/DigitalGate#readme",
+  "devDependencies": {
+    "wrangler": "^4.110.0"
+  }
+}

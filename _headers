@@ -1,0 +1,35 @@
+/index.html
+  Cache-Control: no-cache
+
+/assets_manifest.json
+  Cache-Control: no-cache
+
+/style.css
+  Cache-Control: public, max-age=3600
+
+/js/*
+  Cache-Control: public, max-age=3600
+
+/maps/*
+  Cache-Control: public, max-age=604800
+
+/digimon/*
+  Cache-Control: public, max-age=604800
+
+/tamers/*
+  Cache-Control: public, max-age=604800
+
+/digivices/*
+  Cache-Control: public, max-age=604800
+
+/battle/*
+  Cache-Control: public, max-age=604800
+
+/sounds/*
+  Cache-Control: public, max-age=604800
+
+/*.mp4
+  Cache-Control: public, max-age=604800
+
+/*.png
+  Cache-Control: public, max-age=604800
