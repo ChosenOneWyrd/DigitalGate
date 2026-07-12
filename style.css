@@ -21,7 +21,7 @@ body {
   overflow: hidden;
   background: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
-  touch-action: none;
+  touch-action: manipulation;
 }
 
 button,
@@ -167,7 +167,10 @@ input {
   width: min(360px, calc(100vw - 36px));
   max-height: calc(100vh - 116px);
   max-height: calc(100dvh - 116px);
-  overflow: auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
   color: var(--panel-text);
   background: var(--panel-bg);
   border: 1px solid var(--panel-border);
@@ -635,7 +638,12 @@ input {
     bottom: max(12px, env(safe-area-inset-bottom));
     width: auto;
     max-height: min(76vh, 620px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
     border-radius: 20px;
+    padding-bottom: calc(14px + env(safe-area-inset-bottom));
   }
 
   .search-row {

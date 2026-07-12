@@ -29,6 +29,7 @@ menuPanel.addEventListener("click", (event) => {
   if (panelName === "digimon") renderSpritePanel("digimon");
   if (panelName === "enemies") renderSpritePanel("enemies");
   if (panelName === "battle") renderBattlePanel();
+  if (panelName === "music") renderMusicPanel();
   if (panelName === "state") renderStatePanel();
   if (panelName === "humanworld") returnToHumanWorld();
 });

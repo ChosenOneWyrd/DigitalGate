@@ -98,6 +98,7 @@ function clearCurrentScreenState() {
     element.remove();
   });
 
+  state.activeBattleCount = 0;
   state.battleRunning = false;
   state.evolutionRunning = false;
 }

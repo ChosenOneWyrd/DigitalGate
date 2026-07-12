@@ -920,8 +920,10 @@
   "enemies": [],
   "sprites": [],
   "music": [
+    "sounds/bgm_beat_hit_full.wav",
     "sounds/bgm_brave_heart_full.wav",
     "sounds/bgm_break_up_full.wav",
-    "sounds/bgm_butterfly.wav"
+    "sounds/bgm_butterfly.wav",
+    "sounds/bgm_target_full.wav"
   ]
 }

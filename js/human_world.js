@@ -11,15 +11,15 @@ async function playIntroVideoFromStart() {
 
   try {
     await gateVideo.play();
+    scheduleDigitalGateBeep();
   } catch (error) {
     try {
       gateVideo.muted = true;
       gateVideo.currentTime = 0;
       await gateVideo.play();
+      scheduleDigitalGateBeep();
     } catch (mutedError) {
       console.warn("Could not replay intro video automatically.", mutedError);
-
-      // Fallback: show the existing start button if the browser blocks playback.
       startButton.classList.remove("hidden");
     }
   }

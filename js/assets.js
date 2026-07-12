@@ -6,6 +6,7 @@ function normalizeManifest(manifest) {
     digimon: Array.isArray(manifest?.digimon) ? manifest.digimon : [],
     enemies: Array.isArray(manifest?.enemies) ? manifest.enemies : [],
     sprites: Array.isArray(manifest?.sprites) ? manifest.sprites : [],
+    music: Array.isArray(manifest?.music) ? manifest.music : [],
   };
 }
 

@@ -1,3 +1,32 @@
+let digitalGateBeepTimer = null;
+let digitalGateBeepAudio = null;
+
+function stopDigitalGateBeep() {
+  if (digitalGateBeepTimer) {
+    window.clearTimeout(digitalGateBeepTimer);
+    digitalGateBeepTimer = null;
+  }
+
+  if (digitalGateBeepAudio) {
+    digitalGateBeepAudio.pause();
+    digitalGateBeepAudio = null;
+  }
+}
+
+function scheduleDigitalGateBeep() {
+  stopDigitalGateBeep();
+
+  digitalGateBeepTimer = window.setTimeout(() => {
+    digitalGateBeepTimer = null;
+
+    if (gateVideo.paused || intro.classList.contains("hidden")) {
+      return;
+    }
+
+    digitalGateBeepAudio = playOneShot(DIGITAL_GATE_BEEP_SOUND);
+  }, DIGITAL_GATE_BEEP_DELAY);
+}
+
 function showStartButton() {
   // startButton.classList.remove("hidden");
 }
@@ -8,6 +37,7 @@ async function tryAutoplayIntro() {
 
   try {
     await gateVideo.play();
+    scheduleDigitalGateBeep();
   } catch (error) {
     showStartButton();
   }
@@ -25,9 +55,12 @@ startButton.addEventListener("click", async (event) => {
     gateVideo.muted = true;
     await gateVideo.play();
   }
+
+  scheduleDigitalGateBeep();
 });
 
 gateVideo.addEventListener("ended", () => {
+  stopDigitalGateBeep();
   state.introWaitingForContinue = true;
   gateVideo.pause();
 
@@ -65,6 +98,7 @@ window.addEventListener("keydown", (event) => {
 });
 
 async function beginGateStillTransition() {
+  stopDigitalGateBeep();
   state.introWaitingForContinue = false;
   state.introTransitionStarted = true;
 

@@ -292,9 +292,43 @@ function getSpriteDisplayName(sprite, battleData) {
   return sprite.dataset.label || "Unknown";
 }
 
+function isSpriteBattling(sprite) {
+  return sprite?.dataset?.battling === "1";
+}
+
+function setSpriteBattling(sprite, isBattling) {
+  if (!sprite) return;
+
+  if (isBattling) {
+    sprite.dataset.battling = "1";
+  } else {
+    delete sprite.dataset.battling;
+  }
+}
+
+function startBattleTracking(playerSprite, enemySprite) {
+  setSpriteBattling(playerSprite, true);
+  setSpriteBattling(enemySprite, true);
+
+  state.activeBattleCount += 1;
+  state.battleRunning = state.activeBattleCount > 0;
+}
+
+function stopBattleTracking(playerSprite, enemySprite) {
+  setSpriteBattling(playerSprite, false);
+  setSpriteBattling(enemySprite, false);
+
+  state.activeBattleCount = Math.max(0, state.activeBattleCount - 1);
+  state.battleRunning = state.activeBattleCount > 0;
+}
+
 function formatSpriteOption(sprite, battleData) {
   const stats = getStatsForPlacedSprite(sprite, battleData);
   const label = sprite.dataset.label || "Unknown";
+
+  if (isSpriteBattling(sprite)) {
+    return `${label} - already battling`;
+  }
 
   if (!stats.row) {
     return `${label} - stats not found`;
@@ -401,7 +435,11 @@ async function playBattleSpriteAnimation(
   playerStats,
   enemyStats
 ) {
-  state.battleRunning = true;
+  if (isSpriteBattling(playerSprite) || isSpriteBattling(enemySprite)) {
+    return;
+  }
+
+  startBattleTracking(playerSprite, enemySprite);
 
   const playerHitSprite = getAttackSpritePath(
     playerStats?.hitAttackIndex,
@@ -518,7 +556,7 @@ async function playBattleSpriteAnimation(
       restoreIdleAnimation(enemySprite);
     }
 
-    state.battleRunning = false;
+    stopBattleTracking(playerSprite, enemySprite);
   }
 }
 
@@ -582,8 +620,8 @@ async function renderBattlePanel() {
     option.textContent = formatSpriteOption(sprite, battleData);
 
     const stats = getStatsForPlacedSprite(sprite, battleData);
-    if (!stats.row || stats.row.baby) {
-      option.disabled = true;
+    if (!stats.row || stats.row.baby || isSpriteBattling(sprite)) {
+        option.disabled = true;
     }
 
     playerSelect.appendChild(option);
@@ -595,8 +633,8 @@ async function renderBattlePanel() {
     option.textContent = formatSpriteOption(sprite, battleData);
 
     const stats = getStatsForPlacedSprite(sprite, battleData);
-    if (!stats.row || stats.row.baby) {
-      option.disabled = true;
+    if (!stats.row || stats.row.baby || isSpriteBattling(sprite)) {
+        option.disabled = true;
     }
 
     enemySelect.appendChild(option);
@@ -611,7 +649,6 @@ async function renderBattlePanel() {
   resultBox.className = "battle-result hidden";
 
   startButton.addEventListener("click", async () => {
-    if (state.battleRunning) return;
 
     const playerSprite = placedSprites.querySelector(
       `.placed-sprite[data-sprite-id="${playerSelect.value}"]`
@@ -619,6 +656,12 @@ async function renderBattlePanel() {
     const enemySprite = placedSprites.querySelector(
       `.placed-sprite[data-sprite-id="${enemySelect.value}"]`
     );
+
+    if (isSpriteBattling(playerSprite) || isSpriteBattling(enemySprite)) {
+        resultBox.classList.remove("hidden");
+        resultBox.innerHTML = `<span class="battle-warning">One of these sprites is already in another battle.</span>`;
+        return;
+    }
 
     if (!playerSprite || !enemySprite) {
       resultBox.classList.remove("hidden");
