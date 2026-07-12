@@ -8,8 +8,12 @@ const GATE_OPEN_SOUND = "sounds/digital_gate_open.wav";
 const MAP_CHANGE_SOUND = "sounds/map_change.wav";
 const DIGIVICE_BEEPS_SOUND = "sounds/digivice_beeps.wav";
 const BATTLE_DATA_CSV = "battle/vb_data.csv";
-const BATTLE_HIT_SPRITE = "battle/hit.png";
-const BATTLE_MEGA_HIT_SPRITE = "battle/mega_hit.png";
+const ATTACK_SPRITE_FOLDER = "battle/attacks";
+const ATTACK_SPRITE_EXTENSION = "png";
+const ATTACK_SPRITE_COUNT = 81;
+const ATTACK_SPRITE_INVALID = 65535;
+const FALLBACK_HIT_ATTACK_INDEX = 0;
+const FALLBACK_MEGA_ATTACK_INDEX = 1;
 const BATTLE_HIT_SOUND = "sounds/hit.wav";
 const BATTLE_MEGA_HIT_DIGIMON_SOUND = "sounds/mega_hit_digimon.wav";
 const BATTLE_MEGA_HIT_ENEMY_SOUND = "sounds/mega_hit_enemy.wav";
@@ -24,6 +28,9 @@ const EVOLUTION_CURRENT_WIN_DELAY = 960;
 const EVOLUTION_WIN_HOLD_DURATION = 950;
 const SAVE_STATE_APP = "digital-gate-state";
 const SAVE_STATE_VERSION = 1;
+const PLACEMENT_EDGE_MARGIN = 18;
+const PLACEMENT_STACK_STEP_RATIO = 0.72;
+const PLACEMENT_MAX_TEST_COLUMNS = 30;
 
 const MAP_GROUPS = {
   Adventure: "adv_",
@@ -697,6 +704,30 @@ function toNumber(value) {
   return Number.isFinite(number) ? number : null;
 }
 
+function toAttackIndex(value) {
+  const index = toNumber(value);
+
+  if (index === null) return null;
+  if (!Number.isInteger(index)) return null;
+  if (index < 0) return null;
+  if (index === ATTACK_SPRITE_INVALID) return null;
+
+  return index;
+}
+
+function getAttackSpritePath(index, fallbackIndex = FALLBACK_HIT_ATTACK_INDEX) {
+  const attackIndex = toAttackIndex(index);
+  const resolvedIndex = attackIndex ?? fallbackIndex;
+
+  return `${ATTACK_SPRITE_FOLDER}/${resolvedIndex}.${ATTACK_SPRITE_EXTENSION}`;
+}
+
+function preloadAttackSprites() {
+  for (let i = 0; i < ATTACK_SPRITE_COUNT; i += 1) {
+    preloadImage(getAttackSpritePath(i));
+  }
+}
+
 function normalizeBattleKey(value) {
   return String(value || "")
     .toLowerCase()
@@ -748,6 +779,8 @@ function buildBattleData(rows) {
     const bp = toNumber(row.col9);
     const hp = toNumber(row.col10);
     const ap = toNumber(row.col11);
+    const hitAttackIndex = toAttackIndex(row.col12);
+    const megaHitAttackIndex = toAttackIndex(row.col13);
 
     if (!name || rowIndex === null || bp === null || hp === null || ap === null) {
       continue;
@@ -766,6 +799,8 @@ function buildBattleData(rows) {
       ap,
       baby,
       family: baby ? "baby" : getBattleFamily({ bp }),
+      hitAttackIndex,
+      megaHitAttackIndex,
     });
   }
 
@@ -1005,8 +1040,34 @@ async function animateBattleEffect(imageSrc, fromSprite, toSprite, options = {})
   effect.remove();
 }
 
-async function playBattleSpriteAnimation(playerSprite, enemySprite, playerWins) {
+async function playBattleSpriteAnimation(
+  playerSprite,
+  enemySprite,
+  playerWins,
+  playerStats,
+  enemyStats
+) {
   state.battleRunning = true;
+
+  const playerHitSprite = getAttackSpritePath(
+    playerStats?.hitAttackIndex,
+    FALLBACK_HIT_ATTACK_INDEX
+  );
+
+  const enemyHitSprite = getAttackSpritePath(
+    enemyStats?.hitAttackIndex,
+    FALLBACK_HIT_ATTACK_INDEX
+  );
+
+  const playerMegaHitSprite = getAttackSpritePath(
+    playerStats?.megaHitAttackIndex,
+    playerStats?.hitAttackIndex ?? FALLBACK_MEGA_ATTACK_INDEX
+  );
+
+  const enemyMegaHitSprite = getAttackSpritePath(
+    enemyStats?.megaHitAttackIndex,
+    enemyStats?.hitAttackIndex ?? FALLBACK_MEGA_ATTACK_INDEX
+  );
 
   try {
     restoreIdleAnimation(playerSprite);
@@ -1018,34 +1079,50 @@ async function playBattleSpriteAnimation(playerSprite, enemySprite, playerWins) 
     // 0 idle1, 1 idle2, 2 walk1, 3 walk2, 4 run1, 5 run2,
     // 6 training_idle, 7 training_train, 8 win, 9 lose, 10 attack, 11 dodge.
 
-    // Three normal hits: always Digimon -> Enemy.
+    // Three normal hits:
+    // Digimon shoots col12 at Enemy.
+    // Enemy also shoots its own col12 back at Digimon at the same time.
     for (let i = 0; i < 3; i += 1) {
       setSheetFrame(playerSprite, 10); // Digimon attack
-      setSheetFrame(enemySprite, 11);  // Enemy dodge / impact reaction
+      setSheetFrame(enemySprite, 10);  // Enemy attack
 
       playOneShot(BATTLE_HIT_SOUND);
 
-      await animateBattleEffect(BATTLE_HIT_SPRITE, playerSprite, enemySprite, {
-        mega: false,
-        flip: false,
-        duration: 780,
-      });
+      await Promise.all([
+        animateBattleEffect(playerHitSprite, playerSprite, enemySprite, {
+          mega: false,
+          flip: false,
+          duration: 780,
+        }),
+
+        animateBattleEffect(enemyHitSprite, enemySprite, playerSprite, {
+          mega: false,
+          flip: true,
+          duration: 780,
+        }),
+      ]);
+
+      // Brief impact / reaction pose after both attacks land.
+      setSheetFrame(playerSprite, 11);
+      setSheetFrame(enemySprite, 11);
+
+      await sleep(220);
 
       setSheetFrame(playerSprite, 0);
       setSheetFrame(enemySprite, 1);
 
-      // Wait 1 second after the hit fully reaches before the next hit / mega hit.
       await sleep(BATTLE_BETWEEN_HIT_DELAY);
     }
 
-    // Fourth hit: mega hit from winner to loser.
+    // Fourth hit:
+    // Mega hit happens only once, from the battle winner to the loser.
     if (playerWins) {
       setSheetFrame(playerSprite, 10);
       setSheetFrame(enemySprite, 11);
 
       playOneShot(BATTLE_MEGA_HIT_DIGIMON_SOUND);
 
-      await animateBattleEffect(BATTLE_MEGA_HIT_SPRITE, playerSprite, enemySprite, {
+      await animateBattleEffect(playerMegaHitSprite, playerSprite, enemySprite, {
         mega: true,
         flip: false,
         duration: 1080,
@@ -1061,7 +1138,7 @@ async function playBattleSpriteAnimation(playerSprite, enemySprite, playerWins) 
 
       playOneShot(BATTLE_MEGA_HIT_ENEMY_SOUND);
 
-      await animateBattleEffect(BATTLE_MEGA_HIT_SPRITE, enemySprite, playerSprite, {
+      await animateBattleEffect(enemyMegaHitSprite, enemySprite, playerSprite, {
         mega: true,
         flip: true,
         duration: 1080,
@@ -1073,10 +1150,8 @@ async function playBattleSpriteAnimation(playerSprite, enemySprite, playerWins) 
       playOneShot(BATTLE_LOSE_SOUND);
     }
 
-    // Keep win/lose poses visible after the battle.
     await sleep(2600);
 
-    // If the Enemy loses, remove it from the screen after showing the lose sprite.
     if (playerWins && enemySprite.isConnected) {
       enemySprite.remove();
     }
@@ -1229,7 +1304,7 @@ async function renderBattlePanel() {
     `;
 
     toggleMenu(false);
-    await playBattleSpriteAnimation(playerSprite, enemySprite, result.playerWins);
+    await playBattleSpriteAnimation(playerSprite, enemySprite, result.playerWins, playerStats, enemyStats);
   });
 
   playerRow.appendChild(playerLabel);
@@ -1630,6 +1705,8 @@ function getNextPlacementSlot(side) {
   const usedSlots = new Set(getUsedPlacementSlots(side));
   let slot = 0;
 
+  // This is what makes deleted positions reusable.
+  // If slot 2 was deleted, the next added sprite gets slot 2 again.
   while (usedSlots.has(slot)) {
     slot += 1;
   }
@@ -1637,19 +1714,147 @@ function getNextPlacementSlot(side) {
   return slot;
 }
 
-function getSpriteXForSlot(side, slot) {
-  const gap = Math.min(Math.max(window.innerWidth * 0.14, 96), 180);
+function getDefaultPlacedSpriteWidth() {
+  const isMobile = window.matchMedia("(max-width: 720px)").matches;
+
+  if (isMobile) {
+    return clamp(window.innerWidth * 0.25, 70, 140);
+  }
+
+  return clamp(window.innerWidth * 0.13, 72, 160);
+}
+
+function getPlacedSpriteDimensions(sprite = null) {
+  if (sprite) {
+    const rect = sprite.getBoundingClientRect();
+
+    if (rect.width > 0 || rect.height > 0) {
+      const fallback = getDefaultPlacedSpriteWidth();
+
+      return {
+        width: rect.width || fallback,
+        height: rect.height || rect.width || fallback,
+      };
+    }
+  }
+
+  const width = getDefaultPlacedSpriteWidth();
+
+  return {
+    width,
+    height: width,
+  };
+}
+
+function getBasePlacedSpriteBottom(sprite = null) {
+  if (sprite) {
+    const computedBottom = Number.parseFloat(window.getComputedStyle(sprite).bottom);
+
+    if (Number.isFinite(computedBottom)) {
+      return computedBottom;
+    }
+  }
+
+  return window.matchMedia("(max-width: 720px)").matches ? 18 : 24;
+}
+
+function getPlacementGap() {
+  return Math.min(Math.max(window.innerWidth * 0.14, 96), 180);
+}
+
+function getSpriteColumnX(side, column) {
+  const gap = getPlacementGap();
   const centerX = window.innerWidth / 2;
 
   if (side === "left") {
-    // Enemies skip one left-of-center position.
-    // slot 0 = two gaps left, slot 1 = three gaps left, etc.
-    return centerX - gap * (slot + 2);
+    // Enemies still skip one left-of-center position.
+    // column 0 = two gaps left, column 1 = three gaps left, etc.
+    return centerX - gap * (column + 2);
   }
 
-  // Friends/tamers start at center.
-  // slot 0 = center, slot 1 = one gap right, etc.
-  return centerX + gap * slot;
+  // Tamers/Digimon start at center, then move right.
+  // column 0 = center, column 1 = one gap right, etc.
+  return centerX + gap * column;
+}
+
+function getVisibleColumnCount(side, sprite = null) {
+  const dimensions = getPlacedSpriteDimensions(sprite);
+  const halfWidth = dimensions.width / 2;
+
+  const minX = halfWidth + PLACEMENT_EDGE_MARGIN;
+  const maxX = window.innerWidth - halfWidth - PLACEMENT_EDGE_MARGIN;
+
+  let count = 0;
+
+  for (let column = 0; column < PLACEMENT_MAX_TEST_COLUMNS; column += 1) {
+    const x = getSpriteColumnX(side, column);
+
+    if (x < minX || x > maxX) {
+      break;
+    }
+
+    count += 1;
+  }
+
+  // Very small screens may not have enough room for even the first normal column.
+  // In that case, keep one clamped column.
+  return Math.max(1, count);
+}
+
+function getSpritePlacementForSlot(side, slot, sprite = null) {
+  const safeSlot = Number.isInteger(Number(slot)) && Number(slot) >= 0
+    ? Number(slot)
+    : 0;
+
+  const dimensions = getPlacedSpriteDimensions(sprite);
+  const columns = getVisibleColumnCount(side, sprite);
+
+  let column;
+  let stackLevel;
+
+  if (safeSlot < columns) {
+    // Normal horizontal placement.
+    column = safeSlot;
+    stackLevel = 0;
+  } else {
+    // Once the side reaches the screen edge, keep using the last visible column
+    // and stack upward like a tower.
+    column = columns - 1;
+    stackLevel = safeSlot - columns + 1;
+  }
+
+  const halfWidth = dimensions.width / 2;
+  const minX = halfWidth + PLACEMENT_EDGE_MARGIN;
+  const maxX = window.innerWidth - halfWidth - PLACEMENT_EDGE_MARGIN;
+
+  const x = clamp(getSpriteColumnX(side, column), minX, maxX);
+
+  const baseBottom = getBasePlacedSpriteBottom(sprite);
+  const stackStep = Math.max(46, dimensions.height * PLACEMENT_STACK_STEP_RATIO);
+
+  // Keep tower sprites visible. If the tower reaches the top, later sprites
+  // stay near the top instead of disappearing off-screen.
+  const maxBottom = Math.max(
+    baseBottom,
+    window.innerHeight - dimensions.height - PLACEMENT_EDGE_MARGIN
+  );
+
+  const bottom = clamp(
+    baseBottom + stackLevel * stackStep,
+    baseBottom,
+    maxBottom
+  );
+
+  return {
+    x,
+    bottom,
+    column,
+    stackLevel,
+  };
+}
+
+function getSpriteXForSlot(side, slot, sprite = null) {
+  return getSpritePlacementForSlot(side, slot, sprite).x;
 }
 
 function addPlacedSprite(path, label, config) {
@@ -1709,9 +1914,16 @@ function addPlacedSprite(path, label, config) {
   sprite.appendChild(visual);
   sprite.appendChild(deleteButton);
 
-  sprite.style.left = `${getSpriteXForSlot(side, slot)}px`;
-
   placedSprites.appendChild(sprite);
+
+  // Now that the sprite is in the DOM, we can measure its real rendered size.
+  // That makes the edge detection and tower spacing more accurate.
+  const placement = getSpritePlacementForSlot(side, slot, sprite);
+
+  sprite.style.left = `${placement.x}px`;
+  sprite.style.bottom = `${placement.bottom}px`;
+  sprite.style.top = "auto";
+
   makeDraggable(sprite);
 
   return sprite;
@@ -2144,8 +2356,7 @@ async function init() {
   preloadImage(INTRO_STILL);
 
   // Preload battle effect sprites.
-  preloadImage(BATTLE_HIT_SPRITE);
-  preloadImage(BATTLE_MEGA_HIT_SPRITE);
+  preloadAttackSprites();
   preloadImage(EVOLUTION_EFFECT_GIF);
 
   // Preload battle sounds.
