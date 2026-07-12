@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Digital Gate</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section id="intro" class="intro" aria-label="Digital gate opening video">
+    <video
+      id="gateVideo"
+      class="fullscreen-media"
+      src="digimon_digital_gate.mp4"
+      preload="auto"
+      playsinline
+      muted
+    ></video>
+
+    <img
+      id="gateStill"
+      class="fullscreen-media gate-still hidden"
+      src="digimon_digital_gate.png"
+      alt="Digital gate"
+      draggable="false"
+    />
+
+    <button id="startButton" class="start-button hidden" type="button">
+      Open Digital Gate
+    </button>
+
+    <button id="enterGateButton" class="enter-gate-button hidden" type="button">
+      Enter Digital World
+    </button>
+  </section>
+
+  <div id="whiteFlash" class="white-flash" aria-hidden="true"></div>
+
+  <main id="world" class="world hidden" aria-label="Digital world map">
+    <img id="mapImage" class="map-image" src="maps/adv_digital_forest.png" alt="Digital world map" draggable="false" />
+
+    <div id="placedSprites" class="placed-sprites" aria-label="Placed characters"></div>
+
+    <img id="digiviceSprite" class="digivice-sprite hidden" alt="Selected Digivice" draggable="false" />
+
+    <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      ⚙
+    </button>
+
+    <aside id="menuPanel" class="menu-panel hidden" aria-label="Digital gate menu">
+      <div class="menu-header">
+        <strong>Digital Gate</strong>
+        <button id="closeMenu" class="small-icon-button" type="button" aria-label="Close menu">×</button>
+      </div>
+
+      <button class="menu-button" data-open-panel="maps" type="button">Maps</button>
+      <button class="menu-button" data-open-panel="digivice" type="button">Digivice</button>
+      <button class="menu-button" data-open-panel="analyzer" type="button">Digimon Analyzer</button>
+      <button class="menu-button" data-open-panel="tamers" type="button">Add Tamer</button>
+      <button class="menu-button" data-open-panel="digimon" type="button">Add Digimon</button>
+      <button class="menu-button" data-open-panel="enemies" type="button">Add Enemy</button>
+      <button class="menu-button" data-open-panel="battle" type="button">Battle</button>
+      <button class="menu-button" type="button" data-open-panel="humanworld">Back to Human World</button>
+      <button class="menu-button" type="button" data-open-panel="state">Save / Load State</button>
+
+      <div id="panelHost" class="panel-host"></div>
+    </aside>
+  </main>
+
+  <section id="analyzerViewer" class="analyzer-viewer hidden" aria-label="Digimon Analyzer result">
+    <video
+      id="analyzerVideo"
+      class="analyzer-video hidden"
+      src="analyzer1.mp4"
+      preload="auto"
+      playsinline
+    ></video>
+
+    <img id="analyzerImage" class="analyzer-image hidden" alt="Digimon Analyzer result" draggable="false" />
+    <button id="backToMap" class="back-button hidden" type="button">← Back</button>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
