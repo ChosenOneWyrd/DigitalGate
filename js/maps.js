@@ -4,14 +4,63 @@ function mapsForPrefix(prefix) {
     .sort((a, b) => a.localeCompare(b));
 }
 
+function getOrderedMapPaths() {
+  const ordered = [];
+  const used = new Set();
+
+  for (const prefix of Object.values(MAP_GROUPS)) {
+    for (const path of mapsForPrefix(prefix)) {
+      if (!used.has(path)) {
+        ordered.push(path);
+        used.add(path);
+      }
+    }
+  }
+
+  const leftovers = state.assets.maps
+    .filter((path) => !used.has(path))
+    .sort((a, b) => a.localeCompare(b));
+
+  return ordered.concat(leftovers);
+}
+
+function getAdjacentMapPath(direction) {
+  const maps = getOrderedMapPaths();
+
+  if (!maps.length) return null;
+
+  const currentIndex = maps.indexOf(state.currentMap);
+
+  if (currentIndex < 0) {
+    return maps[0];
+  }
+
+  if (direction === "previous") {
+    return maps[(currentIndex - 1 + maps.length) % maps.length];
+  }
+
+  return maps[(currentIndex + 1) % maps.length];
+}
+
 async function setMap(path) {
   if (!path || path === state.currentMap || state.mapTransitioning) {
     toggleMenu(false);
     return;
   }
 
+  if (state.battleRunning || state.evolutionRunning) {
+    const warning = document.createElement("p");
+    warning.className = "battle-warning";
+    warning.textContent = "Please wait until the current battle/evolution finishes before changing maps.";
+    panelHost.appendChild(warning);
+    return;
+  }
+
   state.mapTransitioning = true;
   toggleMenu(false);
+
+  // Save the map that is currently visible before leaving it.
+  saveActiveMapState();
 
   whiteFlash.classList.remove("gate-slow");
   playOneShot(MAP_CHANGE_SOUND);
@@ -21,6 +70,9 @@ async function setMap(path) {
 
   state.currentMap = path;
   mapImage.src = path;
+
+  // Restore the new map's own Digivice/Tamers/Digimon/Enemies.
+  await restoreMapVisualState(path);
 
   await sleep(180);
 

@@ -405,6 +405,14 @@ input {
   transform: scaleX(-1);
 }
 
+.placed-sprite.keyboard-backward .sprite-visual {
+  transform: scaleX(-1);
+}
+
+.placed-sprite.enemy-sprite.keyboard-backward .sprite-visual {
+  transform: scaleX(1);
+}
+
 .placed-delete-button {
   position: absolute;
   top: -6px;
@@ -515,6 +523,25 @@ input {
 
 .battle-effect.flipped {
   transform: translate(-50%, -50%) scaleX(-1);
+}
+
+.battle-nearby-hint {
+  position: fixed;
+  left: 50%;
+  bottom: max(22px, env(safe-area-inset-bottom));
+  z-index: 35;
+  transform: translateX(-50%);
+  max-width: min(520px, calc(100vw - 32px));
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 245, 145, 0.8);
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(5, 12, 28, 0.78);
+  box-shadow:
+    0 0 18px rgba(255, 245, 145, 0.8),
+    0 10px 24px rgba(0, 0, 0, 0.42);
+  text-align: center;
+  pointer-events: none;
 }
 
 .evolution-row {
@@ -710,6 +737,23 @@ input {
   .placed-sprite {
     width: clamp(70px, 25vw, 140px);
     bottom: max(18px, env(safe-area-inset-bottom));
+  }
+
+  .placed-sprite.selected-sprite::after {
+    content: "";
+    position: absolute;
+    inset: -7px;
+    z-index: 2;
+    border: 2px dashed rgba(255, 245, 145, 0.95);
+    border-radius: 14px;
+    pointer-events: none;
+    filter: drop-shadow(0 0 8px rgba(255, 245, 145, 0.85));
+  }
+
+  .placed-sprite.selected-sprite .sprite-visual {
+    filter:
+      drop-shadow(0 0 10px rgba(255, 245, 145, 0.95))
+      drop-shadow(0 10px 10px rgba(0, 0, 0, 0.35));
   }
 
   .start-button,
