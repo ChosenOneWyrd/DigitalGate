@@ -383,6 +383,70 @@ function restoreIdleAnimation(sprite) {
   visual.style.backgroundPosition = "";
 }
 
+function isCapsLockBattleRunActive() {
+  return typeof capsLockRunning !== "undefined" && capsLockRunning;
+}
+
+function isSpriteSelectedForCapsLockRun(sprite) {
+  if (!sprite || !sprite.isConnected) return false;
+  if (!isCapsLockBattleRunActive()) return false;
+
+  if (
+    typeof selectedPlacedSprites !== "undefined" &&
+    selectedPlacedSprites instanceof Set
+  ) {
+    return selectedPlacedSprites.has(sprite);
+  }
+
+  if (typeof selectedPlacedSprite !== "undefined") {
+    return selectedPlacedSprite === sprite;
+  }
+
+  return false;
+}
+
+function getCapsLockBattleRunFrame(now = performance.now()) {
+  const frameMs = typeof SPRITE_KEYBOARD_FRAME_MS === "number"
+    ? SPRITE_KEYBOARD_FRAME_MS
+    : 140;
+
+  return Math.floor(now / frameMs) % 2 === 0 ? 4 : 5;
+}
+
+function setBattleIdleOrCapsRunFrame(sprite, idleFrame = 0) {
+  if (!sprite || !sprite.isConnected) return;
+
+  // Only selected sprites use run1/run2 during idle pauses.
+  // Non-selected battle sprites, like the Enemy, keep their normal idle frame.
+  if (isSpriteSelectedForCapsLockRun(sprite)) {
+    setSheetFrame(sprite, getCapsLockBattleRunFrame());
+    return;
+  }
+
+  setSheetFrame(sprite, idleFrame);
+}
+
+async function sleepBattleIdleOrCapsRun(duration, entries) {
+  const shouldAnimateAnyCapsRun = entries.some((entry) => {
+    return isSpriteSelectedForCapsLockRun(entry.sprite);
+  });
+
+  if (!shouldAnimateAnyCapsRun) {
+    await sleep(duration);
+    return;
+  }
+
+  const endAt = performance.now() + duration;
+
+  while (performance.now() < endAt) {
+    for (const entry of entries) {
+      setBattleIdleOrCapsRunFrame(entry.sprite, entry.idleFrame);
+    }
+
+    await sleep(50);
+  }
+}
+
 function getSpriteCenter(sprite) {
   const visual = sprite.querySelector(".sprite-visual") || sprite;
   const rect = visual.getBoundingClientRect();
@@ -465,7 +529,13 @@ async function playBattleSpriteAnimation(
     restoreIdleAnimation(playerSprite);
     restoreIdleAnimation(enemySprite);
 
-    await sleep(300);
+    setBattleIdleOrCapsRunFrame(playerSprite, 0);
+    setBattleIdleOrCapsRunFrame(enemySprite, 1);
+
+    await sleepBattleIdleOrCapsRun(300, [
+    { sprite: playerSprite, idleFrame: 0 },
+    { sprite: enemySprite, idleFrame: 1 },
+    ]);
 
     // Frame order:
     // 0 idle1, 1 idle2, 2 walk1, 3 walk2, 4 run1, 5 run2,
@@ -500,10 +570,13 @@ async function playBattleSpriteAnimation(
 
       await sleep(220);
 
-      setSheetFrame(playerSprite, 0);
-      setSheetFrame(enemySprite, 1);
+      setBattleIdleOrCapsRunFrame(playerSprite, 0);
+      setBattleIdleOrCapsRunFrame(enemySprite, 1);
 
-      await sleep(BATTLE_BETWEEN_HIT_DELAY);
+      await sleepBattleIdleOrCapsRun(BATTLE_BETWEEN_HIT_DELAY, [
+        { sprite: playerSprite, idleFrame: 0 },
+        { sprite: enemySprite, idleFrame: 1 },
+      ]);
     }
 
     // Fourth hit:
@@ -557,7 +630,103 @@ async function playBattleSpriteAnimation(
     }
 
     stopBattleTracking(playerSprite, enemySprite);
+
+    if (typeof startCapsLockRunLoopIfNeeded === "function") {
+        startCapsLockRunLoopIfNeeded();
+    }
   }
+}
+
+function setBattleResultBoxWarning(resultBox, message) {
+  if (!resultBox) return;
+
+  resultBox.classList.remove("hidden");
+  resultBox.innerHTML = `<span class="battle-warning">${message}</span>`;
+}
+
+function setBattleResultBoxResult(resultBox, playerStats, enemyStats, result) {
+  if (!resultBox) return;
+
+  const winner = result.playerWins ? playerStats : enemyStats;
+  const loser = result.playerWins ? enemyStats : playerStats;
+
+  resultBox.classList.remove("hidden");
+  resultBox.innerHTML = `
+    <div><strong>${playerStats.name}</strong> vs <strong>${enemyStats.name}</strong></div>
+    <div>${playerStats.name}: normalized score ${playerStats.battleScore.toFixed(1)}</div>
+    <div>${enemyStats.name}: normalized score ${enemyStats.battleScore.toFixed(1)}</div>
+    <div>Win chance for ${playerStats.name}: ${(result.playerWinChance * 100).toFixed(1)}%</div>
+    <hr>
+    <div class="winner">Winner: ${winner.name}</div>
+    <div class="loser">Loser: ${loser.name}</div>
+  `;
+}
+
+async function startBattleBetweenSprites(playerSprite, enemySprite, options = {}) {
+  const {
+    resultBox = null,
+    closeMenuOnStart = false,
+  } = options;
+
+  if (!playerSprite || !enemySprite) {
+    setBattleResultBoxWarning(resultBox, "One of the selected sprites no longer exists.");
+    return false;
+  }
+
+  if (playerSprite.dataset.kind !== "digimon") {
+    setBattleResultBoxWarning(resultBox, "Only Digimon can start battles.");
+    return false;
+  }
+
+  if (enemySprite.dataset.kind !== "enemy") {
+    setBattleResultBoxWarning(resultBox, "The target must be an Enemy.");
+    return false;
+  }
+
+  if (isSpriteBattling(playerSprite) || isSpriteBattling(enemySprite)) {
+    setBattleResultBoxWarning(resultBox, "One of these sprites is already in another battle.");
+    return false;
+  }
+
+  let battleData;
+
+  try {
+    battleData = await loadBattleData();
+  } catch (error) {
+    setBattleResultBoxWarning(resultBox, `Could not load battle data: ${error.message || error}`);
+    return false;
+  }
+
+  const playerStats = getStatsForPlacedSprite(playerSprite, battleData).row;
+  const enemyStats = getStatsForPlacedSprite(enemySprite, battleData).row;
+
+  if (!playerStats || !enemyStats) {
+    setBattleResultBoxWarning(resultBox, "Could not find battle stats for one of these sprites.");
+    return false;
+  }
+
+  if (playerStats.baby || enemyStats.baby) {
+    setBattleResultBoxWarning(resultBox, "Baby Digimon with BP 65535 cannot battle.");
+    return false;
+  }
+
+  const result = calculateBattleResult(playerStats, enemyStats);
+
+  setBattleResultBoxResult(resultBox, playerStats, enemyStats, result);
+
+  if (closeMenuOnStart) {
+    toggleMenu(false);
+  }
+
+  await playBattleSpriteAnimation(
+    playerSprite,
+    enemySprite,
+    result.playerWins,
+    playerStats,
+    enemyStats
+  );
+
+  return true;
 }
 
 async function renderBattlePanel() {
@@ -657,51 +826,10 @@ async function renderBattlePanel() {
       `.placed-sprite[data-sprite-id="${enemySelect.value}"]`
     );
 
-    if (isSpriteBattling(playerSprite) || isSpriteBattling(enemySprite)) {
-        resultBox.classList.remove("hidden");
-        resultBox.innerHTML = `<span class="battle-warning">One of these sprites is already in another battle.</span>`;
-        return;
-    }
-
-    if (!playerSprite || !enemySprite) {
-      resultBox.classList.remove("hidden");
-      resultBox.innerHTML = `<span class="battle-warning">One of the selected sprites no longer exists.</span>`;
-      return;
-    }
-
-    const playerStats = getStatsForPlacedSprite(playerSprite, battleData).row;
-    const enemyStats = getStatsForPlacedSprite(enemySprite, battleData).row;
-
-    if (!playerStats || !enemyStats) {
-      resultBox.classList.remove("hidden");
-      resultBox.innerHTML = `<span class="battle-warning">Could not find battle stats for one of these sprites.</span>`;
-      return;
-    }
-
-    if (playerStats.baby || enemyStats.baby) {
-      resultBox.classList.remove("hidden");
-      resultBox.innerHTML = `<span class="battle-warning">Baby Digimon with BP 65535 cannot battle.</span>`;
-      return;
-    }
-
-    const result = calculateBattleResult(playerStats, enemyStats);
-
-    const winner = result.playerWins ? playerStats : enemyStats;
-    const loser = result.playerWins ? enemyStats : playerStats;
-
-    resultBox.classList.remove("hidden");
-    resultBox.innerHTML = `
-      <div><strong>${playerStats.name}</strong> vs <strong>${enemyStats.name}</strong></div>
-      <div>${playerStats.name}: normalized score ${playerStats.battleScore.toFixed(1)}</div>
-      <div>${enemyStats.name}: normalized score ${enemyStats.battleScore.toFixed(1)}</div>
-      <div>Win chance for ${playerStats.name}: ${(result.playerWinChance * 100).toFixed(1)}%</div>
-      <hr>
-      <div class="winner">Winner: ${winner.name}</div>
-      <div class="loser">Loser: ${loser.name}</div>
-    `;
-
-    toggleMenu(false);
-    await playBattleSpriteAnimation(playerSprite, enemySprite, result.playerWins, playerStats, enemyStats);
+    await startBattleBetweenSprites(playerSprite, enemySprite, {
+        resultBox,
+        closeMenuOnStart: true,
+    });
   });
 
   playerRow.appendChild(playerLabel);

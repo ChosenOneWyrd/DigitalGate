@@ -348,7 +348,11 @@ function addPlacedSprite(path, label, config) {
   sprite.style.top = "auto";
 
   makeDraggable(sprite);
-
+  
+  if (typeof selectPlacedSprite === "function") {
+    selectPlacedSprite(sprite);
+  }
+  
   return sprite;
 }
 

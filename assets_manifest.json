@@ -8,17 +8,32 @@
     "maps/tamers_wind_valley.png"
   ],
   "digivices": [
-    "digivices/86_0_0.png",
-    "digivices/87_0_0.png",
-    "digivices/88_0_0.png"
+    "digivices/D-3_Black.png",
+    "digivices/D-3_Blue.png",
+    "digivices/D-3_Green.png",
+    "digivices/D-3_Paildramon.png",
+    "digivices/D-3_Pink.png",
+    "digivices/D-3_Red.png",
+    "digivices/D-3_Shakkoumon.png",
+    "digivices/D-3_Silphymon.png",
+    "digivices/D-3_Yellow.png"
   ],
   "tamers": [
     "tamers/Daisuke.png",
     "tamers/Hikari.png",
+    "tamers/Hikari02.png",
     "tamers/Iori.png",
+    "tamers/Joe.png",
     "tamers/Ken.png",
+    "tamers/Koushiro.png",
+    "tamers/Mimi.png",
     "tamers/Miyako.png",
-    "tamers/Takeru.png"
+    "tamers/Sora.png",
+    "tamers/Taichi.png",
+    "tamers/Takeru.png",
+    "tamers/Takeru02.png",
+    "tamers/Wallace.png",
+    "tamers/Yamato.png"
   ],
   "digimon": [
     "digimon/000_Bommon.png",

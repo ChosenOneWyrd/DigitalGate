@@ -2,6 +2,7 @@ async function init() {
   await loadAssets();
 
   mapImage.src = state.currentMap;
+  state.mapStates[state.currentMap] = createEmptyMapVisualState();
 
   preloadImage(INTRO_STILL);
 
