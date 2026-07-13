@@ -951,7 +951,7 @@ placedSprites.addEventListener("pointerdown", (event) => {
   if (!sprite) return;
 
   selectPlacedSprite(sprite, {
-    toggle: event.shiftKey,
+    toggle: event.shiftKey || mobileSelectMode,
   });
 });
 
@@ -1042,6 +1042,7 @@ window.addEventListener("keyup", (event) => {
 });
 
 let mobileControlsElement = null;
+let mobileSelectMode = false;
 
 function canUseMobileControls() {
   if (state.mapTransitioning) return false;
@@ -1064,6 +1065,20 @@ function syncMobileCapsButtonState() {
 
   button.classList.toggle("active", capsLockRunning);
   button.setAttribute("aria-pressed", capsLockRunning ? "true" : "false");
+}
+
+function syncMobileSelectButtonState() {
+  const button = mobileControlsElement?.querySelector('[data-mobile-action="select"]');
+
+  if (!button) return;
+
+  button.classList.toggle("active", mobileSelectMode);
+  button.setAttribute("aria-pressed", mobileSelectMode ? "true" : "false");
+}
+
+function toggleMobileSelectMode() {
+  mobileSelectMode = !mobileSelectMode;
+  syncMobileSelectButtonState();
 }
 
 function setVirtualMovementKey(key, pressed) {
@@ -1186,10 +1201,10 @@ function createMobileControls() {
     </div>
 
     <div class="mobile-action-stack" aria-label="Action buttons">
-      <button class="mobile-action-button" type="button" data-mobile-action="run" aria-label="Hold to run">SHIFT</button>
-      <button class="mobile-action-button" type="button" data-mobile-action="caps" aria-label="Toggle run in place" aria-pressed="false">FLY</button>
-      <button class="mobile-action-button" type="button" data-mobile-action="battle" aria-label="Battle">B</button>
-      <button class="mobile-action-button" type="button" data-mobile-action="talk" aria-label="Talk">T</button>
+        <button class="mobile-action-button" type="button" data-mobile-action="select" aria-label="Toggle multi-select" aria-pressed="false">SELECT</button>
+        <button class="mobile-action-button" type="button" data-mobile-action="caps" aria-label="Toggle run in place" aria-pressed="false">FLY</button>
+        <button class="mobile-action-button" type="button" data-mobile-action="battle" aria-label="Battle">B</button>
+        <button class="mobile-action-button" type="button" data-mobile-action="talk" aria-label="Talk">T</button>
     </div>
   `;
 
@@ -1206,17 +1221,18 @@ function createMobileControls() {
     );
   }
 
-  const runButton = controls.querySelector('[data-mobile-action="run"]');
+  const selectButton = controls.querySelector('[data-mobile-action="select"]');
   const capsButton = controls.querySelector('[data-mobile-action="caps"]');
   const battleButton = controls.querySelector('[data-mobile-action="battle"]');
   const talkButton = controls.querySelector('[data-mobile-action="talk"]');
 
-  bindMobileHoldButton(
-    runButton,
-    () => setVirtualRunActive(true),
-    () => setVirtualRunActive(false)
-  );
+  selectButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
 
+    toggleMobileSelectMode();
+  });
+  
   capsButton.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopPropagation();
@@ -1245,6 +1261,7 @@ function createMobileControls() {
   });
 
   syncMobileCapsButtonState();
+  syncMobileSelectButtonState();
 }
 
 createMobileControls();
