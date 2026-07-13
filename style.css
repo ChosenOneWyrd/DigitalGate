@@ -413,6 +413,29 @@ input {
   transform: scaleX(1);
 }
 
+.placed-sprite.selected-sprite::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  z-index: 2;
+  pointer-events: none;
+  filter: 
+    drop-shadow(0 0 16px rgba(255, 245, 145, 1))
+    drop-shadow(0 0 30px rgba(255, 245, 145, 0.65));
+}
+
+.placed-sprite.selected-sprite .sprite-visual {
+  filter:
+    drop-shadow(0 0 14px rgba(255, 245, 145, 1))
+    drop-shadow(0 0 28px rgba(255, 245, 145, 0.7))
+    drop-shadow(0 10px 10px rgba(0, 0, 0, 0.35));
+}
+
+.placed-sprite.primary-selected-sprite::after {
+  filter:
+    drop-shadow(0 0 20px rgba(255, 245, 145, 0.85));
+}
+
 .placed-delete-button {
   position: absolute;
   top: -6px;
@@ -631,6 +654,81 @@ input {
   object-fit: fill;
   user-select: none;
   -webkit-user-drag: none;
+}
+
+.sprite-dialogue-bubble {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 12px);
+  z-index: 8;
+  transform: translateX(-50%);
+  min-width: 130px;
+  max-width: 280px;
+  padding: 9px 12px;
+  border: 2px solid rgba(255, 255, 255, 0.94);
+  border-radius: 16px;
+  color: #10203a;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow:
+    0 0 14px rgba(255, 255, 255, 0.85),
+    0 10px 22px rgba(0, 0, 0, 0.35);
+  font-size: 13px;
+  line-height: 1.25;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  pointer-events: none;
+}
+
+.sprite-dialogue-bubble.editing {
+  pointer-events: auto;
+  padding: 8px;
+  min-width: 190px;
+}
+
+.sprite-dialogue-bubble::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  transform: translateX(-50%) rotate(45deg);
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid rgba(255, 255, 255, 0.94);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.sprite-dialogue-input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  padding: 8px 10px;
+  color: #10203a;
+  background: rgba(230, 243, 255, 0.95);
+  font-size: 13px;
+  text-align: center;
+}
+
+.sprite-dialogue-input::placeholder {
+  color: rgba(16, 32, 58, 0.55);
+}
+
+@media (max-width: 720px) {
+  .sprite-dialogue-bubble {
+    max-width: 220px;
+    font-size: 12px;
+  }
+
+  .sprite-dialogue-bubble.editing {
+    min-width: 170px;
+  }
+
+  .sprite-dialogue-input {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 720px) {

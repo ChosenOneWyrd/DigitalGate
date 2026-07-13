@@ -16,6 +16,7 @@ let keyboardMovementFrameChangedAt = 0;
 let keyboardMovementRunning = false;
 let lastMapEdgeChangeAt = 0;
 let battleHintElement = null;
+let dialogueHideTimers = new WeakMap();
 
 function ensureBattleHintElement() {
   if (battleHintElement) return battleHintElement;
@@ -75,7 +76,10 @@ function syncSelectedSpriteClasses() {
   const allSprites = placedSprites.querySelectorAll(".placed-sprite");
 
   for (const sprite of allSprites) {
-    sprite.classList.toggle("selected-sprite", selectedPlacedSprites.has(sprite));
+    const selected = selectedPlacedSprites.has(sprite);
+
+    sprite.classList.toggle("selected-sprite", selected);
+    sprite.classList.toggle("primary-selected-sprite", selected && sprite === selectedPlacedSprite);
   }
 }
 
@@ -100,7 +104,7 @@ function pruneSelectedSprites() {
 function clearAllSelectedSprites() {
   for (const sprite of selectedPlacedSprites) {
     if (sprite && sprite.isConnected) {
-      sprite.classList.remove("selected-sprite", "keyboard-backward");
+      sprite.classList.remove("selected-sprite", "primary-selected-sprite", "keyboard-backward");
     }
   }
 
@@ -129,7 +133,7 @@ function selectPlacedSprite(sprite, options = {}) {
     selectedPlacedSprite = sprite;
   } else if (toggle) {
     if (selectedPlacedSprites.has(sprite)) {
-      sprite.classList.remove("selected-sprite", "keyboard-backward");
+      sprite.classList.remove("selected-sprite", "primary-selected-sprite", "keyboard-backward");
       selectedPlacedSprites.delete(sprite);
 
       if (selectedPlacedSprite === sprite) {
@@ -156,7 +160,7 @@ function clearSelectedPlacedSprite(sprite = null) {
 
   if (!selectedPlacedSprites.has(sprite)) return;
 
-  sprite.classList.remove("selected-sprite", "keyboard-backward");
+  sprite.classList.remove("selected-sprite", "primary-selected-sprite", "keyboard-backward");
   selectedPlacedSprites.delete(sprite);
 
   if (selectedPlacedSprite === sprite) {
@@ -367,6 +371,184 @@ function applyKeyboardFacing(sprite, dx) {
   }
 
   sprite.classList.toggle("keyboard-backward", walkingBackward);
+}
+
+function clearSpriteDialogueTimer(sprite) {
+  const timer = dialogueHideTimers.get(sprite);
+
+  if (timer) {
+    window.clearTimeout(timer);
+    dialogueHideTimers.delete(sprite);
+  }
+}
+
+function ensureSpriteDialogueBubble(sprite) {
+  let bubble = sprite.querySelector(".sprite-dialogue-bubble");
+
+  if (bubble) {
+    return bubble;
+  }
+
+  bubble = document.createElement("div");
+  bubble.className = "sprite-dialogue-bubble";
+
+  sprite.appendChild(bubble);
+
+  return bubble;
+}
+
+function removeSpriteDialogueBubble(sprite) {
+  if (!sprite) return;
+
+  clearSpriteDialogueTimer(sprite);
+
+  const bubble = sprite.querySelector(".sprite-dialogue-bubble");
+
+  if (bubble) {
+    bubble.remove();
+  }
+
+  delete sprite.dataset.dialogue;
+}
+
+function showSpriteDialogue(sprite, text, duration = 3000) {
+  if (!sprite) return;
+
+  const dialogue = String(text || "").trim();
+
+  if (!dialogue) {
+    removeSpriteDialogueBubble(sprite);
+    return;
+  }
+
+  clearSpriteDialogueTimer(sprite);
+
+  const bubble = ensureSpriteDialogueBubble(sprite);
+  bubble.classList.remove("editing");
+  bubble.textContent = dialogue;
+
+  // Dialogue is temporary, so do not persist it into save data.
+  delete sprite.dataset.dialogue;
+
+  const timer = window.setTimeout(() => {
+    const currentBubble = sprite.querySelector(".sprite-dialogue-bubble");
+
+    if (currentBubble && !currentBubble.classList.contains("editing")) {
+      currentBubble.remove();
+    }
+
+    dialogueHideTimers.delete(sprite);
+  }, duration);
+
+  dialogueHideTimers.set(sprite, timer);
+}
+
+function restoreSpriteDialogue(sprite) {
+  // Backward compatibility for old save files that had persistent dialogue.
+  // Show it once for 3 seconds, then remove it.
+  if (!sprite) return;
+
+  const dialogue = sprite.dataset.dialogue || "";
+
+  if (dialogue) {
+    showSpriteDialogue(sprite, dialogue, 3000);
+    delete sprite.dataset.dialogue;
+  }
+}
+
+function getDialogueTargetSprite() {
+  const primary = getSelectedMovableSprite();
+
+  if (primary) {
+    return primary;
+  }
+
+  return getSelectedMovableSprites()[0] || null;
+}
+
+function shouldHandleTalkKey(event) {
+  if (String(event.key || "").toLowerCase() !== "t") return false;
+  if (isEditableKeyboardTarget(event.target)) return false;
+
+  if (state.mapTransitioning) return false;
+  if (intro && !intro.classList.contains("hidden")) return false;
+  if (world && world.classList.contains("hidden")) return false;
+  if (analyzerViewer && !analyzerViewer.classList.contains("hidden")) return false;
+  if (menuPanel && !menuPanel.classList.contains("hidden")) return false;
+
+  return getSelectedMovableSprites().length > 0;
+}
+
+function openSpriteDialogueInput(sprite, targets = [sprite]) {
+  if (!sprite) return;
+
+  clearSpriteDialogueTimer(sprite);
+
+  const bubble = ensureSpriteDialogueBubble(sprite);
+  bubble.classList.add("editing");
+  bubble.replaceChildren();
+
+  const input = document.createElement("input");
+  input.className = "sprite-dialogue-input";
+  input.type = "text";
+  input.maxLength = 120;
+  input.placeholder = "Type dialogue...";
+  input.autocomplete = "off";
+
+  bubble.appendChild(input);
+
+  input.addEventListener("pointerdown", (event) => {
+    event.stopPropagation();
+  });
+
+  input.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+
+  input.addEventListener("keydown", (event) => {
+    event.stopPropagation();
+
+    if (event.key === "Enter") {
+      event.preventDefault();
+
+      const text = input.value.trim();
+
+      if (!text) {
+        for (const target of targets) {
+          removeSpriteDialogueBubble(target);
+        }
+
+        return;
+      }
+
+      for (const target of targets) {
+        showSpriteDialogue(target, text, 3000);
+      }
+
+      return;
+    }
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      removeSpriteDialogueBubble(sprite);
+    }
+  });
+
+  window.setTimeout(() => {
+    input.focus();
+  }, 0);
+}
+
+function editSelectedSpriteDialogue(applyToAllSelected = false) {
+  const target = getDialogueTargetSprite();
+
+  if (!target) return;
+
+  const targets = applyToAllSelected
+    ? getSelectedMovableSprites()
+    : [target];
+
+  openSpriteDialogueInput(target, targets);
 }
 
 function moveSpriteBy(sprite, dx, dy) {
@@ -697,6 +879,12 @@ window.addEventListener("keydown", async (event) => {
   if (shouldHandleBattleKey(event)) {
     event.preventDefault();
     await attemptNearbyBattle();
+    return;
+  }
+
+  if (shouldHandleTalkKey(event)) {
+    event.preventDefault();
+    editSelectedSpriteDialogue(event.shiftKey);
     return;
   }
 

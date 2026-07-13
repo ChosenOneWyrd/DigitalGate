@@ -250,6 +250,14 @@ async function restoreImportedSprite(item) {
   sprite.dataset.label = label;
   sprite.dataset.assetPath = item.assetPath;
 
+  if (item.dialogue) {
+    sprite.dataset.dialogue = String(item.dialogue);
+
+    if (typeof restoreSpriteDialogue === "function") {
+        restoreSpriteDialogue(sprite);
+    }
+  }
+
   if (Number.isInteger(Number(item.slot))) {
     sprite.dataset.slot = String(Number(item.slot));
   }
