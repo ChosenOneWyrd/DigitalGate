@@ -383,6 +383,70 @@ function restoreIdleAnimation(sprite) {
   visual.style.backgroundPosition = "";
 }
 
+function isCapsLockBattleRunActive() {
+  return typeof capsLockRunning !== "undefined" && capsLockRunning;
+}
+
+function isSpriteSelectedForCapsLockRun(sprite) {
+  if (!sprite || !sprite.isConnected) return false;
+  if (!isCapsLockBattleRunActive()) return false;
+
+  if (
+    typeof selectedPlacedSprites !== "undefined" &&
+    selectedPlacedSprites instanceof Set
+  ) {
+    return selectedPlacedSprites.has(sprite);
+  }
+
+  if (typeof selectedPlacedSprite !== "undefined") {
+    return selectedPlacedSprite === sprite;
+  }
+
+  return false;
+}
+
+function getCapsLockBattleRunFrame(now = performance.now()) {
+  const frameMs = typeof SPRITE_KEYBOARD_FRAME_MS === "number"
+    ? SPRITE_KEYBOARD_FRAME_MS
+    : 140;
+
+  return Math.floor(now / frameMs) % 2 === 0 ? 4 : 5;
+}
+
+function setBattleIdleOrCapsRunFrame(sprite, idleFrame = 0) {
+  if (!sprite || !sprite.isConnected) return;
+
+  // Only selected sprites use run1/run2 during idle pauses.
+  // Non-selected battle sprites, like the Enemy, keep their normal idle frame.
+  if (isSpriteSelectedForCapsLockRun(sprite)) {
+    setSheetFrame(sprite, getCapsLockBattleRunFrame());
+    return;
+  }
+
+  setSheetFrame(sprite, idleFrame);
+}
+
+async function sleepBattleIdleOrCapsRun(duration, entries) {
+  const shouldAnimateAnyCapsRun = entries.some((entry) => {
+    return isSpriteSelectedForCapsLockRun(entry.sprite);
+  });
+
+  if (!shouldAnimateAnyCapsRun) {
+    await sleep(duration);
+    return;
+  }
+
+  const endAt = performance.now() + duration;
+
+  while (performance.now() < endAt) {
+    for (const entry of entries) {
+      setBattleIdleOrCapsRunFrame(entry.sprite, entry.idleFrame);
+    }
+
+    await sleep(50);
+  }
+}
+
 function getSpriteCenter(sprite) {
   const visual = sprite.querySelector(".sprite-visual") || sprite;
   const rect = visual.getBoundingClientRect();
@@ -465,7 +529,13 @@ async function playBattleSpriteAnimation(
     restoreIdleAnimation(playerSprite);
     restoreIdleAnimation(enemySprite);
 
-    await sleep(300);
+    setBattleIdleOrCapsRunFrame(playerSprite, 0);
+    setBattleIdleOrCapsRunFrame(enemySprite, 1);
+
+    await sleepBattleIdleOrCapsRun(300, [
+    { sprite: playerSprite, idleFrame: 0 },
+    { sprite: enemySprite, idleFrame: 1 },
+    ]);
 
     // Frame order:
     // 0 idle1, 1 idle2, 2 walk1, 3 walk2, 4 run1, 5 run2,
@@ -500,10 +570,13 @@ async function playBattleSpriteAnimation(
 
       await sleep(220);
 
-      setSheetFrame(playerSprite, 0);
-      setSheetFrame(enemySprite, 1);
+      setBattleIdleOrCapsRunFrame(playerSprite, 0);
+      setBattleIdleOrCapsRunFrame(enemySprite, 1);
 
-      await sleep(BATTLE_BETWEEN_HIT_DELAY);
+      await sleepBattleIdleOrCapsRun(BATTLE_BETWEEN_HIT_DELAY, [
+        { sprite: playerSprite, idleFrame: 0 },
+        { sprite: enemySprite, idleFrame: 1 },
+      ]);
     }
 
     // Fourth hit:
@@ -557,6 +630,10 @@ async function playBattleSpriteAnimation(
     }
 
     stopBattleTracking(playerSprite, enemySprite);
+
+    if (typeof startCapsLockRunLoopIfNeeded === "function") {
+        startCapsLockRunLoopIfNeeded();
+    }
   }
 }
 

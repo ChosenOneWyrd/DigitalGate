@@ -17,6 +17,7 @@ let keyboardMovementRunning = false;
 let lastMapEdgeChangeAt = 0;
 let battleHintElement = null;
 let dialogueHideTimers = new WeakMap();
+let capsLockRunning = false;
 
 function ensureBattleHintElement() {
   if (battleHintElement) return battleHintElement;
@@ -150,6 +151,7 @@ function selectPlacedSprite(sprite, options = {}) {
 
   pruneSelectedSprites();
   updateNearbyBattleHint();
+  startCapsLockRunLoopIfNeeded();
 }
 
 function clearSelectedPlacedSprite(sprite = null) {
@@ -253,6 +255,40 @@ function hasMovementKeysPressed() {
   }
 
   return false;
+}
+
+function updateCapsLockState(event) {
+  if (event && typeof event.getModifierState === "function") {
+    capsLockRunning = event.getModifierState("CapsLock");
+  }
+
+  return capsLockRunning;
+}
+
+function shouldRunInPlaceWithCapsLock() {
+  return capsLockRunning && !hasMovementKeysPressed() && getSelectedMovableSprites().length > 0;
+}
+
+function startCapsLockRunLoopIfNeeded() {
+  if (shouldRunInPlaceWithCapsLock()) {
+    startKeyboardMovementLoop();
+  }
+}
+
+function isKeyboardRunActive() {
+  return keyboardMovementRunning || capsLockRunning;
+}
+
+function isSpriteCurrentlyBattling(sprite) {
+  return sprite?.dataset?.battling === "1";
+}
+
+function canMovementControlSpriteFrame(sprite) {
+  if (!sprite) return false;
+  if (isSpriteCurrentlyBattling(sprite)) return false;
+  if (sprite.classList.contains("evolving")) return false;
+
+  return true;
 }
 
 function getElementCenter(element) {
@@ -411,7 +447,7 @@ function removeSpriteDialogueBubble(sprite) {
   delete sprite.dataset.dialogue;
 }
 
-function showSpriteDialogue(sprite, text, duration = 3000) {
+function showSpriteDialogue(sprite, text, duration = DIALOGUE_BUBBLE_DURATION) {
   if (!sprite) return;
 
   const dialogue = String(text || "").trim();
@@ -451,7 +487,7 @@ function restoreSpriteDialogue(sprite) {
   const dialogue = sprite.dataset.dialogue || "";
 
   if (dialogue) {
-    showSpriteDialogue(sprite, dialogue, 3000);
+    showSpriteDialogue(sprite, dialogue, DIALOGUE_BUBBLE_DURATION);
     delete sprite.dataset.dialogue;
   }
 }
@@ -522,7 +558,7 @@ function openSpriteDialogueInput(sprite, targets = [sprite]) {
       }
 
       for (const target of targets) {
-        showSpriteDialogue(target, text, 3000);
+        showSpriteDialogue(target, text, DIALOGUE_BUBBLE_DURATION);
       }
 
       return;
@@ -748,8 +784,8 @@ function shouldHandleBattleKey(event) {
   return Boolean(getPrimarySelectedDigimon());
 }
 
-function updateKeyboardMovementFrame(sprite, now) {
-  const running = keyboardMovementRunning;
+function updateKeyboardMovementFrame(sprite, now, forceRunAnimation = false) {
+  const running = forceRunAnimation || isKeyboardRunActive();
   const frames = running ? [4, 5] : [2, 3];
 
   if (now - keyboardMovementFrameChangedAt >= SPRITE_KEYBOARD_FRAME_MS) {
@@ -765,7 +801,36 @@ async function keyboardMovementTick(now) {
 
   const sprites = getSelectedMovableSprites();
 
-  if (!sprites.length || !hasMovementKeysPressed()) {
+  if (!sprites.length) {
+    hideBattleHint();
+    pressedMovementKeys.clear();
+    return;
+  }
+
+  const elapsedSeconds = Math.min((now - keyboardMovementLastTime) / 1000, 0.05);
+  keyboardMovementLastTime = now;
+
+  // Caps Lock ON + no arrow keys:
+  // show running animation only, without moving the sprite.
+  if (!hasMovementKeysPressed() && capsLockRunning) {
+    for (const sprite of sprites) {
+        if (!canMovementControlSpriteFrame(sprite)) {
+        continue;
+        }
+
+        sprite.classList.remove("keyboard-backward");
+
+        // Force frames 4 and 5: run1, run2.
+        updateKeyboardMovementFrame(sprite, now, true);
+    }
+
+    updateNearbyBattleHint();
+
+    keyboardMovementFrameRequest = requestAnimationFrame(keyboardMovementTick);
+    return;
+  }
+
+  if (!hasMovementKeysPressed()) {
     for (const sprite of sprites) {
       restoreKeyboardIdleFrame(sprite);
     }
@@ -775,13 +840,8 @@ async function keyboardMovementTick(now) {
     return;
   }
 
-  const elapsedSeconds = Math.min((now - keyboardMovementLastTime) / 1000, 0.05);
-  keyboardMovementLastTime = now;
-
   const vector = getMovementVector();
-  const speed = keyboardMovementRunning
-    ? SPRITE_KEYBOARD_RUN_SPEED
-    : SPRITE_KEYBOARD_WALK_SPEED;
+  const speed = isKeyboardRunActive() ? SPRITE_KEYBOARD_RUN_SPEED : SPRITE_KEYBOARD_WALK_SPEED;
 
   const edgeInfoBySprite = new Map();
 
@@ -793,7 +853,10 @@ async function keyboardMovementTick(now) {
     );
 
     applyKeyboardFacing(sprite, vector.dx);
-    updateKeyboardMovementFrame(sprite, now);
+
+    if (canMovementControlSpriteFrame(sprite)) {
+        updateKeyboardMovementFrame(sprite, now);
+    }
 
     edgeInfoBySprite.set(sprite, edgeInfo);
   }
@@ -809,7 +872,15 @@ async function keyboardMovementTick(now) {
       pressedMovementKeys.clear();
 
       for (const sprite of getSelectedMovableSprites()) {
-        restoreKeyboardIdleFrame(sprite);
+        if (capsLockRunning) {
+            updateKeyboardMovementFrame(sprite, performance.now(), true);
+        } else {
+            restoreKeyboardIdleFrame(sprite);
+        }
+      }
+
+      if (capsLockRunning) {
+        startKeyboardMovementLoop();
       }
 
       return;
@@ -847,7 +918,15 @@ function stopKeyboardMovementLoop(options = {}) {
 
   if (restoreFrame) {
     for (const sprite of sprites) {
-      restoreKeyboardIdleFrame(sprite);
+        if (!canMovementControlSpriteFrame(sprite)) {
+            continue;
+        }
+
+        if (capsLockRunning) {
+            updateKeyboardMovementFrame(sprite, performance.now(), true);
+        } else {
+            restoreKeyboardIdleFrame(sprite);
+        }
     }
 
     updateNearbyBattleHint();
@@ -855,6 +934,10 @@ function stopKeyboardMovementLoop(options = {}) {
 
   if (!sprites.length) {
     hideBattleHint();
+  }
+
+  if (capsLockRunning && sprites.length && !hasMovementKeysPressed()) {
+    startKeyboardMovementLoop();
   }
 }
 
@@ -871,6 +954,21 @@ placedSprites.addEventListener("pointerdown", (event) => {
 });
 
 window.addEventListener("keydown", async (event) => {
+  updateCapsLockState(event);
+
+  if (event.key === "CapsLock") {
+    if (capsLockRunning) {
+      startCapsLockRunLoopIfNeeded();
+    } else {
+      stopKeyboardMovementLoop({
+        restoreFrame: true,
+        clearKeys: false,
+      });
+    }
+
+    return;
+  }
+
   if (event.key === "Shift") {
     keyboardMovementRunning = true;
     return;
@@ -901,6 +999,21 @@ window.addEventListener("keydown", async (event) => {
 });
 
 window.addEventListener("keyup", (event) => {
+  updateCapsLockState(event);
+
+  if (event.key === "CapsLock") {
+    if (capsLockRunning) {
+      startCapsLockRunLoopIfNeeded();
+    } else {
+      stopKeyboardMovementLoop({
+        restoreFrame: true,
+        clearKeys: false,
+      });
+    }
+
+    return;
+  }
+
   if (event.key === "Shift") {
     keyboardMovementRunning = false;
     return;
