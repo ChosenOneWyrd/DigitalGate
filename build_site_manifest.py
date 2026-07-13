@@ -13,10 +13,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "assets_manifest.json"
 
-IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".webp", ".gif"}
+IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".ico", ".webmanifest"}
 AUDIO_EXTS = {".wav", ".mp3", ".ogg", ".m4a", ".aac", ".webm", ".wavm"}
 
-FOLDERS = ["maps", "digivices", "tamers", "digimon"]
+FOLDERS = ["maps", "digivices", "tamers", "digimon", "favicon"]
 
 
 def collect_images(folder_name: str) -> list[str]:
