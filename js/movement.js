@@ -262,6 +262,8 @@ function updateCapsLockState(event) {
     capsLockRunning = event.getModifierState("CapsLock");
   }
 
+  syncMobileCapsButtonState();
+
   return capsLockRunning;
 }
 
@@ -1038,6 +1040,214 @@ window.addEventListener("keyup", (event) => {
     });
   }
 });
+
+let mobileControlsElement = null;
+
+function canUseMobileControls() {
+  if (state.mapTransitioning) return false;
+  if (intro && !intro.classList.contains("hidden")) return false;
+  if (world && world.classList.contains("hidden")) return false;
+  if (analyzerViewer && !analyzerViewer.classList.contains("hidden")) return false;
+  if (menuPanel && !menuPanel.classList.contains("hidden")) return false;
+
+  if (isEditableKeyboardTarget(document.activeElement)) {
+    return false;
+  }
+
+  return getSelectedMovableSprites().length > 0;
+}
+
+function syncMobileCapsButtonState() {
+  const button = mobileControlsElement?.querySelector('[data-mobile-action="caps"]');
+
+  if (!button) return;
+
+  button.classList.toggle("active", capsLockRunning);
+  button.setAttribute("aria-pressed", capsLockRunning ? "true" : "false");
+}
+
+function setVirtualMovementKey(key, pressed) {
+  if (!SPRITE_MOVEMENT_KEYS.has(key)) return;
+
+  if (pressed) {
+    if (!canUseMobileControls()) return;
+
+    pressedMovementKeys.add(key);
+    startKeyboardMovementLoop();
+    return;
+  }
+
+  pressedMovementKeys.delete(key);
+
+  if (!hasMovementKeysPressed()) {
+    stopKeyboardMovementLoop({
+      restoreFrame: true,
+      clearKeys: false,
+    });
+  }
+}
+
+function setVirtualRunActive(active) {
+  keyboardMovementRunning = active;
+
+  if (active && hasMovementKeysPressed()) {
+    startKeyboardMovementLoop();
+  }
+
+  if (!active && !hasMovementKeysPressed() && !capsLockRunning) {
+    stopKeyboardMovementLoop({
+      restoreFrame: true,
+      clearKeys: false,
+    });
+  }
+}
+
+function toggleVirtualCapsLock() {
+  capsLockRunning = !capsLockRunning;
+  syncMobileCapsButtonState();
+
+  if (capsLockRunning) {
+    startCapsLockRunLoopIfNeeded();
+  } else {
+    stopKeyboardMovementLoop({
+      restoreFrame: true,
+      clearKeys: false,
+    });
+  }
+}
+
+function bindMobileHoldButton(button, onDown, onUp) {
+  let active = false;
+  let pointerId = null;
+
+  function release(event = null) {
+    if (!active) return;
+
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    active = false;
+    button.classList.remove("active");
+
+    if (
+      event &&
+      pointerId !== null &&
+      button.hasPointerCapture &&
+      button.hasPointerCapture(pointerId)
+    ) {
+      button.releasePointerCapture(pointerId);
+    }
+
+    pointerId = null;
+    onUp();
+  }
+
+  button.addEventListener("pointerdown", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    active = true;
+    pointerId = event.pointerId;
+
+    button.classList.add("active");
+
+    if (button.setPointerCapture) {
+      button.setPointerCapture(pointerId);
+    }
+
+    onDown();
+  });
+
+  button.addEventListener("pointerup", release);
+  button.addEventListener("pointercancel", release);
+  button.addEventListener("lostpointercapture", release);
+
+  button.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+  });
+}
+
+function createMobileControls() {
+  if (mobileControlsElement) return;
+
+  const controls = document.createElement("div");
+  controls.className = "mobile-controls";
+  controls.setAttribute("aria-label", "Mobile controls");
+
+  controls.innerHTML = `
+    <div class="mobile-joystick" aria-label="Movement joystick">
+      <button class="mobile-joy-button up" type="button" data-mobile-key="ArrowUp" aria-label="Move up">▲</button>
+      <button class="mobile-joy-button left" type="button" data-mobile-key="ArrowLeft" aria-label="Move left">◀</button>
+      <div class="mobile-joy-center" aria-hidden="true"></div>
+      <button class="mobile-joy-button right" type="button" data-mobile-key="ArrowRight" aria-label="Move right">▶</button>
+      <button class="mobile-joy-button down" type="button" data-mobile-key="ArrowDown" aria-label="Move down">▼</button>
+    </div>
+
+    <div class="mobile-action-stack" aria-label="Action buttons">
+      <button class="mobile-action-button" type="button" data-mobile-action="run" aria-label="Hold to run">SHIFT</button>
+      <button class="mobile-action-button" type="button" data-mobile-action="caps" aria-label="Toggle run in place" aria-pressed="false">FLY</button>
+      <button class="mobile-action-button" type="button" data-mobile-action="battle" aria-label="Battle">B</button>
+      <button class="mobile-action-button" type="button" data-mobile-action="talk" aria-label="Talk">T</button>
+    </div>
+  `;
+
+  world.appendChild(controls);
+  mobileControlsElement = controls;
+
+  for (const button of controls.querySelectorAll("[data-mobile-key]")) {
+    const key = button.dataset.mobileKey;
+
+    bindMobileHoldButton(
+      button,
+      () => setVirtualMovementKey(key, true),
+      () => setVirtualMovementKey(key, false)
+    );
+  }
+
+  const runButton = controls.querySelector('[data-mobile-action="run"]');
+  const capsButton = controls.querySelector('[data-mobile-action="caps"]');
+  const battleButton = controls.querySelector('[data-mobile-action="battle"]');
+  const talkButton = controls.querySelector('[data-mobile-action="talk"]');
+
+  bindMobileHoldButton(
+    runButton,
+    () => setVirtualRunActive(true),
+    () => setVirtualRunActive(false)
+  );
+
+  capsButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (!getSelectedMovableSprites().length) return;
+
+    toggleVirtualCapsLock();
+  });
+
+  battleButton.addEventListener("click", async (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (!canUseMobileControls()) return;
+
+    await attemptNearbyBattle();
+  });
+
+  talkButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (!canUseMobileControls()) return;
+
+    editSelectedSpriteDialogue(false);
+  });
+
+  syncMobileCapsButtonState();
+}
+
+createMobileControls();
 
 window.addEventListener("blur", () => {
   keyboardMovementRunning = false;
