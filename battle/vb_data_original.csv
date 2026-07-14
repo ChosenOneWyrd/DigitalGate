@@ -19,95 +19,95 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 1.data,0,スナモン,sunamon,Sunamon,Sandmon,・Sand Toss,Slime,0,0,2,65535,65535,65535,65535,65535
 1.data,1,ゴロモン,goromon,Goromon,Tumblemon,・Rock Breath,Ore,1,0,2,65535,65535,65535,65535,65535
 1.data,2,スナリザモン,sunarizamon,Sunarizamon,Sunarizamon,・Grit Nail・Sand Blast,Reptile,2,1,3,10,3,2,7,4
-1.data,3,トータモン,tortamon,Tortamon,Tortomon,・Shell Phalanx,Reptile,3,3,2,25,5,3,88,88
-1.data,4,トゲモン,togemon,Togemon,Togemon,・Needle Spray,Vegetation,3,2,1,20,4,3,102,102
-1.data,5,ゴーレモン,golemon,Golemon,Golemon,・Crimson Curse・Golem Punch,Mineral,3,1,4,15,4,2,93,93
-1.data,6,ディグモン,digmon,Digmon,Digmon,・Big Crack・Gold Rush,Insectoid,7,4,3,20,5,2,112,112
+1.data,3,トータモン,tortamon,Tortamon,Tortomon,・Shell Phalanx,Reptile,3,3,2,25,5,3,21,18
+1.data,4,トゲモン,togemon,Togemon,Togemon,・Needle Spray,Vegetation,3,2,1,20,4,3,15,12
+1.data,5,ゴーレモン,golemon,Golemon,Golemon,・Crimson Curse・Golem Punch,Mineral,3,1,4,15,4,2,35,6
+1.data,6,ディグモン,digmon,Digmon,Digmon,・Big Crack・Gold Rush,Insectoid,7,4,3,20,5,2,14,4
 1.data,7,ゴグマモン,gogmamon,Gogmamon,Gogmamon,・Giant Grater・Curse Reflection,Ore,4,3,3,35,14,3,22,21
 1.data,8,ジャガモン,jyagamon,Jyagamon,Jagamon,・Smashed Potatoes,Vegetation,4,3,1,30,10,3,21,6
-1.data,9,トリケラモン,triceramon,Triceramon,Triceramon,・Tri-Horn Attack,Ceratopsian,4,2,0,35,10,3,110,110
+1.data,9,トリケラモン,triceramon,Triceramon,Triceramon,・Tri-Horn Attack,Ceratopsian,4,2,0,35,10,3,24,4
 1.data,10,スコピオモン,scorpiomon,Scorpiomon,SkullScorpiomon,・Blackout・Poison Pierce,Insectoid,4,2,2,30,9,4,14,11
 1.data,11,バルチャモン,vulturemon,Vulturemon,Vulturemon,・Reaper Strike・Desert Deathscythe・Wither Wing,Bird Man,4,1,3,35,10,4,7,8
-1.data,12,マミーモン,mummymon,Mummymon,Mummymon,・Snake Bandage・Necrophobia,Undead,4,1,4,30,9,4,130,130
+1.data,12,マミーモン,mummymon,Mummymon,Mummymon,・Snake Bandage・Necrophobia,Undead,4,1,4,30,9,4,23,2
 1.data,13,ブラストモン,blastmon,Blastmon,Blastmon,・Diamond Machine Gun・Diamond Hedgehog・Prism Flash・Crystal Breath,Mineral,4,3,1,45,18,7,17,7
 1.data,14,ディノレクスモン,dinorexmon,Dinorexmon,Dinorexmon,・Splatter Hunting・Ogre Flame,Dinosaur,5,2,0,55,14,8,24,0
 1.data,15,ファラオモン,pharaohmon,Pharaohmon,Pharaohmon,・Necromist,Wizard,5,1,2,50,12,8,29,5
 1.data,16,エンシェントスフィンクモン,ancientsphinkmon,Ancientsphinkmon,AncientSphinxmon,・Dark Blast・Necro Eclipse,Ancient Mythical Beast,5,1,3,70,12,8,11,16
 2.data,0,ピチモン,pitchmon,Pitchmon,Pichimon,・Bubble Blow,Slime,0,0,2,65535,65535,65535,65535,65535
-2.data,1,プカモン,pukamon,Pukamon,Bukamon,・Air Bubbles,Lesser,1,0,2,65535,65535,65535,65616,65616
+2.data,1,プカモン,pukamon,Pukamon,Bukamon,・Air Bubbles,Lesser,1,0,2,65535,65535,65535,65535,65535
 2.data,2,サンゴモン,sangomon,Sangomon,Sangomon,・Refuge Mist・Coral Pressure,Mollusk,2,2,2,10,3,2,3,11
 2.data,3,トビウモン,tobiumon,Tobiumon,Tobiumon,・Suckerfish Darts・Flying Finish,Aquatic,3,3,0,25,5,3,24,9
-2.data,4,シードラモン,seadramon,Seadramon,Seadramon,・Ice Blast,Aquatic,3,2,1,20,4,3,117,117
-2.data,5,シェルモン,shellmon,Shellmon,Shellmon,・Hydro Blaster,Mollusk,3,2,3,15,4,2,89,89
-2.data,6,オクタモン,octmon,Octmon,Octomon,・Spurting Ink,Mollusk,3,1,4,20,5,2,120,120
+2.data,4,シードラモン,seadramon,Seadramon,Seadramon,・Ice Blast,Aquatic,3,2,1,20,4,3,14,10
+2.data,5,シェルモン,shellmon,Shellmon,Shellmon,・Hydro Blaster,Mollusk,3,2,3,15,4,2,8,1
+2.data,6,オクタモン,octmon,Octmon,Octomon,・Spurting Ink,Mollusk,3,1,4,20,5,2,26,4
 2.data,7,グソクモン,gusokumon,Gusokumon,Gusokumon,・Brunt Claw・Colony Torpedo,Crustacean,4,3,3,35,14,3,24,9
 2.data,8,マリンキメラモン,marinchimairamon,Marinchimairamon,MarineChimairamon,・Poseidon Vortex・Aqua Viper,Composite,4,3,1,30,9,5,8,10
 2.data,9,マーメイモン,mermaimon,Mermaimon,Mermaimon,・Charm Plunder・Northern Cross Bomber,Aquatic Beast Man,4,2,2,35,10,3,12,4
-2.data,10,メガシードラモン,megaseadramon,Megaseadramon,MegaSeadramon,・Lightning Javelin,Aquatic,4,2,1,30,9,4,92,92
+2.data,10,メガシードラモン,megaseadramon,Megaseadramon,MegaSeadramon,・Lightning Javelin,Aquatic,4,2,1,30,9,4,6,13
 2.data,11,ピラニモン,piranimon,Piranimon,Piranimon,・Cruel Invitation・Calamity Vise,Aquatic,4,1,0,35,8,5,30,5
 2.data,12,ダゴモン,dagomon,Dagomon,Dragomon,・Forbidden Trident,Aquatic Beast Man,4,1,4,30,9,4,22,3
 2.data,13,ネプトゥーンモン,neptunemon,Neptunemon,Neptunemon,・Vortex Penetration・Wave of Depth,Deity,5,3,0,45,16,8,14,10
-2.data,14,メタルシードラモン,metalseadramon,Metalseadramon,MetalSeadramon,・River of Power,Android,5,2,1,55,18,6,85,85
+2.data,14,メタルシードラモン,metalseadramon,Metalseadramon,MetalSeadramon,・River of Power,Android,5,2,1,55,18,6,10,2
 2.data,15,レガレクスモン,regalecusmon,Regalecusmon,Regalecusmon,・Briona Strike・Reactor Discharge,Aquatic,5,1,2,50,14,8,12,13
 2.data,16,プレシオモン,plesiomon,Plesiomon,Plesiomon,・Sorrow Blue,Plesiosaur,5,2,1,70,12,8,31,1
 3.data,0,ユラモン,yuramon,Yuramon,Yuramon,・Adhesive Bubble Blow,Seed,0,0,2,65535,65535,65535,65535,65535
-3.data,1,タネモン,tanemon,Tanemon,Tanemon,・Adhesive Bubble Blow,Bulb,1,0,2,65535,65535,65535,65616,65616
-3.data,2,パルモン,palmon,Palmon,Palmon,・Poison Ivy,Vegetation,2,2,2,10,3,2,121,121
-3.data,3,スナイモン,snimon,Snimon,Snimon,・Shadow Sickle,Insectoid,3,3,1,25,5,3,90,90
+3.data,1,タネモン,tanemon,Tanemon,Tanemon,・Adhesive Bubble Blow,Bulb,1,0,2,65535,65535,65535,65535,65535
+3.data,2,パルモン,palmon,Palmon,Palmon,・Poison Ivy,Vegetation,2,2,2,10,3,2,25,12
+3.data,3,スナイモン,snimon,Snimon,Snimon,・Shadow Sickle,Insectoid,3,3,1,25,5,3,12,8
 3.data,4,サンフラウモン,sunflowmon,Sunflowmon,Sunflowmon,・Sunshine Beam・Smiley Slap・Cactus Tail,Vegetation,3,2,2,20,4,3,33,2
 3.data,5,パラサウモン,parasaurmon,Parasaurmon,Parasaurmon,・Stunning Sweetness・Wavy Octavist,Dinosaur,3,1,3,20,5,2,31,12
-3.data,6,ベジーモン,vegimon,Vegimon,Vegiemon,・Poop Toss,Carnivorous Vegetation,3,1,4,15,4,2,121,121
+3.data,6,ベジーモン,vegimon,Vegimon,Vegiemon,・Poop Toss,Carnivorous Vegetation,3,1,4,15,4,2,27,15
 3.data,7,アヤタラモン,ajatarmon,Ajatarmon,Ajatarmon,・Assault Hatchet・Entangling Ivy・Shotgun Moss,Vegetation,4,3,1,35,14,3,12,8
 3.data,8,ジュエルビーモン,jewelbeemon,Jewelbeemon,JewelBeemon,・Spike Buster,Insectoid,4,3,2,30,10,4,14,4
-3.data,9,リリモン,lilimon,Lilimon,Lillymon,・Flower Cannon,Pixie,4,2,2,35,8,5,85,85
-3.data,10,ブロッサモン,blossomon,Blossomon,Blossomon,・Spiral Flower,Vegetation,4,2,3,30,14,4,121,121
+3.data,9,リリモン,lilimon,Lilimon,Lillymon,・Flower Cannon,Pixie,4,2,2,35,8,5,10,2
+3.data,10,ブロッサモン,blossomon,Blossomon,Blossomon,・Spiral Flower,Vegetation,4,2,3,30,14,4,25,11
 3.data,11,トロピアモン,toropiamon,Toropiamon,Toropiamon,・Petally Carnage・Tropical Venom,Vegetation,4,1,0,30,8,5,26,12
-3.data,12,アルケニモン,archnemon,Archnemon,Arukenimon,・Spider Thread・Predation Spider,Dark Beast,4,1,1,35,9,4,114,114
+3.data,12,アルケニモン,archnemon,Archnemon,Arukenimon,・Spider Thread・Predation Spider,Dark Beast,4,1,1,35,9,4,30,5
 3.data,13,ブルムロードモン,bloomlordmon,Bloomlordmon,Bloomlordmon,・Seed Belt・Sprout Rush・Gran del Sol,Pixie,5,3,1,55,14,8,12,2
 3.data,14,ラフレシモン,rafflesimon,Rafflesimon,Rafflesimon,・Ballet Gun・Wisselen,Pixie,5,2,2,45,12,7,23,11
 3.data,15,スピノモン,spinomon,Spinomon,Spinomon,・Sonic Slash Rain・Blue Prominence,Dinosaur,5,1,0,50,16,7,24,1
 3.data,16,ヒュドラモン,hydramon,Hydramon,Hydramon,・Biotoxin・Scatterblaster・Fault Break,Vegetation,5,1,3,55,22,6,26,21
 4.data,0,リーフモン,leafmon,Leafmon,Leafmon,・Acid Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
 4.data,1,ミノモン,minomon,Minomon,Minomon,・Pinecone,Larva,1,0,2,65535,65535,65535,65535,65535
-4.data,2,ワームモン,wormmon,Wormmon,Wormmon,・Sticky Net・Silk Thread,Larva,2,4,3,10,3,2,87,87
-4.data,3,スティングモン,stingmon,Stingmon,Stingmon,・Spiking Strike,Insectoid,3,4,2,25,5,3,112,112
+4.data,2,ワームモン,wormmon,Wormmon,Wormmon,・Sticky Net・Silk Thread,Larva,2,4,3,10,3,2,25,18
+4.data,3,スティングモン,stingmon,Stingmon,Stingmon,・Spiking Strike,Insectoid,3,4,2,25,5,3,14,4
 4.data,4,シェイドラモン,shadramon,Shadramon,Shadramon,・Flare Buster,Insectoid,7,4,1,20,5,2,4,0
 4.data,5,フーディエモン,hudiemon,Hudiemon,Hudiemon,・Flying Kick・Infinity Dream,Insectoid,3,4,3,20,4,3,33,12
-4.data,6,ゴキモン,gokimon,Gokimon,Roachmon,・Dream Dust,Insectoid,3,1,4,15,4,2,120,120
+4.data,6,ゴキモン,gokimon,Gokimon,Roachmon,・Dream Dust,Insectoid,3,1,4,15,4,2,27,15
 4.data,7,ジュエルビーモン,jewelbeemon,Jewelbeemon,JewelBeemon,・Spike Buster,Insectoid,4,3,2,30,10,4,14,4
-4.data,8,パイルドラモン,paildramon,Paildramon,Paildramon,・Sting Strike・Death Parade Blaster,Dragon Man,4,4,2,30,10,3,139,139
+4.data,8,パイルドラモン,paildramon,Paildramon,Paildramon,・Sting Strike・Death Parade Blaster,Dragon Man,4,4,2,30,10,3,24,2
 4.data,9,ディノビーモン,dinobeemon,Dinobeemon,Dinobeemon,・Hell Masquerade,Mutant,4,4,4,30,9,4,25,18
 4.data,10,コンゴウモン,kongoumon,Kongoumon,Kongoumon,・Popper,Insectoid,7,4,0,35,12,3,18,14
 4.data,11,プッチーモン,pucchiemon,Pucchiemon,Bucchiemon,・Heartner Beam,Pixie,7,4,2,35,7,5,9,12
 4.data,12,プッチーモン（緑）,pucchiemon-green,Pucchiemon-Green,Bucchiemon (Green),・Heartner Beam,Pixie,7,4,2,35,8,4,9,12
 4.data,13,バンチョースティングモン,banchostingmon,Banchostingmon,BanchoStingmon,・Bloody Finish・Depth Charge Sky・Redbutt,Insectoid,5,4,2,50,12,7,13,4
 4.data,14,グランクワガーモン,grankuwagamon,Grankuwagamon,GranKuwagamon,・Dimension Scissor,Insectoid,5,4,1,50,16,6,30,4
-4.data,15,インペリアルドラモン：ドラゴンモード,imperialdramondragonmode,Imperialdramon:Dragonmode,Imperialdramon: Dragon Mode,・Mega Death,Ancient Dragon,5,4,3,45,16,6,129,129
-4.data,16,インペリアルドラモン：パラディンモード,imperialdramonpaladinmode,Imperialdramon:Paladinmode,Imperialdramon: Paladin Mode,・Omni Blade,Ancient Holy Knight,5,3,0,60,12,9,138,138
+4.data,15,インペリアルドラモン：ドラゴンモード,imperialdramondragonmode,Imperialdramon:Dragonmode,Imperialdramon: Dragon Mode,・Mega Death,Ancient Dragon,5,4,3,45,16,6,10,17
+4.data,16,インペリアルドラモン：パラディンモード,imperialdramonpaladinmode,Imperialdramon:Paladinmode,Imperialdramon: Paladin Mode,・Omni Blade,Ancient Holy Knight,5,3,0,60,12,9,12,8
 5.data,0,ボムモン,bommon,Bommon,Bommon,・Crack-Crack-Crackle,Slime,0,0,2,65535,65535,65535,65535,65535
 5.data,1,ミサイモン,missimon,Missimon,Missimon,・Missile Crash,Machine,1,0,2,65535,65535,65535,65535,65535
-5.data,2,ハグルモン,hagurumon,Hagurumon,Hagurumon,・Cog Crusher,Machine,2,1,2,10,3,2,123,123
+5.data,2,ハグルモン,hagurumon,Hagurumon,Hagurumon,・Cog Crusher,Machine,2,1,2,10,3,2,11,2
 5.data,3,マッハモン,machmon,Machmon,Machmon,・Full Throttle Edge・Madness Fire,Android,3,3,1,25,5,3,23,8
 5.data,4,バリスタモン,baristamon,Baristamon,Ballistamon,・Horn Breaker・Heavy Speaker,Machine,3,3,2,20,4,3,31,4
 5.data,5,メイルバードラモン,mailbirdramon,Mailbirdramon,MailBirdramon,・Plasma Cannon・Nighthawk・Trident Tail,Machine,3,2,3,20,5,2,13,13
-5.data,6,レアモン,raremon,Raremon,Raremon,・Sludge,Undead,3,1,4,15,4,2,120,120
+5.data,6,レアモン,raremon,Raremon,Raremon,・Sludge,Undead,3,1,4,15,4,2,26,11
 5.data,7,ローダーレオモン,loaderleomon,Loaderliomon,LoaderLeomon,・Bowling Storm・Loader Morning Star,Machine,4,3,1,35,14,3,24,4
 5.data,8,アトラーバリスタモン,atlurballistamon,Atlurballistamon,AtlurBallistamon,・Plasma Crack,Machine,5,3,2,30,10,4,6,13
-5.data,9,メタルマメモン,metalmamemon,Metalmamemon,MetalMamemon,・Energy Bomb,Android,4,2,1,35,8,5,95,95
+5.data,9,メタルマメモン,metalmamemon,Metalmamemon,MetalMamemon,・Energy Bomb,Android,4,2,1,35,8,5,10,2
 5.data,10,ロコモン,locomon,Locomon,Locomon,・Steam Bomb・Wheel Grinder,Machine,4,2,2,30,14,4,32,4
 5.data,11,リベリモン,rebellimon,Rebellimon,Rebellimon,・Vanquish Missile・Maximum Demolisher,Android,4,1,0,30,8,5,23,9
 5.data,12,メタルグレイモン（2010アニメ版）,metalgreymon,Metalgreymon,MetalGreymon (2010 Anime Version),・Trident Arm・Giga Destroyer,Android,5,1,0,35,9,4,12,18
 5.data,13,ヘヴィーレオモン,heavyleomon,Heavyleomon,HeavyLeomon,・Barrage Sweeper・Resting Burner・Sonic Excavator,Machine,5,3,1,50,16,7,23,0
 5.data,14,グランドロコモン,grandlocomon,Grandlocomon,GroundLocomon,・Destruction Crush,Machine,5,2,2,45,18,6,10,4
 5.data,15,ジークグレイモン,zekegreymon,Zekegreymon,ZeigGreymon,・Trident Fang・Destruction Smasher・Zeig Flame・Plasma Railgun・Final Strikes,Android,4,1,0,55,14,8,4,17
-5.data,16,ムゲンドラモン,mugendramon,Mugendramon,Machinedramon,・Infinity Cannon,Machine,5,1,2,55,18,8,85,85
+5.data,16,ムゲンドラモン,mugendramon,Mugendramon,Machinedramon,・Infinity Cannon,Machine,5,1,2,55,18,8,13,16
 6.data,0,モクモン,mokumon,Mokumon,Mokumon,・Smoke,Smoke,0,0,2,65535,65535,65535,65535,65535
 6.data,1,プチメラモン,petimeramon,Petimeramon,DemiMeramon,・Small Flame Shot,Fire,1,0,2,65535,65535,65535,65535,65535
 6.data,2,フレイモン,flamon,Flamon,Flamemon,・Baby Salamander,Wizard,8,6,1,10,3,2,0,0
-6.data,3,ゴツモン,gottsumon,Gottsumon,Gotsumon,・Rock Fist,Ore,2,2,3,10,3,2,88,88
+6.data,3,ゴツモン,gottsumon,Gottsumon,Gotsumon,・Rock Fist,Ore,2,2,3,10,3,2,35,6
 6.data,4,アグニモン,agnimon,Agnimon,Agunimon,・Pyro Punch・Salamander Break,Wizard,8,6,1,25,5,3,16,0
-6.data,5,メラモン,meramon,Meramon,Meramon,・Burning Fist,Fire,3,2,3,15,4,2,93,93
-6.data,6,スターモン,starmon,Starmon,Starmon,・Meteor Shower,Mutant,3,2,3,20,4,3,142,142
+6.data,5,メラモン,meramon,Meramon,Meramon,・Burning Fist,Fire,3,2,3,15,4,2,16,14
+6.data,6,スターモン,starmon,Starmon,Starmon,・Meteor Shower,Mutant,3,2,3,20,4,3,10,2
 6.data,7,グロットモン,grottemon,Grottemon,Grumblemon,・Snake Eye Break・Jack in the Box,Demon,8,6,0,20,5,2,35,6
 6.data,8,アルダモン,aldamon,Aldamon,Aldamon,・Brahmashira・Atomic Inferno,Wizard,8,6,1,35,9,4,4,17
 6.data,9,ヴリトラモン,vritramon,Vritramon,BurningGreymon,・Corona Blaster・Flame Storm,Dark Dragon,8,6,2,40,8,5,4,0
@@ -119,32 +119,32 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 6.data,15,エンシェントボルケーモン,ancientvolcamon,Ancientvolcamon,AncientVolcanomon,・Atomic Bomber・Supernova,Ancient Mineral,5,1,0,55,18,7,21,6
 6.data,16,スサノオモン,susanoomon,Susanoomon,Susanomon,・Ama no Habakiri・Yakusa no Ikazuchi,Deity,5,3,0,65,12,12,12,18
 7.data,0,チコモン,chicomon,Chicomon,Chibomon,・Acid Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
-7.data,1,チビモン,chibimon,Chibimon,DemiVeemon,・Hop Attack,Baby Dragon,1,0,2,65535,65535,65535,65616,65616
-7.data,2,ブイモン,v-mon,Veemon,V-Mon,・Boom Boom Punch・Veemon Headbutt,Mini Dragon,2,4,1,10,3,2,87,87
-7.data,3,ブイドラモン,v-dramon,V-Dramon,Veedramon,・V-Nova Blast,Mythical Dragon,3,3,0,25,5,3,90,90
-7.data,4,エクスブイモン,xv-mon,Xv-Mon,ExVeemon,・Strong Crunch・Vee Laser,Mythical Dragon,3,4,1,20,4,3,137,137
-7.data,5,フレイドラモン,fladramon,Fladramon,Flamedramon,・Flaming Fist・Fire Rocket,Dragon Man,7,4,2,20,5,2,108,108
-7.data,6,ライドラモン,lighdramon,Lighdramon,Lighdramon,・Lightning Blade・Blue Thunder,Beast,7,4,2,15,4,2,92,92
+7.data,1,チビモン,chibimon,Chibimon,DemiVeemon,・Hop Attack,Baby Dragon,1,0,2,65535,65535,65535,65535,65535
+7.data,2,ブイモン,v-mon,Veemon,V-Mon,・Boom Boom Punch・Veemon Headbutt,Mini Dragon,2,4,1,10,3,2,17,4
+7.data,3,ブイドラモン,v-dramon,V-Dramon,Veedramon,・V-Nova Blast,Mythical Dragon,3,3,0,25,5,3,14,1
+7.data,4,エクスブイモン,xv-mon,Xv-Mon,ExVeemon,・Strong Crunch・Vee Laser,Mythical Dragon,3,4,1,20,4,3,33,8
+7.data,5,フレイドラモン,fladramon,Fladramon,Flamedramon,・Flaming Fist・Fire Rocket,Dragon Man,7,4,2,20,5,2,16,0
+7.data,6,ライドラモン,lighdramon,Lighdramon,Lighdramon,・Lightning Blade・Blue Thunder,Beast,7,4,2,15,4,2,6,13
 7.data,7,エアロブイドラモン,earov-dramon,Earov-Dramon,AeroVeedramon,・V-Wing Blade・Dragon Impulse,Holy Dragon,4,3,0,35,12,4,33,8
-7.data,8,パイルドラモン,paildramon,Paildramon,Paildramon,・Sting Strike・Death Parade Blaster,Dragon Man,4,4,2,30,10,3,139,139
+7.data,8,パイルドラモン,paildramon,Paildramon,Paildramon,・Sting Strike・Death Parade Blaster,Dragon Man,4,4,2,30,10,3,24,2
 7.data,9,サジタリモン,sagittarimon,Sagittarimon,Sagittarimon,・Judgment Arrow,Mythical Beast,7,4,3,35,10,3,14,4
 7.data,10,ディノビーモン,dinobeemon,Dinobeemon,Dinobeemon,・Hell Masquerade,Mutant,4,4,4,30,9,4,25,18
 7.data,11,ゴールドブイドラモン,goldv-dramon,Goldv-Dramon,GoldVeedramon,・V-Nova Blast,Mythical Dragon,7,3,0,35,10,3,10,4
-7.data,12,デジタマモン,digitamamon,Digitamamon,Digitamamon,・Enigma・Nightmare Syndrome,Perfect,4,2,4,25,9,4,86,86
+7.data,12,デジタマモン,digitamamon,Digitamamon,Digitamamon,・Enigma・Nightmare Syndrome,Perfect,4,2,4,25,9,4,20,5
 7.data,13,アルフォースブイドラモン,ulforcevdramon,Ulforcevdramon,UlforceVeedramon,・The Ray of Victory,Holy Knight,5,3,1,50,14,7,5,8
-7.data,14,インペリアルドラモン：ドラゴンモード,imperialdramondragonmode,Imperialdramon:Dragonmode,Imperialdramon: Dragon Mode,・Mega Death,Ancient Dragon,5,4,3,45,16,6,129,129
-7.data,15,マグナモン,magnamon,Magnamon,Magnamon,・Plasma Shot・Shining Gold Solar Storm・Magna Explosion,Holy Knight,7,4,2,50,12,5,85,85
-7.data,16,インペリアルドラモン：ファイターモード,imperialdramonfightermode,Imperialdramon:Fightermode,Imperialdramon: Fighter Mode,・Positron Laser・Giga Death,Ancient Dragon Man,5,4,0,60,14,8,86,86
+7.data,14,インペリアルドラモン：ドラゴンモード,imperialdramondragonmode,Imperialdramon:Dragonmode,Imperialdramon: Dragon Mode,・Mega Death,Ancient Dragon,5,4,3,45,16,6,10,17
+7.data,15,マグナモン,magnamon,Magnamon,Magnamon,・Plasma Shot・Shining Gold Solar Storm・Magna Explosion,Holy Knight,7,4,2,50,12,5,5,14
+7.data,16,インペリアルドラモン：ファイターモード,imperialdramonfightermode,Imperialdramon:Fightermode,Imperialdramon: Fighter Mode,・Positron Laser・Giga Death,Ancient Dragon Man,5,4,0,60,14,8,12,2
 8.data,0,モクモン,mokumon,Mokumon,Mokumon,・Smoke,Smoke,0,0,2,65535,65535,65535,65535,65535
 8.data,1,プチメラモン,petimeramon,Petimeramon,DemiMeramon,・Small Flame Shot,Fire,1,0,2,65535,65535,65535,65535,65535
 8.data,2,ヴォーボモン,vorvomon,Vorvomon,Vorvomon,・Petit Flame,Rock Dragon,2,1,2,10,3,2,0,0
-8.data,3,バードラモン,birdramon,Birdramon,Birdramon,・Meteor Wing,Giant Bird,3,3,1,25,5,3,108,108
-8.data,4,メラモン,meramon,Meramon,Meramon,・Burning Fist,Fire,3,2,3,15,4,2,93,93
-8.data,5,ティラノモン,tyranomon,Tyranomon,Tyrannomon,・Fire Breath,Dinosaur,3,2,0,20,5,2,107,107
+8.data,3,バードラモン,birdramon,Birdramon,Birdramon,・Meteor Wing,Giant Bird,3,3,1,25,5,3,24,4
+8.data,4,メラモン,meramon,Meramon,Meramon,・Burning Fist,Fire,3,2,3,15,4,2,16,14
+8.data,5,ティラノモン,tyranomon,Tyranomon,Tyrannomon,・Fire Breath,Dinosaur,3,2,0,20,5,2,4,0
 8.data,6,ラヴォーボモン,lavorvomon,Lavorvomon,Lavorvomon,・Great Flame・Earth Stomp,Rock Dragon,3,1,2,20,4,3,34,0
 8.data,7,マスターティラノモン,mastertyranomon,Mastertyranomon,MasterTyrannomon,・Master Fire,Dinosaur,4,3,0,35,12,4,4,0
 8.data,8,フレアモン,flaremon,Flaremon,Flaremon,・Crimson Wave of the Beast King・Crimson Lion Dance・Purifying Howl,Beast Man,4,3,1,30,10,3,16,2
-8.data,9,デスメラモン,deathmeramon,Deathmeramon,SkullMeramon,・Heavy Metal Fire・Heat Chain,Fire,4,2,3,35,10,3,84,84
+8.data,9,デスメラモン,deathmeramon,Deathmeramon,SkullMeramon,・Heavy Metal Fire・Heat Chain,Fire,4,2,3,35,10,3,17,1
 8.data,10,ボルケーモン,volcamon,Volcamon,Volcanomon,・Big Bang Voice・Big Bang Tackle,Android,4,2,1,30,9,4,38,4
 8.data,11,ラヴォガリータモン,lavogaritamon,Lavogaritamon,Lavogaritamon,・Melding Blaze・Wild Blast,Rock Dragon,4,1,2,35,10,3,34,0
 8.data,12,グラウンドラモン,groundramon,Groundramon,Groundramon,・Scrapless Claw・Megaton Hammer Crush・Giga Crack,Earth Dragon,4,1,1,30,9,4,24,6
@@ -152,14 +152,14 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 8.data,14,キャノンドラモン,cannondramon,Cannondramon,Cannondramon,・Dyna Cannon・Grenade Storm,Android,5,2,3,45,16,6,13,2
 8.data,15,ヴォルケニックドラモン,volcanicdramon,Volcanicdramon,Volcanicdramon,・Volcanic Flare・Glide Blaze,Earth Dragon,5,1,2,55,14,8,4,17
 8.data,16,エンシェントボルケーモン,ancientvolcamon,Ancientvolcamon,AncientVolcanomon,・Atomic Bomber・Supernova,Ancient Mineral,5,1,0,55,18,7,21,6
-9.data,0,ユキミボタモン,yukimibotamon,Yukimibotamon,YukimiBotamon,・Diamond Dust,Slime,0,0,2,65535,65535,65535,134,134
+9.data,0,ユキミボタモン,yukimibotamon,Yukimibotamon,YukimiBotamon,・Diamond Dust,Slime,0,0,2,65535,65535,65535,65535,65535
 9.data,1,ヒヤリモン,hiyarimon,Hiyarimon,Hiyarimon,・Diamond Dust,Lesser,1,0,2,65535,65535,65535,65535,65535
 9.data,2,ブルコモン,bulucomon,Bulucomon,Bulucomon,・Baby Hail・Ice-Smash,Mini Dragon,2,2,2,10,3,2,0,0
-9.data,3,ユキダルモン,yukidarumon,Yukidarumon,Frigimon,・Sub-zero Ice Punch,Ice-Snow,3,3,1,25,5,3,124,124
+9.data,3,ユキダルモン,yukidarumon,Yukidarumon,Frigimon,・Sub-zero Ice Punch,Ice-Snow,3,3,1,25,5,3,24,4
 9.data,4,ペイルドラモン,paledramon,Paledramon,Paledramon,・Ice Age・Meteor Hail,Dragon,3,2,3,15,4,2,16,14
 9.data,5,ヒョーガモン,hyougamon,Hyougamon,Hyogamon,・Snow Punch,Ice-Snow,3,1,0,20,5,2,4,0
 9.data,6,ムースモン,moosemon,Moosemon,Moosemon,・Horn Blade,Ancient Beast,7,4,2,20,4,3,34,0
-9.data,7,マンモン,mammon,Mammon,Mammothmon,・Tusk Strikes・Tundra Breath,Ancient Beast,4,3,0,35,12,4,110,110
+9.data,7,マンモン,mammon,Mammon,Mammothmon,・Tusk Strikes・Tundra Breath,Ancient Beast,4,3,0,35,12,4,4,0
 9.data,8,パンジャモン,panjyamon,Panjyamon,IceLeomon,・Fist of Ice,Beast Man,4,3,1,30,10,3,16,2
 9.data,9,クリスペイルドラモン,cryspaledramon,Cryspaledramon,CrysPaledramon,・Frozen Claw・Callous Dimension,Dragon Man,4,2,3,35,10,3,17,1
 9.data,10,クレシェモン,crescemon,Crescemon,Crescemon,・Lunatic Dance・Ice Archery・Dark Archery,Wizard,4,2,1,30,9,4,38,4
@@ -170,11 +170,11 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 9.data,15,フロスベルグモン,frosvelgrmon,Frosvelgrmon,FrosVelgrmon,・Innocence Blizzard・Freezing Ray・Ruin Reverb,Giant Bird,5,1,2,55,14,8,4,17
 9.data,16,エンシェントメガテリウモン,ancientmegatheriumon,Ancientmegatheriumon,AncientMegatheriummon,・Freezing Blizzard・Great Snowplow,Ancient Beast,5,2,0,55,18,7,21,6
 10.data,0,ユラモン,yuramon,Yuramon,Yuramon,・Adhesive Bubble Blow,Seed,0,0,2,65535,65535,65535,65535,65535
-10.data,1,タネモン,tanemon,Tanemon,Tanemon,・Adhesive Bubble Blow,Bulb,1,0,2,65535,65535,65535,65616,65616
+10.data,1,タネモン,tanemon,Tanemon,Tanemon,・Adhesive Bubble Blow,Bulb,1,0,2,65535,65535,65535,65535,65535
 10.data,2,ティンカーモン,tinkermon,Tinkermon,Tinkermon,・Speed Nightmare・Nightmare Pandemic・Fairy Powder・Petermon Syndrome,Pixie,2,1,2,10,3,2,14,4
 10.data,3,ポームモン,pomumon,Pomumon,Pomumon,・Rapid Seed・Fruit Rush,Vegetation,2,2,3,10,3,2,23,4
 10.data,4,フェアリモン,fairimon,Fairimon,Kazemon,・Tornado Gamba・Roseo Temporale,Pixie,8,6,2,25,5,3,33,18
-10.data,5,コカトリモン,cockatrimon,Cockatrimon,Kokatorimon,・Petra Fire,Giant Bird,3,2,1,20,5,2,107,107
+10.data,5,コカトリモン,cockatrimon,Cockatrimon,Kokatorimon,・Petra Fire,Giant Bird,3,2,1,20,5,2,24,0
 10.data,6,アルボルモン,arbormon,Arbormon,Arbormon,・Machine Gun Dance・Blockade Seed,Android,8,6,3,20,4,3,25,18
 10.data,7,ザッソーモン,zassoumon,Zassoumon,Weedmon,・Squeeze Vine,Vegetation,3,1,4,15,4,2,25,15
 10.data,8,ジェットシルフィーモン,jetsilphymon,Jetsilphymon,JetSilphymon,・Jet Binter・Ultra Turbulence,Android,8,6,2,40,8,5,18,12
@@ -190,79 +190,79 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 11.data,1,パグモン,pagumon,Pagumon,Pagumon,・Poison Bubbles,Lesser,1,0,2,65535,65535,65535,65535,65535
 11.data,2,ゴースモン,ghostmon,Ghostmon,Ghostmon,・Little Plasma・Jack Raid,Ghost,2,2,2,10,3,2,2,1
 11.data,3,セーバードラモン,saberdramon,Saberdramon,Saberdramon,・Black Saber,Giant Bird,3,3,1,25,5,3,24,4
-11.data,4,ウィザーモン,wizarmon,Wizarmon,Wizardmon,・Thunder Cloud,Wizard,3,2,2,20,4,3,92,92
-11.data,5,デビモン,devimon,Devimon,Devimon,・Death Claw,Dark Angel,3,1,3,20,5,2,119,119
-11.data,6,バケモン,bakemon,Bakemon,Bakemon,・Hell's Hand・Death Charm,Ghost,3,1,4,15,4,2,119,119
+11.data,4,ウィザーモン,wizarmon,Wizarmon,Wizardmon,・Thunder Cloud,Wizard,3,2,2,20,4,3,6,0
+11.data,5,デビモン,devimon,Devimon,Devimon,・Death Claw,Dark Angel,3,1,3,20,5,2,20,3
+11.data,6,バケモン,bakemon,Bakemon,Bakemon,・Hell's Hand・Death Charm,Ghost,3,1,4,15,4,2,20,5
 11.data,7,バアルモン,baalmon,Baalmon,Baalmon,・Kamiuchi・Guiltish・Leak Information,Wizard,5,4,2,35,10,4,12,13
 11.data,8,サイバードラモン（2010アニメ版）,cyberdramon-xwars,Cyberdramon_2010,Cyberdramon,・Erase Claw・Glutton Fang・Cyber Blader・Death Divider,Alien Humanoid,5,3,1,30,9,5,14,8
-11.data,9,パンプモン,pumpmon,Pumpmon,Pumpkinmon,・Trick or Treat,Puppet,4,2,3,35,10,3,100,100
-11.data,10,ヴァンデモン,vamdemon,Vamdemon,Myotismon,・Night Raid,Undead,4,1,1,30,9,4,103,103
+11.data,9,パンプモン,pumpmon,Pumpmon,Pumpkinmon,・Trick or Treat,Puppet,4,2,3,35,10,3,18,5
+11.data,10,ヴァンデモン,vamdemon,Vamdemon,Myotismon,・Night Raid,Undead,4,1,1,30,9,4,37,3
 11.data,11,ジョーカーモン,jokermon,Jokermon,Jokermon,・Lunatic Slash・Gaia Magicar,Wizard,5,1,0,35,8,5,12,2
-11.data,12,ファントモン,fantomon,Fantomon,Phantomon,・Soul Chopper,Ghost,4,1,4,30,9,4,90,90
+11.data,12,ファントモン,fantomon,Fantomon,Phantomon,・Soul Chopper,Ghost,4,1,4,30,9,4,29,8
 11.data,13,ノーブルパンプモン,noblepumpmon,Noblepumpmon,NoblePumpkinmon,・Trick or Treat Wallace・Atlantic Dam・Assam Ring Jack,Puppet,5,2,3,45,12,6,7,12
-11.data,14,ピエモン,piemon,Piemon,Piedmon,・Trump Sword,Wizard,5,1,0,55,16,7,122,122
+11.data,14,ピエモン,piemon,Piemon,Piedmon,・Trump Sword,Wizard,5,1,0,55,16,7,12,8
 11.data,15,ベルゼブモン（2010アニメ版）,beelzebumon-xwars,Beelzebumon-Xwars,Beelzemon (2010 Anime Version),・Death the Cannon・Darkness Claw,Evil King,4,1,2,50,12,8,11,3
 11.data,16,ネオヴァンデモン,neovamdemon,Neovamdemon,NeoMyotismon,・Nightmare Raid・Blue Obliteration・Doom Cannon,Undead,4,1,1,55,14,9,20,16
 12.data,0,ボタモン,botamon,Botamon,Botamon,・Acid Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
-12.data,1,コロモン,koromon,Koromon,Koromon,・Foam,Lesser,1,0,2,65535,65535,65535,65616,65616
-12.data,2,アグモン,agumon,Agumon,Agumon,・Pepper Breath,Reptile,2,3,1,10,3,2,83,83
-12.data,3,グレイモン,greymon-first,Greymon,Greymon,・Mega Flame,Dinosaur,3,3,1,25,5,3,83,83
-12.data,4,シーラモン,coelamon,Coelamon,Coelamon,・Fossil Bite,Ancient Fish,3,2,2,20,4,3,114,114
-12.data,5,オーガモン,orgemon,Orgemon,Ogremon,・Pummel Whack,Demon,3,1,0,20,5,2,93,93
+12.data,1,コロモン,koromon,Koromon,Koromon,・Foam,Lesser,1,0,2,65535,65535,65535,65535,65535
+12.data,2,アグモン,agumon,Agumon,Agumon,・Pepper Breath,Reptile,2,3,1,10,3,2,0,0
+12.data,3,グレイモン,greymon-first,Greymon,Greymon,・Mega Flame,Dinosaur,3,3,1,25,5,3,4,0
+12.data,4,シーラモン,coelamon,Coelamon,Coelamon,・Fossil Bite,Ancient Fish,3,2,2,20,4,3,14,10
+12.data,5,オーガモン,orgemon,Orgemon,Ogremon,・Pummel Whack,Demon,3,1,0,20,5,2,28,14
 12.data,6,アルゴモン,algomon-ultimate,Algomon_Ultimate,Argomon,・Imprisonment・Elimination Line・Worm Phase,Mutant,4,1,4,15,4,2,2,21
-12.data,7,メタルグレイモン（ワクチン種）,metalgreymon-v,Metalgreymon-Va,MetalGreymon (Vaccine),・Trident Arm・Giga Destroyer・Giga Storm,Android,4,3,1,35,12,4,106,106
-12.data,8,アンドロモン,andromon,Andromon,Andromon,・Gatling Missile・Spiral Sword,Android,4,3,3,30,10,3,91,91
-12.data,9,アノマロカリモン,anomalocarimon,Anomalocarimon,Scorpiomon,・Stinger Surprise,Ancient Crustacean,4,2,4,35,10,3,90,90
-12.data,10,マメモン,mamemon,Mamemon,Mamemon,・Smiley Bomb,Mutant,4,2,2,30,8,5,102,102
+12.data,7,メタルグレイモン（ワクチン種）,metalgreymon-v,Metalgreymon-Va,MetalGreymon (Vaccine),・Trident Arm・Giga Destroyer・Giga Storm,Android,4,3,1,35,12,4,13,2
+12.data,8,アンドロモン,andromon,Andromon,Andromon,・Gatling Missile・Spiral Sword,Android,4,3,3,30,10,3,12,9
+12.data,9,アノマロカリモン,anomalocarimon,Anomalocarimon,Scorpiomon,・Stinger Surprise,Ancient Crustacean,4,2,4,35,10,3,30,10
+12.data,10,マメモン,mamemon,Mamemon,Mamemon,・Smiley Bomb,Mutant,4,2,2,30,8,5,32,19
 12.data,11,ネオデビモン,neodevimon,Neodevimon,NeoDevimon,・Guilty Claw,Dark Angel,4,1,0,35,10,3,20,3
 12.data,12,メタルティラノモン,metaltyranomon,Metaltyranomon,MetalTyrannomon,・Giga DestroyerII・Nuclear Laser,Android,4,1,2,25,10,4,13,1
-12.data,13,ウォーグレイモン,wargreymon,Wargreymon,WarGreymon,・Terra Force・Great Tornado,Dragon Man,5,3,1,45,14,5,95,95
-12.data,14,オメガモン,omegamon,Omegamon,Omnimon,・Supreme Cannon・Transcendent Sword,Holy Knight,5,3,2,60,14,7,126,126
+12.data,13,ウォーグレイモン,wargreymon,Wargreymon,WarGreymon,・Terra Force・Great Tornado,Dragon Man,5,3,1,45,14,5,10,17
+12.data,14,オメガモン,omegamon,Omegamon,Omnimon,・Supreme Cannon・Transcendent Sword,Holy Knight,5,3,2,60,14,7,12,2
 12.data,15,ブリッツグレイモン,blitzgreymon,Blitzgreymon,BlitzGreymon,・Plasma Stake・Thunder Vernier・Elec Guard,Android,5,1,3,50,12,6,6,13
 12.data,16,ダンデビモン,donedevimon,Donedevimon,DoneDevimon,・Destruction Claw・Ultimate Flare・Mias-spew,Dark Angel,5,1,0,55,16,6,29,5
 13.data,0,プニモン,punimon,Punimon,Punimon,・Acid Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
-13.data,1,ツノモン,tunomon,Tunomon,Tsunomon,・Acid Bubbles,Lesser,1,0,2,65535,65535,65535,65616,65616
-13.data,2,ガブモン,gabumon,Gabumon,Gabumon,・Blue Blaster,Reptile,2,2,1,10,3,2,84,84
-13.data,3,ガルルモン,garurumon,Garurumon,Garurumon,・Fox Fire,Beast,3,3,1,25,5,3,84,84
-13.data,4,ゴリモン,gorimon,Gorimon,Gorillamon,・Power Attack,Beast Man,3,2,2,20,4,3,85,85
-13.data,5,ドクグモン,dokugumon,Dokugumon,Dokugumon,・Venom Blast,Insectoid,3,1,0,20,5,2,87,87
+13.data,1,ツノモン,tunomon,Tunomon,Tsunomon,・Acid Bubbles,Lesser,1,0,2,65535,65535,65535,65535,65535
+13.data,2,ガブモン,gabumon,Gabumon,Gabumon,・Blue Blaster,Reptile,2,2,1,10,3,2,1,1
+13.data,3,ガルルモン,garurumon,Garurumon,Garurumon,・Fox Fire,Beast,3,3,1,25,5,3,5,1
+13.data,4,ゴリモン,gorimon,Gorimon,Gorillamon,・Power Attack,Beast Man,3,2,2,20,4,3,11,3
+13.data,5,ドクグモン,dokugumon,Dokugumon,Dokugumon,・Venom Blast,Insectoid,3,1,0,20,5,2,26,11
 13.data,6,アルゴモン,algomon-ultimate,Algomon_Ultimate,Argomon,・Imprisonment・Elimination Line・Worm Phase,Mutant,4,1,4,15,4,2,2,21
-13.data,7,ワーガルルモン,weregarrumon,Weregarurumon,WereGarurumon,・Wolf Claw,Beast Man,4,3,1,35,12,4,114,114
-13.data,8,パロットモン,parrotmon,Parrotmon,Parrotmon,・Sonic Destroyer・Mjolnir Thunder,Giant Bird,4,3,3,30,10,3,92,92
+13.data,7,ワーガルルモン,weregarrumon,Weregarurumon,WereGarurumon,・Wolf Claw,Beast Man,4,3,1,35,12,4,24,4
+13.data,8,パロットモン,parrotmon,Parrotmon,Parrotmon,・Sonic Destroyer・Mjolnir Thunder,Giant Bird,4,3,3,30,10,3,31,13
 13.data,9,バルブモン,valvemon,Valvemon,Bulbmon,・Mud Pump・Octagon Attack,Machine,4,2,4,35,10,3,21,2
-13.data,10,ビッグマメモン,bigmamemon,Bigmamemon,BigMamemon,・Big Smiley Bomber,Mutant,4,2,2,30,8,5,145,145
+13.data,10,ビッグマメモン,bigmamemon,Bigmamemon,BigMamemon,・Big Smiley Bomber,Mutant,4,2,2,30,8,5,32,19
 13.data,11,オロチモン,orochimon,Orochimon,Orochimon,・Sake Breath・Ame no Murakumo,Dark Dragon,4,1,0,35,10,3,12,10
 13.data,12,ワルシードラモン,waruseadramon,Waruseadramon,WaruSeadramon,・Darkstrom・Evil Icicle・Strange Mist,Aquatic,4,1,2,25,10,4,14,11
-13.data,13,メタルガルルモン,metalgarurumon,Metalgarurumon,MetalGarurumon,・Freezing Breath・Garuru Tomahawk・Ice Wolf Claw,Android,5,2,1,45,14,5,84,84
-13.data,14,オメガモン,omegamon,Omegamon,Omnimon,・Supreme Cannon・Transcendent Sword,Holy Knight,5,3,2,60,14,7,126,126
+13.data,13,メタルガルルモン,metalgarurumon,Metalgarurumon,MetalGarurumon,・Freezing Breath・Garuru Tomahawk・Ice Wolf Claw,Android,5,2,1,45,14,5,5,9
+13.data,14,オメガモン,omegamon,Omegamon,Omnimon,・Supreme Cannon・Transcendent Sword,Holy Knight,5,3,2,60,14,7,12,2
 13.data,15,クーレスガルルモン,cresgarurumon,Cresgarurumon,CresGarurumon,・Yellow Beast Crescent Blade・Beast Cyclone・Fury: Ice Moon Fang,Beast Knight,5,2,3,50,12,6,22,8
 13.data,16,ニーズヘッグモン,nidhoggmon,Nidhoggmon,Nidhoggmon,・Annihilention・Rudiment,Dark Dragon,5,1,0,55,16,6,11,16
 14.data,0,ボタモン,botamon,Botamon,Botamon,・Acid Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
-14.data,1,コロモン,koromon,Koromon,Koromon,・Foam,Lesser,1,0,2,65535,65535,65535,65616,65616
+14.data,1,コロモン,koromon,Koromon,Koromon,・Foam,Lesser,1,0,2,65535,65535,65535,65535,65535
 14.data,2,アグモン（黒）,agumon-black,Agumon-Black,Agumon (Black),・Pepper Breath,Reptile,2,1,1,10,3,2,0,0
 14.data,3,グレイモン（青）,greymon_blue,Greymon_Blue,Greymon (Blue),・Mega Flame,Dinosaur,3,1,1,25,5,3,4,0
-14.data,4,メタルグレイモン（ウィルス種）,metalgreymon-web,Metalgreymon-Vi,MetalGreymon (Virus),・Giga Destroyer,Android,4,1,1,35,12,4,106,106
-14.data,5,ブラックウォーグレイモン,blackwargreymon,Blackwargreymon,BlackWarGreymon,・Dark Terra Force,Dragon Man,5,1,1,45,14,5,129,129
+14.data,4,メタルグレイモン（ウィルス種）,metalgreymon-web,Metalgreymon-Vi,MetalGreymon (Virus),・Giga Destroyer,Android,4,1,1,35,12,4,13,9
+14.data,5,ブラックウォーグレイモン,blackwargreymon,Blackwargreymon,BlackWarGreymon,・Dark Terra Force,Dragon Man,5,1,1,45,14,5,11,16
 14.data,6,オメガモン ズワルト,omegamon_zwart,Omegamon_Zwart,Omnimon Zwart,・Supreme Cannon・Transcendent Sword,Holy Knight,5,3,2,60,14,7,12,2
 15.data,0,プニモン,punimon,Punimon,Punimon,・Acid Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
-15.data,1,ツノモン,tunomon,Tunomon,Tsunomon,・Acid Bubbles,Lesser,1,0,2,65535,65535,65535,65616,65616
+15.data,1,ツノモン,tunomon,Tunomon,Tsunomon,・Acid Bubbles,Lesser,1,0,2,65535,65535,65535,65535,65535
 15.data,2,ガブモン（黒）,gabumon_black,Gabumon_Black,Gabumon (Black),・Blue Blaster,Reptile,2,1,1,10,3,2,1,1
 15.data,3,ガルルモン（黒）,garurumon_black,Garurumon_Black,Garurumon (Black),・Fox Fire,Beast,3,1,1,25,5,3,5,1
 15.data,4,ワーガルルモン（黒）,weregarurumon_black,Weregarurumon_Black,WereGarurumon (Black),・Wolf Claw,Beast Man,4,1,1,35,12,4,24,4
 15.data,5,メタルガルルモン（黒）,metalgarurumon_black,Metalgarurumon_Black,MetalGarurumon (Black),・Freezing Breath・Garuru Tomahawk・Ice Wolf Claw,Android,5,1,1,45,14,5,5,9
 15.data,6,オメガモン ズワルト,omegamon_zwart,Omegamon_Zwart,Omnimon Zwart,・Supreme Cannon・Transcendent Sword,Holy Knight,5,3,2,60,14,7,12,2
-16.data,0,ユキミボタモン,yukimibotamon,Yukimibotamon,YukimiBotamon,・Diamond Dust,Slime,0,0,2,65535,65535,65535,134,134
+16.data,0,ユキミボタモン,yukimibotamon,Yukimibotamon,YukimiBotamon,・Diamond Dust,Slime,0,0,2,65535,65535,65535,65535,65535
 16.data,1,ヒヤリモン,hiyarimon,Hiyarimon,Hiyarimon,・Diamond Dust,Lesser,1,0,2,65535,65535,65535,65535,65535
 16.data,2,ベアモン,bearmon,Bearmon,Bearmon,・Bear Fist,Beast,2,3,1,10,3,2,15,14
 16.data,3,スノーゴブリモン,snowgoburimon,Snowgoburimon,SnowGoblimon,・Snow Goblin Volt,Demon,2,1,2,10,3,2,35,7
 16.data,4,チャックモン,chackmon,Chackmon,Kumamon,・Frozen Tundra・Snow Bomber,Beast Man,8,6,3,25,5,3,22,7
 16.data,5,グリズモン,gryzmon,Gryzmon,Grizzlymon,・Maul Attack,Beast,3,3,1,20,5,2,24,4
 16.data,6,アイスモン,icemon,Icemon,Icemon,・Iceball Bomb,Ice-Snow,3,2,3,15,4,2,22,1
-16.data,7,モジャモン,mojyamon,Mojyamon,Mojyamon,・Icicle Rod・Boomerang Bone,Rare Animal,3,3,2,20,4,3,124,124
+16.data,7,モジャモン,mojyamon,Mojyamon,Mojyamon,・Icicle Rod・Boomerang Bone,Rare Animal,3,3,2,20,4,3,28,7
 16.data,8,ダイペンモン,daipenmon,Daipenmon,DaiPenmon,・Blue Hawaii Death・Strawberry Death,Android,8,6,4,30,9,4,22,7
 16.data,9,ブリザーモン,blizzarmon,Blizzarmon,Korikakumon,・Avalanche Step・Glacier Torpedo,Beast,8,6,1,30,8,5,12,8
 16.data,10,パンジャモン（Ｘ抗体）,panjyamon_x,Panjyamon_X,IceLeomon (X Antibody),・Fist of Ice・Snow Fireworks,Beast Man,4,3,0,30,10,4,17,8
-16.data,11,ナノモン,nanomon,Nanomon,Datamon,・Digital Bomb,Machine,4,1,0,35,8,4,96,96
+16.data,11,ナノモン,nanomon,Nanomon,Datamon,・Digital Bomb,Machine,4,1,0,35,8,4,32,19
 16.data,12,アスタモン,astamon,Astamon,Astamon,・Mad Dog Fire・Maverick,Wizard,4,1,1,35,10,4,23,21
 16.data,13,オレーグモン,olegmon,Olegmon,Olegmon,・Dual Tomahawk Boomerang・Viking Vuffet・Age of Discovery・Dream Comes True,Sea Beast,4,3,2,45,12,6,12,8
 16.data,14,フロスベルグモン,frosvelgrmon,Frosvelgrmon,FrosVelgrmon,・Innocence Blizzard・Freezing Ray・Ruin Reverb,Giant Bird,5,1,0,50,16,8,38,10
@@ -274,7 +274,7 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 17.data,3,シーサモン,siesamon,Siesamon,Seasarmon,・Ancient Firewall・Tiida Iya,Holy Beast,3,3,2,20,4,3,10,18
 17.data,4,グラウモン（橙）,growmon_orange,Growmon_Orange,Growlmon (Orange),・Plasma Blade・Exhaust Flame,Dark Dragon,3,2,3,25,5,2,4,0
 17.data,5,グラウモン,growmon,Growmon,Growlmon,・Plasma Blade・Exhaust Flame,Dark Dragon,3,1,1,25,4,3,4,0
-17.data,6,デビドラモン,devidramon,Devidramon,Devidramon,・Crimson Claw,Evil Dragon,3,1,4,15,4,3,98,98
+17.data,6,デビドラモン,devidramon,Devidramon,Devidramon,・Crimson Claw,Evil Dragon,3,1,4,15,4,3,24,8
 17.data,7,ヴァジラモン,vajramon,Vajramon,Vajramon,・Rodha,Holy Beast,4,3,0,35,9,4,12,6
 17.data,8,マジラモン,majiramon,Majiramon,Majiramon,・Vedhaka,Holy Dragon,4,2,1,30,10,3,14,18
 17.data,9,ミヒラモン,mihiramon,Mihiramon,Mihiramon,・Vimohana,Holy Beast,4,2,2,30,8,4,24,8
@@ -287,21 +287,21 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 17.data,16,デュークモン：クリムゾンモード,dukemoncrimsonmode,Dukemon:Crimsonmode,Gallantmon: Crimson Mode,・Invincible Sword・Quo Vadis,Holy Knight,5,1,1,70,16,9,12,17
 18.data,0,ゼリモン,zerimon,Zerimon,Zerimon,・Acid Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
 18.data,1,グミモン,gummymon,Gummymon,Gummymon,・Double Bubble,Lesser,1,0,2,65535,65535,65535,65535,65535
-18.data,2,テリアモン,terriermon,Terriermon,Terriermon,・Terrier Tornado・Blazing Fire・Double Typhoon,Beast,2,3,2,10,3,2,140,140
-18.data,3,ガルゴモン,galgomon,Galgomon,Gargomon,・Gatling Arm・Dumdum Uppercut,Beast Man,3,3,2,25,5,3,108,108
+18.data,2,テリアモン,terriermon,Terriermon,Terriermon,・Terrier Tornado・Blazing Fire・Double Typhoon,Beast,2,3,2,10,3,2,33,12
+18.data,3,ガルゴモン,galgomon,Galgomon,Gargomon,・Gatling Arm・Dumdum Uppercut,Beast Man,3,3,2,25,5,3,23,18
 18.data,4,トゥルイエモン,turuiemon,Turuiemon,Turuiemon,・Gauntlet Claw,Beast Man,3,2,1,20,5,2,15,8
 18.data,5,ハーピモン,harpymon,Harpymon,Harpymon,・Wind Seeker,Mythical Beast,7,4,3,15,4,2,24,12
-18.data,6,ウェンディモン,wendimon,Wendimon,Wendigomon,・Howling Destroyer・Club Arm,Beast Man,3,1,4,20,4,3,144,144
-18.data,7,ラピッドモン,rapidmon,Rapidmon,Rapidmon,・Rapid Fire・Golden Triangle,Android,4,3,2,35,9,4,85,85
+18.data,6,ウェンディモン,wendimon,Wendimon,Wendigomon,・Howling Destroyer・Club Arm,Beast Man,3,1,4,20,4,3,31,14
+18.data,7,ラピッドモン,rapidmon,Rapidmon,Rapidmon,・Rapid Fire・Golden Triangle,Android,4,3,2,35,9,4,13,2
 18.data,8,シンドゥーラモン,sinduramon,Sinduramon,Sinduramon,・Puyavaha,Holy Bird,4,2,1,30,8,3,6,13
 18.data,9,マクラモン,makuramon,Makuramon,Makuramon,・Raurava,Holy Beast,4,2,2,35,8,4,10,2
 18.data,10,アンティラモン（デーヴァ）,andiramon,Andiramon,Antylamon (Deva),・Bunny Blades,Holy Beast,4,2,3,30,7,5,12,8
 18.data,11,パジラモン,pajiramon,Pajiramon,Pajiramon,・Vahnijvala,Holy Beast,4,1,0,35,8,4,14,18
-18.data,12,アンティラモン,andiramon_2,Andiramon_2,Antylamon,・Meditation Cure・Mantra Chant,Holy Beast,4,1,3,30,7,5,90,90
+18.data,12,アンティラモン,andiramon_2,Andiramon_2,Antylamon,・Meditation Cure・Mantra Chant,Holy Beast,4,1,3,30,7,5,24,4
 18.data,13,セントガルゴモン,saintgalgomon,Saintgalgomon,MegaGargomon,・Burst Shot・Giant Missile,Machine,5,3,2,50,18,6,13,9
 18.data,14,ケルビモン（善）,cherubimon,Cherubimon,Cherubimon (Good),・Lightning Spear・Heaven's Judgment,Cherub,5,3,1,50,12,7,6,13
-18.data,15,ケルビモン（悪）,cherubimon-vice,Cherubimon-Vice,Cherubimon (Black),・Lightning Spear・Heaven's Judgment,Cherub,5,3,1,50,10,8,87,87
-18.data,16,ラピッドモン,rapidmon,Rapidmon,Rapidmon,・Rapid Fire・Golden Triangle,Android,4,3,0,60,12,9,85,85
+18.data,15,ケルビモン（悪）,cherubimon-vice,Cherubimon-Vice,Cherubimon (Black),・Lightning Spear・Heaven's Judgment,Cherub,5,3,1,50,10,8,6,13
+18.data,16,ラピッドモン,rapidmon,Rapidmon,Rapidmon,・Rapid Fire・Golden Triangle,Android,4,3,0,60,12,9,13,2
 19.data,0,ジャリモン,jyarimon,Jyarimon,Jyarimon,・Heated Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
 19.data,1,ギギモン,gigimon,Gigimon,Gigimon,・Hot Bite,Lesser,1,0,2,65535,65535,65535,65535,65535
 19.data,2,ギルモン,guilmon,Guilmon,Guilmon,・Rock Breaker・Fire Ball,Reptile,2,1,3,10,3,2,0,0
@@ -313,7 +313,7 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 20.data,0,キーモン,keemon,Keemon,Keemon,・Pushu,Slime,0,0,2,65535,65535,65535,65535,65535
 20.data,1,ヤーモン,yarmon,Yarmon,Yaamon,・Paint Splash,Lesser,1,0,2,65535,65535,65535,65535,65535
 20.data,2,インプモン,impmon,Impmon,Impmon,・Summon・Night of Fire,Little Devil,2,1,2,10,3,2,0,3
-20.data,3,ウィザーモン,wizarmon,Wizarmon,Wizardmon,・Thunder Cloud,Wizard,3,2,2,20,4,3,92,92
+20.data,3,ウィザーモン,wizarmon,Wizarmon,Wizardmon,・Thunder Cloud,Wizard,3,2,2,20,4,3,6,0
 20.data,4,バアルモン,baalmon,Baalmon,Baalmon,・Kamiuchi・Guiltish・Leak Information,Wizard,5,4,2,35,10,4,12,13
 20.data,5,ベルゼブモン（2010アニメ版）,beelzebumon-xwars,Beelzebumon-Xwars,Beelzemon (2010 Anime Version),・Death the Cannon・Darkness Claw,Evil King,4,1,2,50,12,8,11,3
 20.data,6,ベルゼブモン,beelzebumon,Beelzebumon,Beelzemon,・Darkness Claw・Double Impact,Evil King,5,1,1,55,12,8,23,18
@@ -343,7 +343,7 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 23.data,6,グルスガンマモン,gulusgammamon,Gulusgammamon,GulusGammamon,・Dark Pales・Desdemona・Dead End Skewer,Dragon Man,3,1,4,20,5,3,20,5
 23.data,7,カノーヴァイスモン,canoweissmon,Canoweissmon,Canoweissmon,・Gallia Fissure・Dragonia・Meteor Lux・Gran Nova,Sky Dragon,4,3,0,35,12,4,10,17
 23.data,8,ブラキモン,brachiomon,Brakimon,Brachiomon,・Brachio Bubble,Plesiosaur,4,2,4,30,8,5,3,20
-23.data,9,キメラモン,chimairamon,Chimairamon,Kimeramon,・Heat Viper,Composite,4,2,1,35,12,4,95,95
+23.data,9,キメラモン,chimairamon,Chimairamon,Kimeramon,・Heat Viper,Composite,4,2,1,35,12,4,4,16
 23.data,10,タンクドラモン,tankdramon,Tankdramon,Tankdramon,・Striver Cannon・Blast Gatling,Machine,4,1,2,30,10,4,23,9
 23.data,11,イージスドラモン,ageisdramon,Ageisdramon,Aegisdramon,・Power Water・Blaze Power・Tera Hydro Breath・Shine Breaker,Android,5,3,0,55,14,7,13,1
 23.data,12,アルティメットブラキモン,ultimatebrakimon,Ultimatebrakimon,UltimateBrachiomon,・Ultimate Blast・Ultimate Quake,Android,5,2,3,50,12,6,31,0
@@ -352,52 +352,52 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 25.data,1,ボサモン,bosamon,Bosamon,Bosamon,・Total Earful,Lesser,1,0,2,65535,65535,65535,65535,65535
 25.data,2,アンゴラモン,angoramon,Angoramon,Angoramon,・Double Lariat・Petit Tornado・Pyon Dump,Beast,2,3,2,10,3,2,33,12
 25.data,3,ジンバーアンゴラモン,symbareangoramon,Symbareangoramon,SymbareAngoramon,・Jive・Render・Break-in Stream,Beast Man,3,3,2,25,5,3,14,8
-25.data,4,レオモン,leomon,Leomon,Leomon,・Fist of the Beast King,Beast Man,3,3,0,20,4,3,93,93
+25.data,4,レオモン,leomon,Leomon,Leomon,・Fist of the Beast King,Beast Man,3,3,0,20,4,3,15,14
 25.data,5,コモンドモン,komondomon,Komondomon,Komondomon,・Howling Wiper・Masshigurun,Beast,3,2,1,15,4,2,33,4
 25.data,6,ポキュパモン,porcupamon,Porcupamon,Porcupamon,・Madness Broach・Slap and Rip,Puppet,3,1,3,20,5,3,12,4
 25.data,7,ラモールモン,lamortmon,Lamortmon,Lamortmon,・Kasaiso・Koha Batto・Fuga Rekkanjin・Gouon Kieizan,Beast,4,3,2,35,12,4,20,8
 25.data,8,グラップレオモン,grappuleomon,Grappuleomon,GrapLeomon,・The King of Fists・Cyclonic Kick,Beast Man,4,3,1,30,10,5,18,12
 25.data,9,スカルバルキモン,skullbaluchimon,Skullbaluchimon,SkullBaluchimon,・Grave Bone・Deadly Fear,Undead,4,2,1,35,10,4,35,21
-25.data,10,ワルもんざえモン,warumonzaemon,Warumonzaemon,WaruMonzaemon,・Heartbreak Attack,Puppet,4,1,4,30,12,4,118,118
+25.data,10,ワルもんざえモン,warumonzaemon,Warumonzaemon,WaruMonzaemon,・Heartbreak Attack,Puppet,4,1,4,30,12,4,20,5
 25.data,11,アヌビモン,anubimon,Anubimon,Anubismon,・Pyramid Power・Amemit,Deity,5,3,0,55,16,7,10,3
-25.data,12,サーベルレオモン,saberleomon,Saberleomon,SaberLeomon,・Howling Crusher,Ancient Beast,5,2,1,50,14,6,114,114
+25.data,12,サーベルレオモン,saberleomon,Saberleomon,SaberLeomon,・Howling Crusher,Ancient Beast,5,2,1,50,14,6,14,8
 25.data,13,グリフォモン,griffomon,Griffomon,Gryphonmon,・Supersonic Voice,Mythical Beast,5,2,2,55,14,6,31,12
 26.data,0,プヨモン,puyomon,Puyomon,Puyomon,・Static Cloud,Slime,0,0,2,65535,65535,65535,65535,65535
 26.data,1,プヨヨモン,puyoyomon,Puyoyomon,Puyoyomon,・Static Zone,Lesser,1,0,2,65535,65535,65535,65535,65535
 26.data,2,ジェリーモン,jellymon,Jellymon,Jellymon,・Bibi Thunder・Bolt Knuckle・Spiral Kick,Mollusk,2,2,2,10,3,2,33,12
-26.data,3,ルカモン,rukamon,Rukamon,Dolphmon,・Shaking Pulse,Sea Animal,3,3,2,25,5,3,144,144
+26.data,3,ルカモン,rukamon,Rukamon,Dolphmon,・Shaking Pulse,Sea Animal,3,3,2,25,5,3,14,8
 26.data,4,テスラジェリーモン,teslajellymon,Teslajellymon,TeslaJellymon,・Physalist・Punishment Nettle・Vortex Sprite,Mollusk,3,2,0,20,4,3,15,14
-26.data,5,ゲソモン,gesomon,Gesomon,Gesomon,・Devil Bashing・Deadly Shade,Mollusk,3,1,1,15,4,2,120,120
+26.data,5,ゲソモン,gesomon,Gesomon,Gesomon,・Devil Bashing・Deadly Shade,Mollusk,3,1,1,15,4,2,33,4
 26.data,6,マンボモン,manbomon,Manbomon,Manbomon,・Balloon Mine・Global Glove,Mutant,7,4,3,20,5,3,12,4
-26.data,7,ホエーモン,whamon,Whamon,Whamon,・Tidal Wave,Sea Animal,4,3,2,35,12,4,89,89
+26.data,7,ホエーモン,whamon,Whamon,Whamon,・Tidal Wave,Sea Animal,4,3,2,35,12,4,20,8
 26.data,8,テティスモン,thetismon,Thetismon,Thetismon,・Biri Smasher・Hammer Thunder・Adue World・Dokutease,Aquatic Beast Man,4,2,1,30,10,5,18,12
-26.data,9,ハンギョモン,hangyomon,Hangyomon,Divermon,・Strike Fishing,Aquatic Beast Man,4,2,1,35,10,4,112,112
-26.data,10,マリンデビモン,marindevimon,Marindevimon,MarineDevimon,・Dark Deluge,Aquatic Beast Man,4,1,4,30,12,4,120,120
+26.data,9,ハンギョモン,hangyomon,Hangyomon,Divermon,・Strike Fishing,Aquatic Beast Man,4,2,1,35,10,4,35,21
+26.data,10,マリンデビモン,marindevimon,Marindevimon,MarineDevimon,・Dark Deluge,Aquatic Beast Man,4,1,4,30,12,4,20,5
 26.data,11,マリンエンジェモン,marinangemon,Marinangemon,MarineAngemon,・Ocean Love,Pixie,5,3,0,55,16,7,10,3
 26.data,12,エンシェントマーメイモン,ancientmermaimon,Ancientmermaimon,AncientMermaimon,・Great Maelstrom・Crystal Billow,Ancient Aquatic Beast Man,5,2,1,50,14,6,14,8
 26.data,13,プクモン,pukumon,Pukumon,Pukumon,・Needle Squall,Mutant,5,1,2,55,14,6,31,12
 27.data,0,ボタモン,botamon,Botamon,Botamon,・Acid Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
-27.data,1,コロモン,koromon,Koromon,Koromon,・Foam,Lesser,1,0,2,65535,65535,65535,65616,65616
+27.data,1,コロモン,koromon,Koromon,Koromon,・Foam,Lesser,1,0,2,65535,65535,65535,65535,65535
 27.data,2,アグモン（黒）,agumon-black,Agumon-Black,Agumon (Black),・Pepper Breath,Reptile,2,1,1,10,3,2,0,0
-27.data,3,グレイモン,greymon-first,Greymon,Greymon,・Mega Flame,Dinosaur,3,3,1,25,5,3,83,83
-27.data,4,モノクロモン,monochromon,Monochromon,Monochromon,・Volcanic Strike,Armored Dragon,3,2,3,20,5,2,110,110
+27.data,3,グレイモン,greymon-first,Greymon,Greymon,・Mega Flame,Dinosaur,3,3,1,25,5,3,4,0
+27.data,4,モノクロモン,monochromon,Monochromon,Monochromon,・Volcanic Strike,Armored Dragon,3,2,3,20,5,2,21,0
 27.data,5,グレイモン（青）,greymon_blue,Greymon_Blue,Greymon (Blue),・Mega Flame,Dinosaur,3,1,1,25,5,3,4,0
-27.data,6,ダークティラノモン,darktyranomon,Darktyranomon,DarkTyrannomon,・Fire Blast,Dinosaur,3,1,2,20,4,3,83,83
+27.data,6,ダークティラノモン,darktyranomon,Darktyranomon,DarkTyrannomon,・Fire Blast,Dinosaur,3,1,2,20,4,3,24,0
 27.data,7,メタルグレイモン：アルタラウスモード,metalgreymon_alter,Metalgreymon:Alterous Mode,MetalGreymon: Alterous Mode,・Positron Blaster・Alter Blade・Giga Destroyer・Trident Arm・Giga Storm,Android,4,3,1,35,10,5,13,13
 27.data,8,エクスティラノモン,ex-tyranomon,Ex-Tyranomon,ExTyrannomon,・Pretty Attack・Black Matter,Puppet,4,3,2,30,12,4,9,5
 27.data,9,ヴァーミリモン,vermillimon,Vermillimon,Vermilimon,・Volcanic Strike S・Hard Tackle,Armored Dragon,4,2,3,35,10,5,21,0
 27.data,10,マメティラモン,mametyramon,Mametyramon,Mametyramon,・Mame Bite 1000・Met Lariat,Mutant,4,2,1,30,8,6,30,4
-27.data,11,メタルグレイモン（ウィルス種）,metalgreymon-web,Metalgreymon-Vi,MetalGreymon (Virus),・Giga Destroyer,Android,4,1,1,35,12,4,106,106
-27.data,12,スカルグレイモン,skullgreymon,Skullgreymon,SkullGreymon,・Ground Zero・Oblivion Bird,Undead,4,1,3,30,16,4,106,106
+27.data,11,メタルグレイモン（ウィルス種）,metalgreymon-web,Metalgreymon-Vi,MetalGreymon (Virus),・Giga Destroyer,Android,4,1,1,35,12,4,13,9
+27.data,12,スカルグレイモン,skullgreymon,Skullgreymon,SkullGreymon,・Ground Zero・Oblivion Bird,Undead,4,1,3,30,16,4,13,21
 27.data,13,ビクトリーグレイモン,victorygreymon,Victorygreymon,VictoryGreymon,・Dramon Breaker・Trident Gaia・Victory Charge,Dragon Man,5,3,1,50,12,7,12,17
-27.data,14,ブラックウォーグレイモン,blackwargreymon,Blackwargreymon,BlackWarGreymon,・Dark Terra Force,Dragon Man,5,1,1,45,14,5,129,129
+27.data,14,ブラックウォーグレイモン,blackwargreymon,Blackwargreymon,BlackWarGreymon,・Dark Terra Force,Dragon Man,5,1,1,45,14,5,11,16
 27.data,15,ガイオウモン,gaioumon,Gaioumon,Gaiomon,・Will-O'-Wisp Slash・Gaia Reactor・Phosphorus Fire Attack,Dragon Man,5,1,0,60,10,9,4,8
 27.data,16,オメガモン ズワルト,omegamon_zwart,Omegamon_Zwart,Omnimon Zwart,・Supreme Cannon・Transcendent Sword,Holy Knight,5,3,2,60,14,7,12,2
 28.data,0,プニモン,punimon,Punimon,Punimon,・Acid Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
-28.data,1,ツノモン,tunomon,Tunomon,Tsunomon,・Acid Bubbles,Lesser,1,0,2,65535,65535,65535,65616,65616
+28.data,1,ツノモン,tunomon,Tunomon,Tsunomon,・Acid Bubbles,Lesser,1,0,2,65535,65535,65535,65535,65535
 28.data,2,ガブモン（黒）,gabumon_black,Gabumon_Black,Gabumon (Black),・Blue Blaster,Reptile,2,1,1,10,3,2,1,1
-28.data,3,ガルルモン,garurumon,Garurumon,Garurumon,・Fox Fire,Beast,3,3,1,25,5,3,84,84
-28.data,4,ドリモゲモン,drimogemon,Drimogemon,Drimogemon,・Drill Spin・Crusher Bone,Beast,3,2,4,20,5,2,112,112
+28.data,3,ガルルモン,garurumon,Garurumon,Garurumon,・Fox Fire,Beast,3,3,1,25,5,3,5,1
+28.data,4,ドリモゲモン,drimogemon,Drimogemon,Drimogemon,・Drill Spin・Crusher Bone,Beast,3,2,4,20,5,2,28,4
 28.data,5,ドルルモン,dorulumon,Dorulumon,Dorulumon,・Drill Buster・Drill Tornado・Drill Blader,Beast,3,1,2,20,4,3,14,12
 28.data,6,ガルルモン（黒）,garurumon_black,Garurumon_Black,Garurumon (Black),・Fox Fire,Beast,3,1,1,25,5,3,5,1
 28.data,7,ワーガルルモン：サジタリウスモード,waregarurumon_sagittarius,Waregarurumon:Sagittarius Mode,WereGarurumon: Sagittarius Mode,・Kaus Slugger・Alnas Shot・Wolf Claw,Beast Man,4,3,1,35,10,5,24,8
@@ -411,44 +411,44 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 28.data,15,メルクリモン,mercurymon,Mercurymon,Merukimon,・Thousand Fists・Spiritual Enchantment,Deity,5,1,0,60,12,8,19,5
 28.data,16,オメガモン ズワルト,omegamon_zwart,Omegamon_Zwart,Omnimon Zwart,・Supreme Cannon・Transcendent Sword,Holy Knight,5,3,2,60,14,7,12,2
 29.data,0,ボタモン,botamon,Botamon,Botamon,・Acid Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
-29.data,1,コロモン,koromon,Koromon,Koromon,・Foam,Lesser,1,0,2,65535,65535,65535,65616,65616
-29.data,2,アグモン,agumon,Agumon,Agumon,・Pepper Breath,Reptile,2,3,1,10,3,2,83,83
+29.data,1,コロモン,koromon,Koromon,Koromon,・Foam,Lesser,1,0,2,65535,65535,65535,65535,65535
+29.data,2,アグモン,agumon,Agumon,Agumon,・Pepper Breath,Reptile,2,3,1,10,3,2,0,0
 29.data,3,アグモン（黒）,agumon-black,Agumon-Black,Agumon (Black),・Pepper Breath,Reptile,2,1,1,10,3,2,0,0
-29.data,4,グレイモン,greymon-first,Greymon,Greymon,・Mega Flame,Dinosaur,3,3,1,25,5,3,83,83
-29.data,5,モノクロモン,monochromon,Monochromon,Monochromon,・Volcanic Strike,Armored Dragon,3,2,3,20,5,2,110,110
+29.data,4,グレイモン,greymon-first,Greymon,Greymon,・Mega Flame,Dinosaur,3,3,1,25,5,3,4,0
+29.data,5,モノクロモン,monochromon,Monochromon,Monochromon,・Volcanic Strike,Armored Dragon,3,2,3,20,5,2,21,0
 29.data,6,グレイモン（青）,greymon_blue,Greymon_Blue,Greymon (Blue),・Mega Flame,Dinosaur,3,1,1,25,5,3,4,0
-29.data,7,ダークティラノモン,darktyranomon,Darktyranomon,DarkTyrannomon,・Fire Blast,Dinosaur,3,1,2,20,4,3,83,83
-29.data,8,メタルグレイモン（ワクチン種）,metalgreymon-v,Metalgreymon-Va,MetalGreymon (Vaccine),・Trident Arm・Giga Destroyer・Giga Storm,Android,4,3,1,35,12,4,106,106
+29.data,7,ダークティラノモン,darktyranomon,Darktyranomon,DarkTyrannomon,・Fire Blast,Dinosaur,3,1,2,20,4,3,24,0
+29.data,8,メタルグレイモン（ワクチン種）,metalgreymon-v,Metalgreymon-Va,MetalGreymon (Vaccine),・Trident Arm・Giga Destroyer・Giga Storm,Android,4,3,1,35,12,4,13,2
 29.data,9,ヴァーミリモン,vermillimon,Vermillimon,Vermilimon,・Volcanic Strike S・Hard Tackle,Armored Dragon,4,2,3,35,10,5,21,0
-29.data,10,スカルグレイモン,skullgreymon,Skullgreymon,SkullGreymon,・Ground Zero・Oblivion Bird,Undead,4,1,3,30,16,4,106,106
-29.data,11,メタルグレイモン（ウィルス種）,metalgreymon-web,Metalgreymon-Vi,MetalGreymon (Virus),・Giga Destroyer,Android,4,1,1,35,12,4,106,106
-29.data,12,ウォーグレイモン,wargreymon,Wargreymon,WarGreymon,・Terra Force・Great Tornado,Dragon Man,5,3,1,45,14,5,95,95
+29.data,10,スカルグレイモン,skullgreymon,Skullgreymon,SkullGreymon,・Ground Zero・Oblivion Bird,Undead,4,1,3,30,16,4,13,21
+29.data,11,メタルグレイモン（ウィルス種）,metalgreymon-web,Metalgreymon-Vi,MetalGreymon (Virus),・Giga Destroyer,Android,4,1,1,35,12,4,13,9
+29.data,12,ウォーグレイモン,wargreymon,Wargreymon,WarGreymon,・Terra Force・Great Tornado,Dragon Man,5,3,1,45,14,5,10,17
 29.data,13,ビクトリーグレイモン,victorygreymon,Victorygreymon,VictoryGreymon,・Dramon Breaker・Trident Gaia・Victory Charge,Dragon Man,5,3,1,50,12,7,12,17
-29.data,14,ブラックウォーグレイモン,blackwargreymon,Blackwargreymon,BlackWarGreymon,・Dark Terra Force,Dragon Man,5,1,1,45,14,5,129,129
-29.data,15,オメガモン,omegamon,Omegamon,Omnimon,・Supreme Cannon・Transcendent Sword,Holy Knight,5,3,2,60,14,7,126,126
+29.data,14,ブラックウォーグレイモン,blackwargreymon,Blackwargreymon,BlackWarGreymon,・Dark Terra Force,Dragon Man,5,1,1,45,14,5,11,16
+29.data,15,オメガモン,omegamon,Omegamon,Omnimon,・Supreme Cannon・Transcendent Sword,Holy Knight,5,3,2,60,14,7,12,2
 29.data,16,オメガモン ズワルト,omegamon_zwart,Omegamon_Zwart,Omnimon Zwart,・Supreme Cannon・Transcendent Sword,Holy Knight,5,3,2,60,14,7,12,2
 30.data,0,プニモン,punimon,Punimon,Punimon,・Acid Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
-30.data,1,ツノモン,tunomon,Tunomon,Tsunomon,・Acid Bubbles,Lesser,1,0,2,65535,65535,65535,65616,65616
-30.data,2,ガブモン,gabumon,Gabumon,Gabumon,・Blue Blaster,Reptile,2,2,1,10,3,2,84,84
+30.data,1,ツノモン,tunomon,Tunomon,Tsunomon,・Acid Bubbles,Lesser,1,0,2,65535,65535,65535,65535,65535
+30.data,2,ガブモン,gabumon,Gabumon,Gabumon,・Blue Blaster,Reptile,2,2,1,10,3,2,1,1
 30.data,3,ガブモン（黒）,gabumon_black,Gabumon_Black,Gabumon (Black),・Blue Blaster,Reptile,2,1,1,10,3,2,1,1
-30.data,4,ガルルモン,garurumon,Garurumon,Garurumon,・Fox Fire,Beast,3,3,1,25,5,3,84,84
-30.data,5,ドリモゲモン,drimogemon,Drimogemon,Drimogemon,・Drill Spin・Crusher Bone,Beast,3,2,4,20,5,2,112,112
+30.data,4,ガルルモン,garurumon,Garurumon,Garurumon,・Fox Fire,Beast,3,3,1,25,5,3,5,1
+30.data,5,ドリモゲモン,drimogemon,Drimogemon,Drimogemon,・Drill Spin・Crusher Bone,Beast,3,2,4,20,5,2,28,4
 30.data,6,ドルルモン,dorulumon,Dorulumon,Dorulumon,・Drill Buster・Drill Tornado・Drill Blader,Beast,3,1,2,20,4,3,14,12
 30.data,7,ガルルモン（黒）,garurumon_black,Garurumon_Black,Garurumon (Black),・Fox Fire,Beast,3,1,1,25,5,3,5,1
-30.data,8,ワーガルルモン,weregarrumon,Weregarurumon,WereGarurumon,・Wolf Claw,Beast Man,4,3,1,35,12,4,114,114
+30.data,8,ワーガルルモン,weregarrumon,Weregarurumon,WereGarurumon,・Wolf Claw,Beast Man,4,3,1,35,12,4,24,4
 30.data,9,パンダモン,pandamon,Pandamon,Pandamon,・Animal Nail,Puppet,4,2,3,30,12,5,15,8
 30.data,10,イェーガードルルモン,yaegerdorurumon,Yaegerdorurumon,JaegerDorulumon,・WeiB Spirale・Schwarz Nagel,Beast Man,5,1,2,30,14,5,12,18
 30.data,11,ワーガルルモン（黒）,weregarurumon_black,Weregarurumon_Black,WereGarurumon (Black),・Wolf Claw,Beast Man,4,1,1,35,12,4,24,4
-30.data,12,メタルガルルモン,metalgarurumon,Metalgarurumon,MetalGarurumon,・Freezing Breath・Garuru Tomahawk・Ice Wolf Claw,Android,5,2,1,45,14,5,84,84
+30.data,12,メタルガルルモン,metalgarurumon,Metalgarurumon,MetalGarurumon,・Freezing Breath・Garuru Tomahawk・Ice Wolf Claw,Android,5,2,1,45,14,5,5,9
 30.data,13,ズィードガルルモン,zdgarurumon,Zdgarurumon,ZeedGarurumon,・Zeed Cannon・Fullmetal Blaze・Blowback Breath,Android,5,2,2,50,12,7,23,17
 30.data,14,メタルガルルモン（黒）,metalgarurumon_black,Metalgarurumon_Black,MetalGarurumon (Black),・Freezing Breath・Garuru Tomahawk・Ice Wolf Claw,Android,5,1,1,45,14,5,5,9
-30.data,15,オメガモン,omegamon,Omegamon,Omnimon,・Supreme Cannon・Transcendent Sword,Holy Knight,5,3,2,60,14,7,126,126
+30.data,15,オメガモン,omegamon,Omegamon,Omnimon,・Supreme Cannon・Transcendent Sword,Holy Knight,5,3,2,60,14,7,12,2
 30.data,16,オメガモン ズワルト,omegamon_zwart,Omegamon_Zwart,Omnimon Zwart,・Supreme Cannon・Transcendent Sword,Holy Knight,5,3,2,60,14,7,12,2
 31.data,0,フウカシタメダル,mb_weathered medal,Weathered Medal,Weathered Medal,・Unknown,None,0,0,2,65535,65535,65535,65535,65535
 31.data,1,メダル,mb_medal,Medal,Medal,・Unknown,None,1,0,2,65535,65535,65535,65535,65535
 31.data,2,ティンペット,mb_tinpet,Tinpet,Tinpet,・Muscle Cable,None,2,0,2,10,3,2,15,14
-31.data,3,グレイモン,greymon-first,Greymon,Greymon,・Mega Flame,Dinosaur,3,3,1,25,5,3,83,83
-31.data,4,ガルルモン,garurumon,Garurumon,Garurumon,・Fox Fire,Beast,3,3,1,25,5,3,84,84
+31.data,3,グレイモン,greymon-first,Greymon,Greymon,・Mega Flame,Dinosaur,3,3,1,25,5,3,4,0
+31.data,4,ガルルモン,garurumon,Garurumon,Garurumon,・Fox Fire,Beast,3,3,1,25,5,3,5,1
 31.data,5,メタビー(未完成),mb_metabee_unfinished,Metabee(Unfinished),Metabee(Unfinished),・Meta Missile・Meta Revolver,None,3,0,0,20,6,2,23,18
 31.data,6,ロクショウ（未完成）,mb_rokusho_unfinished,Rokusho(Unfinished),Rokusho(Unfinished),・Antenna・Chanbara Sword,None,3,0,3,20,6,2,12,8
 31.data,7,グレイウォーズ,mb_greywars,GreyWars,GreyWars,・Kanzen Guard・Charge Claw・Gyakkyo,None,4,0,1,35,12,4,10,2
@@ -477,7 +477,7 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 33.data,0,ポポモン,popomon,Popomon,Popomon,・Hair Mist,Slime,0,0,2,65535,65535,65535,65535,65535
 33.data,1,フリモン,frimon,Frimon,Frimon,・Tail Slap,Lesser,1,0,2,65535,65535,65535,65535,65535
 33.data,2,レオルモン,liollmon,Liollmon,Liollmon,・Lio Claw・Critical Bite,Holy Beast,2,3,1,10,3,2,24,4
-33.data,3,ガジモン,gazimon,Gazimon,Gazimon,・Electric Stun Blast,Mammal,2,1,3,10,3,2,114,114
+33.data,3,ガジモン,gazimon,Gazimon,Gazimon,・Electric Stun Blast,Mammal,2,1,3,10,3,2,26,11
 33.data,4,レーベモン,louwemon,Louwemon,Loweemon,・Ewig Schlaf・Endlich Meteor,Warrior,8,6,2,25,5,3,14,2
 33.data,5,ライアモン,liamon,Liamon,Liamon,・Thunder of the King・Critical Strike,Holy Beast,3,3,1,20,5,2,6,4
 33.data,6,ダスクモン,duskmon,Duskmon,Duskmon,・Geist Abend・Eroberung,Wizard,8,6,0,20,4,3,12,8
@@ -486,7 +486,7 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 33.data,9,カイザーレオモン,kaiserleomon,Kaiserleomon,JagerLoweemon,・Schwarz Donner・Schwarz Konig,Android,8,6,2,35,9,4,11,3
 33.data,10,ローダーレオモン,loaderleomon,Loaderliomon,LoaderLeomon,・Bowling Storm・Loader Morning Star,Machine,4,3,1,35,14,3,24,4
 33.data,11,ベルグモン,velgrmon,Velgrmon,Velgrmon,・Zone Deleter・Master of Darkness,Giant Bird,8,6,1,30,7,4,33,21
-33.data,12,スカルサタモン,skullsatamon,Skullsatamon,SkullSatamon,・Nail Bone,Undead,4,1,3,30,7,4,129,129
+33.data,12,スカルサタモン,skullsatamon,Skullsatamon,SkullSatamon,・Nail Bone,Undead,4,1,3,30,7,4,11,3
 33.data,13,ルーチェモン：フォールダウンモード,rucemonfalldownmode,Rucemon:Falldownmode,Lucemon: Chaos Mode,・Paradise Lost・Dead or Alive,Evil King,4,1,0,70,14,9,10,16
 33.data,14,デスモン,deathmon,Deathmon,Ghoulmon,・Death Arrow・Explosion Eye,Evil King,5,2,1,50,12,7,14,16
 33.data,15,ディノタイガモン,dinotigermon,Dinotigermon,Dinotigermon,・Ground Fang・Highland Fang,Ancient Beast,5,2,3,45,12,6,29,5
@@ -497,8 +497,8 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 34.data,3,リュウダモン,ryudamon,Ryudamon,Ryudamon,・Kabutogaeshi・Iai Blade,Beast,2,3,2,10,3,2,14,8
 34.data,4,ズバイガーモン,zubaeagermon,Zubaeagermon,ZubaEagermon,・Road T(w)o Decade・Vantheon,Weapon,3,3,1,25,5,3,12,4
 34.data,5,ギンリュウモン,ginryumon,Ginryumon,Ginryumon,・Boujinha・Metal Armor Blade,Beast Dragon,3,3,2,20,4,3,14,18
-34.data,6,ムシャモン,musyamon,Musyamon,Musyamon,・Kirisute Gomen,Wizard,3,1,3,20,4,3,138,138
-34.data,7,ドクグモン,dokugumon,Dokugumon,Dokugumon,・Venom Blast,Insectoid,3,1,0,20,5,2,87,87
+34.data,6,ムシャモン,musyamon,Musyamon,Musyamon,・Kirisute Gomen,Wizard,3,1,3,20,4,3,12,8
+34.data,7,ドクグモン,dokugumon,Dokugumon,Dokugumon,・Venom Blast,Insectoid,3,1,0,20,5,2,26,11
 34.data,8,デュラモン,duramon,Duramon,Duramon,・Glass Slash・Blinded,Weapon,4,3,1,35,9,4,12,2
 34.data,9,ヒシャリュウモン,hisyaryumon,Hisyaryumon,Hisyaryumon,・Legendary Dragon Blade・Juouguruma,Beast Dragon,4,3,2,35,8,5,12,18
 34.data,10,アシュラモン,asuramon,Asuramon,Asuramon,・Fire Fist of Shiva,Wizard,4,3,0,35,7,5,16,14
@@ -517,8 +517,8 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 35.data,6,レッパモン,reppamon,Reppamon,Reppamon,・Rolling Tackle・Lion Claw・Razor Wind,Holy Beast,3,3,2,20,4,3,12,8
 35.data,7,ブラックテイルモン Uver.,blacktailmon_uver,Blacktailmon Uver.,BlackGatomon Uver.,・Lightning Paw・Bag Tag,Dark Beast,3,1,2,20,5,2,19,4
 35.data,8,ライジルドモン,raijiludomon,Raijiludomon,RaijiLudomon,・Lightning Buster・Rocket Messer,Armor,4,2,3,35,9,4,10,13
-35.data,9,デジタマモン,digitamamon,Digitamamon,Digitamamon,・Enigma・Nightmare Syndrome,Perfect,4,2,4,25,9,4,86,86
-35.data,10,ピッコロモン,picklemon,Picklemon,Piximon,・Pit Bomb,Pixie,4,2,2,30,6,5,96,96
+35.data,9,デジタマモン,digitamamon,Digitamamon,Digitamamon,・Enigma・Nightmare Syndrome,Perfect,4,2,4,25,9,4,20,5
+35.data,10,ピッコロモン,picklemon,Picklemon,Piximon,・Pit Bomb,Pixie,4,2,2,30,6,5,32,19
 35.data,11,レアレアモン,rareraremon,Rareraremon,RareRaremon,・Digestion・Decayson,Undead,4,1,4,30,10,3,30,11
 35.data,12,マンティコアモン,manticoremon,Manticoremon,Manticoremon,・Trinity Gospel・Acid Injection,Dark Beast,4,1,0,35,8,4,26,3
 35.data,13,ブリウエルドラモン,bryweludramon,Bryweludramon,BryweLudramon,・Crimson Storm・Blast Smash,Armor,5,2,3,50,15,6,4,0
@@ -528,11 +528,11 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 36.data,0,ボタモン,botamon,Botamon,Botamon,・Acid Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
 36.data,1,ワニャモン,wanyamon,Wanyamon,Wanyamon,・Smile Fang,Lesser,1,0,2,65535,65535,65535,65535,65535
 36.data,2,ストラビモン,storabimon,Storabimon,Strabimon,・Licht Nagel,Beast Man,8,6,1,10,3,2,24,4
-36.data,3,ギザモン,gizamon,Gizamon,Gizamon,・Spiral Edge,Sea Animal,2,1,3,10,3,2,90,90
+36.data,3,ギザモン,gizamon,Gizamon,Gizamon,・Spiral Edge,Sea Animal,2,1,3,10,3,2,12,8
 36.data,4,ヴォルフモン,wolfmon,Wolfmon,Lobomon,・Licht Sieger・Zwei Sieger,Warrior,8,6,1,25,5,3,12,8
 36.data,5,ドーベルモン,dobermon,Dobermon,Dobermon,・Grau Larm・Schwarz Strahl,Dark Beast,3,3,2,20,5,2,31,3
 36.data,6,ラーナモン,ranamon,Ranamon,Lanamon,・Rain Stream・Jealousy Rain,Pixie,8,6,2,20,4,3,3,10
-36.data,7,エビドラモン,ebidramon,Ebidramon,Ebidramon,・Twin Neptune,Aquatic,3,2,3,15,4,2,90,90
+36.data,7,エビドラモン,ebidramon,Ebidramon,Ebidramon,・Twin Neptune,Aquatic,3,2,3,15,4,2,30,18
 36.data,8,ベオウルフモン,beowolfmon,Beowolfmon,Beowolfmon,・Licht Angriff・Zweihander,Warrior,8,6,1,40,9,4,12,9
 36.data,9,ガルムモン,garummon,Garummon,KendoGarurumon,・Speed Star・Solar Laser,Android,8,6,2,35,8,5,10,4
 36.data,10,カルマーラモン,calamaramon,Calamaramon,Calmaramon,・Nero Corso・Titanic Charge,Aquatic,8,6,2,30,7,4,26,4
@@ -547,7 +547,7 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 37.data,2,コカブテリモン,kokabuterimon,Kokabuterimon,KoKabuterimon,・Scoop Smash・Beetle Lariat,Insectoid,2,1,1,10,3,2,14,4
 37.data,3,コクワモン,kokuwamon,Kokuwamon,Kokuwamon,・Mini Scissor Claw,Machine,2,2,3,10,3,2,30,13
 37.data,4,ブリッツモン,blitzmon,Blitzmon,Beetlemon,・Thor's Hammer・Mjolnir Thunder,Android,8,6,1,25,5,3,6,14
-37.data,5,サンダーボールモン,thunderballmon,Thunderballmon,Thundermon,・Thunder Ball,Mutant,3,2,2,15,4,2,92,92
+37.data,5,サンダーボールモン,thunderballmon,Thunderballmon,Thundermon,・Thunder Ball,Mutant,3,2,2,15,4,2,10,2
 37.data,6,メルキューレモン,mercuremon,Mercuremon,Mercurymon,・Generous Mirror・Offset Reflector,Mutant,8,6,3,20,4,3,11,3
 37.data,7,ブレイドクワガーモン,bladekuwagamon,Bladekuwagamon,BladeKuwagamon,・Spark Blade・Air Knife,Machine,3,1,1,20,5,2,12,8
 37.data,8,ライノカブテリモン,rhinokabuterimon,Rhinokabuterimon,RhinoKabuterimon,・Condenser Storm・Thunder Laser,Insectoid,8,6,1,40,8,5,2,13
@@ -560,19 +560,19 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 37.data,15,エンシェントワイズモン,ancientwisetmon,Ancientwisetmon,AncientWisemon,・Laplace's Demon・Elder Sign,Ancient Mutant,5,1,3,50,10,8,29,5
 37.data,16,ムルムクスモン,murmukusmon,Murmukusmon,Murmukusmon,・Gehenna Flame,Evil King,5,1,2,50,14,7,4,0
 124.data,0,ボタモン,botamon,Botamon,Botamon,・Acid Bubbles,Slime,0,0,0,65535,65535,65535,65535,65535
-124.data,1,コロモン,koromon,Koromon,Koromon,・Foam,Lesser,1,0,0,65535,65535,65535,65616,65616
-124.data,2,アグモン,agumon,Agumon,Agumon,・Pepper Breath,Reptile,2,3,1,3900,3200,1050,83,83
+124.data,1,コロモン,koromon,Koromon,Koromon,・Foam,Lesser,1,0,0,65535,65535,65535,65535,65535
+124.data,2,アグモン,agumon,Agumon,Agumon,・Pepper Breath,Reptile,2,3,1,3900,3200,1050,40,23
 124.data,3,ベタモン,betamon,Betamon,Betamon,・Electric Shock,Amphibian,2,1,3,3900,3000,900,41,24
-124.data,4,グレイモン,greymon-first,Greymon,Greymon,・Mega Flame,Dinosaur,3,3,1,5100,3500,1300,83,83
-124.data,5,エアドラモン,airdramon,Airdramon,Airdramon,・Spinning Needle,Mythical Beast,3,3,1,5500,3600,1160,116,116
-124.data,6,ティラノモン,tyranomon,Tyranomon,Tyrannomon,・Fire Breath,Dinosaur,3,2,2,4400,3700,1350,107,107
-124.data,7,シードラモン,seadramon,Seadramon,Seadramon,・Ice Blast,Aquatic,3,2,2,4700,4000,1260,117,117
-124.data,8,メラモン,meramon,Meramon,Meramon,・Burning Fist,Fire,3,2,2,5000,3600,1260,93,93
-124.data,9,デビモン,devimon,Devimon,Devimon,・Death Claw,Dark Angel,3,1,3,5200,3200,1300,119,119
-124.data,10,ヌメモン,numemon,Numemon,Numemon,・Poop Toss,Mollusk,3,1,4,4700,3400,1160,94,94
-124.data,11,メタルグレイモン（ウィルス種）,metalgreymon-web,Metalgreymon-Vi,MetalGreymon (Virus),・Giga Destroyer,Android,4,1,3,5400,5100,1500,106,106
-124.data,12,マメモン,mamemon,Mamemon,Mamemon,・Smiley Bomb,Mutant,4,2,2,5500,4400,1540,102,102
-124.data,13,もんざえモン,monzaemon,Monzaemon,Monzaemon,・Hearts Attack,Puppet,4,3,1,5700,4500,1510,118,118
+124.data,4,グレイモン,greymon-first,Greymon,Greymon,・Mega Flame,Dinosaur,3,3,1,5100,3500,1300,42,25
+124.data,5,エアドラモン,airdramon,Airdramon,Airdramon,・Spinning Needle,Mythical Beast,3,3,1,5500,3600,1160,44,27
+124.data,6,ティラノモン,tyranomon,Tyranomon,Tyrannomon,・Fire Breath,Dinosaur,3,2,2,4400,3700,1350,42,25
+124.data,7,シードラモン,seadramon,Seadramon,Seadramon,・Ice Blast,Aquatic,3,2,2,4700,4000,1260,44,27
+124.data,8,メラモン,meramon,Meramon,Meramon,・Burning Fist,Fire,3,2,2,5000,3600,1260,43,26
+124.data,9,デビモン,devimon,Devimon,Devimon,・Death Claw,Dark Angel,3,1,3,5200,3200,1300,43,26
+124.data,10,ヌメモン,numemon,Numemon,Numemon,・Poop Toss,Mollusk,3,1,4,4700,3400,1160,45,28
+124.data,11,メタルグレイモン（ウィルス種）,metalgreymon-web,Metalgreymon-Vi,MetalGreymon (Virus),・Giga Destroyer,Android,4,1,3,5400,5100,1500,46,29
+124.data,12,マメモン,mamemon,Mamemon,Mamemon,・Smiley Bomb,Mutant,4,2,2,5500,4400,1540,47,30
+124.data,13,もんざえモン,monzaemon,Monzaemon,Monzaemon,・Hearts Attack,Puppet,4,3,1,5700,4500,1510,48,31
 124.data,14,ブリッツグレイモン,blitzgreymon,Blitzgreymon,BlitzGreymon,・Plasma Stake・Thunder Vernier・Elec Guard,Android,5,1,3,5900,5300,2000,41,24
 124.data,15,バンチョーマメモン,banchomamemon,Banchomamemon,BanchoMamemon,・Golden Rush・Senbon Dokkan・Bukkomi Otokodama,Mutant,5,2,2,5800,4900,1900,47,30
 124.data,16,しんもんざえモン,shinmonzaemon,Shinmonzaemon,ShinMonzaemon,・Nightmare Rain・Fantastic Smash・Sweetheart Attack,Puppet,5,3,1,6500,5100,1950,48,31
@@ -602,7 +602,7 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 125.data,17,ボコモン,bokomon,Bokomon,Bokomon,・Wild Escape Dash,Mutant,2,3,1,4100,2800,1100,18,18
 125.data,18,コエモン,koemon,Koemon,Monmon,・Mischievous Hoop・Baby Sling,Beast,2,1,0,4500,3000,1000,35,6
 125.data,19,シールズドラモン,sealsdramon,Sealsdramon,Sealsdramon,・Death Behind・Scouter Monoeye,Android,3,1,1,5300,3500,1250,14,8
-125.data,20,ヴァンデモン,vamdemon,Vamdemon,Myotismon,・Night Raid,Undead,4,1,2,5900,4800,1450,103,103
+125.data,20,ヴァンデモン,vamdemon,Vamdemon,Myotismon,・Night Raid,Undead,4,1,2,5900,4800,1450,37,3
 125.data,21,クズハモン,kuzuhamon,Kuzuhamon,Kuzuhamon,・Illuminator・Taizoukai Mandala,Deity,5,2,1,6300,5300,1900,11,3
 125.data,22,プロキシマモン,proximamon,Proximamon,Proximamon,・Extinction Cloud・Light of Re-creation,Unique,5,1,2,6500,4900,2000,11,21
 126.data,0,ピョンモン,pyonmon,Pyonmon,Pyonmon,・Earwhip,Slime,0,0,2,65535,65535,65535,65535,65535
@@ -615,7 +615,7 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 126.data,7,ラモールモン,lamortmon,Lamortmon,Lamortmon,・Kasaiso・Koha Batto・Fuga Rekkanjin・Gouon Kieizan,Beast,4,3,2,5800,4600,1550,20,8
 126.data,8,ケルベロモン,cerberumon,Cerberumon,Cerberusmon,・Inferno Gate・Mad Dog Fire,Dark Beast,4,3,0,5700,4500,1500,29,0
 126.data,9,ヒポグリフォモン,hippogriffomon,Hippogriffomon,HippoGryphonmon,・Heat Wave,Mythical Beast,4,2,0,6000,4200,1500,4,0
-126.data,10,デジタマモン,digitamamon,Digitamamon,Digitamamon,・Enigma・Nightmare Syndrome,Perfect,4,2,4,5300,4200,1610,86,86
+126.data,10,デジタマモン,digitamamon,Digitamamon,Digitamamon,・Enigma・Nightmare Syndrome,Perfect,4,2,4,5300,4200,1610,20,5
 126.data,11,マタドゥルモン,matadrmon,Matadrmon,Matadormon,・Thousand Arrows・Bulldog・Earth-Shattering Stomp,Undead,4,1,2,6200,4600,1550,14,18
 126.data,12,メフィスモン,mephismon,Mephismon,Mephistomon,・Black Sabbath・Death Cloud,Dark Angel,4,1,1,5800,4200,1610,29,11
 126.data,13,ディルビットモン,diarbbitmon,Diarbbitmon,Diarbbitmon,・Truskmore Advance・Twin Spear Pursuit・Buck Rush,Beast Knight,5,3,2,6300,5300,2100,14,8
@@ -627,15 +627,15 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 126.data,19,フェレスモン,phelesmon,Phelesmon,Feresmon,・Black Statue・Demon's Shout,Dark Angel,4,1,4,6000,4200,1550,31,21
 126.data,20,オウリアモン,oleamon,Oleamon,Oleamon,・Jameal・Leaf Shredder,Carnivorous Vegetation,4,1,1,5550,4800,1500,26,5
 126.data,21,バステモン,bastemon,Bastemon,Bastemon,・Helter Skelter・Vampire Dance,Beast Man,4,1,2,5800,4600,1400,9,5
-126.data,22,ピエモン,piemon,Piemon,Piedmon,・Trump Sword,Wizard,5,1,0,6700,5000,1950,122,122
+126.data,22,ピエモン,piemon,Piemon,Piedmon,・Trump Sword,Wizard,5,1,0,6700,5000,1950,12,8
 127.data,0,プヨモン,puyomon,Puyomon,Puyomon,・Static Cloud,Slime,0,0,2,65535,65535,65535,65535,65535
 127.data,1,プヨヨモン,puyoyomon,Puyoyomon,Puyoyomon,・Static Zone,Lesser,1,0,2,65535,65535,65535,65535,65535
 127.data,2,ジェリーモン,jellymon,Jellymon,Jellymon,・Bibi Thunder・Bolt Knuckle・Spiral Kick,Mollusk,2,2,1,5200,2950,1000,2,13
-127.data,3,イッカクモン,ikkakumon,Ikkakumon,Ikkakumon,・Harpoon Torpedo,Sea Beast,3,3,1,5500,3700,1250,112,112
+127.data,3,イッカクモン,ikkakumon,Ikkakumon,Ikkakumon,・Harpoon Torpedo,Sea Beast,3,3,1,5500,3700,1250,14,4
 127.data,4,トビウモン,tobiumon,Tobiumon,Tobiumon,・Suckerfish Darts・Flying Finish,Aquatic,3,3,0,5600,3600,1200,24,9
 127.data,5,テスラジェリーモン,teslajellymon,Teslajellymon,TeslaJellymon,・Physalist・Punishment Nettle・Vortex Sprite,Mollusk,3,2,1,5800,3400,1200,2,13
 127.data,6,カラツキヌメモン,karatukinumemon,Karatukinumemon,ShellNumemon,・Shell's Attack,Crustacean,3,1,3,4800,3000,1150,27,15
-127.data,7,ズドモン,zudomon,Zudomon,Zudomon,・Vulcan's Hammer,Sea Beast,4,3,2,5300,4500,1610,99,99
+127.data,7,ズドモン,zudomon,Zudomon,Zudomon,・Vulcan's Hammer,Sea Beast,4,3,2,5300,4500,1610,31,13
 127.data,8,マリンキメラモン,marinchimairamon,Marinchimairamon,MarineChimairamon,・Poseidon Vortex・Aqua Viper,Composite,4,3,1,5600,4000,1610,8,10
 127.data,9,テティスモン,thetismon,Thetismon,Thetismon,・Biri Smasher・Hammer Thunder・Adue World・Dokutease,Aquatic Beast Man,4,2,1,6000,4200,1600,18,13
 127.data,10,アノマロカリモン（X抗体）,anomalocarimon-x,Anomalocarimon-X,Scorpiomon (X Antibody),・Stinger Surprise,Ancient Crustacean,4,2,3,6200,4600,1500,30,10
@@ -652,18 +652,18 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 127.data,21,トロピアモン,toropiamon,Toropiamon,Toropiamon,・Petally Carnage・Tropical Venom,Vegetation,4,1,0,5800,4200,1610,26,12
 127.data,22,クティーラモン,cthyllamon,Cthyllamon,Cthyllamon,・Buccal Rush・Ocean Hell・Aqua Grinder,Pixie,5,1,0,6500,5000,2100,11,3
 128.data,0,チコモン,chicomon,Chicomon,Chibomon,・Acid Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
-128.data,1,チビモン,chibimon,Chibimon,DemiVeemon,・Hop Attack,Baby Dragon,1,0,2,65535,65535,65535,65616,65616
-128.data,2,ブイモン,v-mon,Veemon,V-Mon,・Boom Boom Punch・Veemon Headbutt,Mini Dragon,2,4,1,4500,3500,900,87,87
-128.data,3,エクスブイモン,xv-mon,Xv-Mon,ExVeemon,・Strong Crunch・Vee Laser,Mythical Dragon,3,4,1,5000,3500,1300,137,137
-128.data,4,パイルドラモン,paildramon,Paildramon,Paildramon,・Sting Strike・Death Parade Blaster,Dragon Man,4,4,2,5500,4800,1450,139,139
-128.data,5,インペリアルドラモン：ドラゴンモード,imperialdramondragonmode,Imperialdramon:Dragonmode,Imperialdramon: Dragon Mode,・Mega Death,Ancient Dragon,5,4,2,6800,4800,1950,129,129
+128.data,1,チビモン,chibimon,Chibimon,DemiVeemon,・Hop Attack,Baby Dragon,1,0,2,65535,65535,65535,65535,65535
+128.data,2,ブイモン,v-mon,Veemon,V-Mon,・Boom Boom Punch・Veemon Headbutt,Mini Dragon,2,4,1,4500,3500,900,17,4
+128.data,3,エクスブイモン,xv-mon,Xv-Mon,ExVeemon,・Strong Crunch・Vee Laser,Mythical Dragon,3,4,1,5000,3500,1300,33,8
+128.data,4,パイルドラモン,paildramon,Paildramon,Paildramon,・Sting Strike・Death Parade Blaster,Dragon Man,4,4,2,5500,4800,1450,24,2
+128.data,5,インペリアルドラモン：ドラゴンモード,imperialdramondragonmode,Imperialdramon:Dragonmode,Imperialdramon: Dragon Mode,・Mega Death,Ancient Dragon,5,4,2,6800,4800,1950,10,17
 128.data,6,リーフモン,leafmon,Leafmon,Leafmon,・Acid Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
 128.data,7,ミノモン,minomon,Minomon,Minomon,・Pinecone,Larva,1,0,2,65535,65535,65535,65535,65535
-128.data,8,ワームモン,wormmon,Wormmon,Wormmon,・Sticky Net・Silk Thread,Larva,2,4,1,3900,3000,1200,87,87
-128.data,9,スティングモン,stingmon,Stingmon,Stingmon,・Spiking Strike,Insectoid,3,4,1,5100,3800,1200,112,112
+128.data,8,ワームモン,wormmon,Wormmon,Wormmon,・Sticky Net・Silk Thread,Larva,2,4,1,3900,3000,1200,25,18
+128.data,9,スティングモン,stingmon,Stingmon,Stingmon,・Spiking Strike,Insectoid,3,4,1,5100,3800,1200,14,4
 128.data,10,ディノビーモン,dinobeemon,Dinobeemon,Dinobeemon,・Hell Masquerade,Mutant,4,4,2,5900,4900,1300,25,18
-128.data,11,インペリアルドラモン：ファイターモード,imperialdramonfightermode,Imperialdramon:Fightermode,Imperialdramon: Fighter Mode,・Positron Laser・Giga Death,Ancient Dragon Man,5,4,0,6000,5800,2000,86,86
-128.data,12,インペリアルドラモン：パラディンモード,imperialdramonpaladinmode,Imperialdramon:Paladinmode,Imperialdramon: Paladin Mode,・Omni Blade,Ancient Holy Knight,5,3,0,6400,5500,2200,138,138
+128.data,11,インペリアルドラモン：ファイターモード,imperialdramonfightermode,Imperialdramon:Fightermode,Imperialdramon: Fighter Mode,・Positron Laser・Giga Death,Ancient Dragon Man,5,4,0,6000,5800,2000,12,2
+128.data,12,インペリアルドラモン：パラディンモード,imperialdramonpaladinmode,Imperialdramon:Paladinmode,Imperialdramon: Paladin Mode,・Omni Blade,Ancient Holy Knight,5,3,0,6400,5500,2200,12,8
 129.data,0,プチモン,petitmon,Petitmon,Petitmon,・Hot Breath,Slime,0,0,2,65535,65535,65535,65535,65535
 129.data,1,ベビドモン,babydmon,Babydmon,Bebydomon,・Hot Gas,Baby Dragon,1,0,2,65535,65535,65535,65535,65535
 129.data,2,アグモン（２００６アニメ版）,agumon-2006,Agumon-2006,Agumon (2006 Anime Version),・Pepper Breath・Baby Burner,Dinosaur,2,3,2,4500,3300,1000,0,0
@@ -695,7 +695,7 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 130.data,5,ガオガモン,gaogamon,Gaogamon,Gaogamon,・Dash Double Claw・Gaoga Hound・Spiral Blow,Beast,3,2,1,6500,3400,1200,24,10
 130.data,6,ファイラモン,firamon,Firamon,Firamon,・Flame Dive・Fira Claw・Fira Bomb,Beast,3,3,2,5000,3700,1310,24,0
 130.data,7,レキスモン,lekismon,Lekismon,Lekismon,・Moon Night Bomb・Tear Arrow・Moon Night Kick,Beast Man,3,2,3,5500,3600,1100,36,7
-130.data,8,レオモン,leomon,Leomon,Leomon,・Fist of the Beast King,Beast Man,3,3,0,5000,3300,1100,93,93
+130.data,8,レオモン,leomon,Leomon,Leomon,・Fist of the Beast King,Beast Man,3,3,0,5000,3300,1100,15,14
 130.data,9,マッハガオガモン,machgaogamon,Machgaogamon,MachGaogamon,・Gaoga Tornado・Winning Knuckle・Howling Cannon,Android,4,2,1,8000,3100,1500,18,14
 130.data,10,フレアモン,flaremon,Flaremon,Flaremon,・Crimson Wave of the Beast King・Crimson Lion Dance・Purifying Howl,Beast Man,4,3,1,5300,4400,1600,16,2
 130.data,11,クレシェモン,crescemon,Crescemon,Crescemon,・Lunatic Dance・Ice Archery・Dark Archery,Wizard,4,2,1,7500,4400,1450,14,8
@@ -716,12 +716,12 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 131.data,3,エリスモン,herissmon,Herissmon,Herissmon,・Lightning Fur・Needle-Point Dive,Mammal,2,2,2,4600,3000,1000,10,4
 131.data,4,ルガルモン,loogarmon,Loogarmon,Loogarmon,・Howling Burner・Flame Blow,Dark Beast,3,1,1,5400,3300,1300,4,0
 131.data,5,フィルモン,filmon,Filmon,Filmon,・Lightning Stinger・Crimson Slash,Beast Man,3,2,2,5200,3600,1200,24,4
-131.data,6,ティラノモン,tyranomon,Tyranomon,Tyrannomon,・Fire Breath,Dinosaur,3,2,2,5000,3700,1200,107,107
+131.data,6,ティラノモン,tyranomon,Tyranomon,Tyrannomon,・Fire Breath,Dinosaur,3,2,2,5000,3700,1200,4,0
 131.data,7,ダメモン,damemon,Damemon,Damemon,・Buzzing Fist・Gun Vulcan・Boo-st Attack,Mutant,3,1,4,4800,3300,1150,23,15
 131.data,8,ソルガルモン,soloogarmon,Soloogarmon,Soloogarmon,・Prominence Laser・Eruption Howling・Skoll Rage,Dark Beast,4,1,1,6200,4300,1550,4,0
 131.data,9,スティフィルモン,stiffilmon,Stiffilmon,Stefilmon,・Giga Crimson Dive・Vermilion Vortex,Beast Man,4,2,2,5600,4600,1500,24,4
 131.data,10,ヘルガルモン,helloogarmon,Helloogarmon,Helloogarmon,・Howling Burst・Inferno Claw・Hati Embrace,Dark Beast,4,1,3,4800,4000,1600,4,0
-131.data,11,アンドロモン,andromon,Andromon,Andromon,・Gatling Missile・Spiral Sword,Android,4,3,3,5000,3900,1450,91,91
+131.data,11,アンドロモン,andromon,Andromon,Andromon,・Gatling Missile・Spiral Sword,Android,4,3,3,5000,3900,1450,12,9
 131.data,12,マスターティラノモン,mastertyranomon,Mastertyranomon,MasterTyrannomon,・Master Fire,Dinosaur,4,3,2,4900,4200,1500,4,0
 131.data,13,フェンリルガモン,fenriloogamon,Fenriloogamon,Fenriloogamon,・Ragnarok Howling・Jotunheimr Gale・Hrodvitnir,Dark Beast,5,1,1,6800,5500,2100,5,1
 131.data,14,ラセンモン,rasenmon,Rasenmon,Rasenmon,・Gyro Smash・Qualialise Blast・Spiral Vanish,Beast Man,5,2,2,6000,6000,1900,33,4
@@ -734,15 +734,15 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 131.data,21,デストロモン,destromon,Destromon,Destromon,・Triple Cannon Shot・Juggernaut Blast・Long-Range Buster Cannon・Fusionize,Unidentified,4,5,2,5700,4300,1500,13,9
 131.data,22,ラグナモン,ragnamon,Ragnamon,Galacticmon,・Ragnarok Cannon・Gimlet Gun・Space Laser・Shuttle Scissors・Satellite Buster・Fusionize,Unidentified,5,5,2,5600,6000,2100,11,3
 132.data,0,ニョキモン,nyokimon,Nyokimon,Nyokimon,・Seed Cracker,Seed,0,0,2,65535,65535,65535,65535,65535
-132.data,1,ピョコモン,pyocomon,Pyocomon,Yokomon,・Soap Flower,Bulb,1,0,2,65535,65535,65535,65616,65616
-132.data,2,ピヨモン,piyomon,Piyomon,Biyomon,・Spiral Twister,Baby Bird,2,3,2,4600,2900,1000,116,116
+132.data,1,ピョコモン,pyocomon,Pyocomon,Yokomon,・Soap Flower,Bulb,1,0,2,65535,65535,65535,65535,65535
+132.data,2,ピヨモン,piyomon,Piyomon,Biyomon,・Spiral Twister,Baby Bird,2,3,2,4600,2900,1000,4,0
 132.data,3,ルクスモン,luxmon,Luxmon,Luxmon,・Tiny Knuckle・Cloud Barrier,Angel,2,3,1,5100,2950,1050,10,2
 132.data,4,ファルコモン（２００６アニメ版）,falcomon-2006,Falcomon-2006,Falcomon (2006 Anime Version),・Scratch Smash・Ninja Blade・Firecracker Smokescreen,Bird,2,3,3,4500,2800,1000,24,19
-132.data,5,バードラモン,birdramon,Birdramon,Birdramon,・Meteor Wing,Giant Bird,3,3,1,5500,3500,1200,108,108
+132.data,5,バードラモン,birdramon,Birdramon,Birdramon,・Meteor Wing,Giant Bird,3,3,1,5500,3500,1200,24,4
 132.data,6,ピッドモン,pidmon,Pidmon,Piddomon,・Fire Phaser・Pid Speed,Angel,3,3,1,5300,3700,1250,0,8
 132.data,7,ペックモン,peckmon,Peckmon,Peckmon,・Spiral Claw・Kunai Wing・Thousand Beaks,Bird,3,3,3,5400,3400,1150,24,4
 132.data,8,シーチューモン,xiquemon,Xiquemon,Xiquemon,・Splash Thrash・Mortar Morsel・Ice Vice,Bird,3,3,1,5100,3600,1200,8,1
-132.data,9,ガルダモン,garudamon,Garudamon,Garudamon,・Shadow Wing,Bird Man,4,3,2,5900,4200,1450,83,83
+132.data,9,ガルダモン,garudamon,Garudamon,Garudamon,・Shadow Wing,Bird Man,4,3,2,5900,4200,1450,24,12
 132.data,10,アルケーエンジェモン,arkhaiangemon,Arkhaiangemon,ArkhaiAngemon,・Saint Legion・Heaven's Flame・Brave Aura,Principality,4,3,1,6100,4250,1400,4,0
 132.data,11,ヤタガラモン（2006年アニメ版）,yatagaramon,Yatagaramon,Crowmon (2006 Anime Version),・Savage Emperor・Haguro,Mysterious Bird,4,3,3,6200,3900,1400,20,16
 132.data,12,ファンクンモン,huankunmon,Huankunmon,Huankunmon,・Lonely Bubble・Ice Crash・Tidal Vortex,Aquatic,4,3,1,5400,4500,1550,36,7
@@ -757,18 +757,18 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 132.data,21,ジャザリッヒモン,jazarichmon,Jazarichmon,Jazarichmon,・Messer Spiral・N.S.B.M,Machine Dragon,4,2,2,6000,4200,1600,14,4
 132.data,22,メタリックドラモン,metallicdramon,Metallicdramon,Metallicdramon,・Laser Cannon・Laser Saber,Sky Dragon,5,2,2,6200,5800,2000,12,8
 133.data,0,バブモン,bubbmon,Bubbmon,Pabumon,・Adhesive Bubble Blow,Slime,0,0,2,65535,65535,65535,65535,65535
-133.data,1,モチモン,mochimon,Mochimon,Motimon,・Elastic Bubbles,Lesser,1,0,2,65535,65535,65535,65616,65616
-133.data,2,テントモン,tentomon,Tentomon,Tentomon,・Super Shocker,Insectoid,2,3,2,4300,3000,1100,92,92
+133.data,1,モチモン,mochimon,Mochimon,Motimon,・Elastic Bubbles,Lesser,1,0,2,65535,65535,65535,65535,65535
+133.data,2,テントモン,tentomon,Tentomon,Tentomon,・Super Shocker,Insectoid,2,3,2,4300,3000,1100,2,13
 133.data,3,ララモン,lalamon,Lalamon,Lalamon,・Seed Blast・Lala Screw・Sing a Song,Vegetation,2,2,1,5000,2800,1050,38,18
 133.data,4,ファンビーモン,funbeemon,Funbeemon,FunBeemon,・Gear Stinger・Buzz-Buzz Call,Insectoid,2,1,1,4700,2600,1050,14,18
-133.data,5,カブテリモン,kabuterimon,Kabuterimon,Kabuterimon,・Electro Shocker,Insectoid,3,3,2,5000,3800,1250,85,85
+133.data,5,カブテリモン,kabuterimon,Kabuterimon,Kabuterimon,・Electro Shocker,Insectoid,3,3,2,5000,3800,1250,6,13
 133.data,6,サンフラウモン,sunflowmon,Sunflowmon,Sunflowmon,・Sunshine Beam・Smiley Slap・Cactus Tail,Vegetation,3,2,2,5600,3500,1300,33,2
 133.data,7,ワスプモン,waspmon,Waspmon,Waspmon,・Turbo Stinger・Bear Buster,Android,3,1,1,5400,3400,1200,14,4
-133.data,8,クワガーモン,kuwagamon,Kuwagamon,Kuwagamon,・Scissor Claw,Insectoid,3,1,3,5250,3700,1200,90,90
-133.data,9,アトラーカブテリモン（赤）,atlurkabuterimon,Atlurkabuterimon,MegaKabuterimon (Red),・Horn Buster,Insectoid,4,3,2,5300,4700,1500,110,110
+133.data,8,クワガーモン,kuwagamon,Kuwagamon,Kuwagamon,・Scissor Claw,Insectoid,3,1,3,5250,3700,1200,30,8
+133.data,9,アトラーカブテリモン（赤）,atlurkabuterimon,Atlurkabuterimon,MegaKabuterimon (Red),・Horn Buster,Insectoid,4,3,2,5300,4700,1500,14,4
 133.data,10,ライラモン,lilamon,Lilamon,Lilamon,・Lila Shower・Beauty Slap・Pollen Spray,Pixie,4,2,1,6000,4300,1600,9,12
 133.data,11,キャノンビーモン,cannonbeemon,Cannonbeemon,CannonBeemon,・Nitro Stinger・Sky Rocket infinity,Android,4,1,1,5400,4500,1550,13,9
-133.data,12,オオクワモン,okuwamon,Oukuwamon,Okuwamon,・Double Scissor Claw,Insectoid,4,1,3,5100,4500,1450,90,90
+133.data,12,オオクワモン,okuwamon,Oukuwamon,Okuwamon,・Double Scissor Claw,Insectoid,4,1,3,5100,4500,1450,30,8
 133.data,13,ヘラクルカブテリモン,heraklekabuterimon,Heraklekabuterimon,HerculesKabuterimon,・Giga Blaster,Insectoid,5,3,2,5700,5900,2050,6,13
 133.data,14,ロゼモン,rosemon,Rosemon,Rosemon,・Thorn Whip・Roses Rapier・Forbidden Temptation,Pixie,5,2,1,6200,5600,2000,25,12
 133.data,15,タイガーヴェスパモン,tigervespamon,Tigervespamon,TigerVespamon,・Mach Stinger V,Android,5,1,1,6000,5700,1900,14,4
@@ -780,50 +780,50 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 133.data,21,エオスモン,eosmon_lv4,Eosmon_Lv4,Eosmon,・Mirror Guard・Mirror Dust・Bolt Rip,Unidentified,3,5,2,6000,4500,1500,6,8
 133.data,22,バンチョーリリモン,bancholilimon,Bancholilimon,BanchoLillymon,・Absolute Territory・Nightmare Assemble・Twin Petal,Pixie,5,2,1,6300,5800,2050,12,16
 134.data,0,ツブモン,tsubumon,Tsubumon,Tsubumon,・Acid Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
-134.data,1,ウパモン,upamon,Upamon,Upamon,・Shock Shout,Amphibian,1,0,2,65535,65535,65535,65616,65616
-134.data,2,アルマジモン,armadimon,Armadimon,Armadillomon,・Scratch Beat・Diamond Shell,Mammal,2,4,2,3900,3700,1200,88,88
-134.data,3,パタモン,patamon,Patamon,Patamon,・Air Shot・Wing Slap,Mammal,2,2,4,4800,3000,900,97,97
-134.data,4,ブイモン,v-mon,V-Mon,Veemon,・Boom Boom Punch・Veemon Headbutt,Mini Dragon,2,4,1,4500,3500,900,87,87
-134.data,5,アンキロモン,ankylomon,Ankylomon,Ankylomon,・Megaton Press・Tail Hammer,Armored Dragon,3,4,4,4400,4000,1350,132,132
-134.data,6,エンジェモン,angemon,Angemon,Angemon,・Heaven's Knuckle,Angel,3,3,0,5500,3800,1300,93,93
-134.data,7,エクスブイモン,xv-mon,Xv-Mon,ExVeemon,・Strong Crunch・Vee Laser,Mythical Dragon,3,4,1,5000,3500,1300,137,137
-134.data,8,ディグモン,digmon,Digmon,Digmon,・Big Crack・Gold Rush,Insectoid,7,4,3,4200,3500,1250,112,112
-134.data,9,サブマリモン,sabmarimon,Sabmarimon,Submarimon,・Oxygen Homing・Submarine Attack,Aquatic,7,4,0,5100,3300,1200,112,112
-134.data,10,ペガスモン,pegasmon,Pegasmon,Pegasusmon,・Rodeo Gallop・Silver Blaze・Shooting Star,Holy Beast,7,4,1,5300,3300,1100,142,142
-134.data,11,フレイドラモン,fladramon,Fladramon,Flamedramon,・Flaming Fist・Fire Rocket,Dragon Man,7,4,2,4800,3450,1200,108,108
-134.data,12,ライドラモン,lighdramon,Lighdramon,Lighdramon,・Lightning Blade・Blue Thunder,Beast,7,4,2,5200,3400,1100,92,92
-134.data,13,シャッコウモン,shakkoumon,Shakkoumon,Shakkoumon,・Kachina Bombs・Disaster Blaster,Mutant,4,4,3,5900,5000,1580,139,139
-134.data,14,ホーリーエンジェモン,holyangemon,Holyangemon,MagnaAngemon,・Heaven's Gate,High Angel,4,3,0,6000,4000,1400,90,90
-134.data,15,パイルドラモン,paildramon,Paildramon,Paildramon,・Sting Strike・Death Parade Blaster,Dragon Man,4,4,2,5500,4800,1450,139,139
+134.data,1,ウパモン,upamon,Upamon,Upamon,・Shock Shout,Amphibian,1,0,2,65535,65535,65535,65535,65535
+134.data,2,アルマジモン,armadimon,Armadimon,Armadillomon,・Scratch Beat・Diamond Shell,Mammal,2,4,2,3900,3700,1200,24,4
+134.data,3,パタモン,patamon,Patamon,Patamon,・Air Shot・Wing Slap,Mammal,2,2,4,4800,3000,900,33,12
+134.data,4,ブイモン,v-mon,V-Mon,Veemon,・Boom Boom Punch・Veemon Headbutt,Mini Dragon,2,4,1,4500,3500,900,17,4
+134.data,5,アンキロモン,ankylomon,Ankylomon,Ankylomon,・Megaton Press・Tail Hammer,Armored Dragon,3,4,4,4400,4000,1350,7,4
+134.data,6,エンジェモン,angemon,Angemon,Angemon,・Heaven's Knuckle,Angel,3,3,0,5500,3800,1300,18,14
+134.data,7,エクスブイモン,xv-mon,Xv-Mon,ExVeemon,・Strong Crunch・Vee Laser,Mythical Dragon,3,4,1,5000,3500,1300,33,8
+134.data,8,ディグモン,digmon,Digmon,Digmon,・Big Crack・Gold Rush,Insectoid,7,4,3,4200,3500,1250,14,4
+134.data,9,サブマリモン,sabmarimon,Sabmarimon,Submarimon,・Oxygen Homing・Submarine Attack,Aquatic,7,4,0,5100,3300,1200,12,4
+134.data,10,ペガスモン,pegasmon,Pegasmon,Pegasusmon,・Rodeo Gallop・Silver Blaze・Shooting Star,Holy Beast,7,4,1,5300,3300,1100,10,2
+134.data,11,フレイドラモン,fladramon,Fladramon,Flamedramon,・Flaming Fist・Fire Rocket,Dragon Man,7,4,2,4800,3450,1200,16,0
+134.data,12,ライドラモン,lighdramon,Lighdramon,Lighdramon,・Lightning Blade・Blue Thunder,Beast,7,4,2,5200,3400,1100,6,13
+134.data,13,シャッコウモン,shakkoumon,Shakkoumon,Shakkoumon,・Kachina Bombs・Disaster Blaster,Mutant,4,4,3,5900,5000,1580,4,0
+134.data,14,ホーリーエンジェモン,holyangemon,Holyangemon,MagnaAngemon,・Heaven's Gate,High Angel,4,3,0,6000,4000,1400,12,8
+134.data,15,パイルドラモン,paildramon,Paildramon,Paildramon,・Sting Strike・Death Parade Blaster,Dragon Man,4,4,2,5500,4800,1450,24,2
 134.data,16,ヴァイクモン,vikemon,Vikemon,Vikemon,・Arctic Blizzard・Mjolnir,Beast Man,5,4,4,5600,6000,2100,22,7
-134.data,17,セラフィモン,seraphimon,Seraphimon,Seraphimon,・Strike of the Seven Stars・Testament,Seraph,5,3,0,6400,5300,1950,95,95
-134.data,18,インペリアルドラモン：ドラゴンモード,imperialdramondragonmode,Imperialdramon:Dragonmode,Imperialdramon: Dragon Mode,・Mega Death,Ancient Dragon,5,4,2,6800,4800,1950,129,129
-134.data,19,マグナモン,magnamon,Magnamon,Magnamon,・Plasma Shot・Shining Gold Solar Storm・Magna Explosion,Holy Knight,7,4,2,6300,4700,2000,85,85
-134.data,20,アルケニモン,archnemon,Archnemon,Arukenimon,・Spider Thread・Predation Spider,Dark Beast,4,1,1,5600,4800,1400,114,114
-134.data,21,ベリアルヴァンデモン,belialvamdemon,Belialvamdemon,MaloMyotismon,・Pandemonium Flame,Evil King,5,1,0,6700,5400,2100,98,98
-134.data,22,ブラックウォーグレイモン,blackwargreymon,Blackwargreymon,BlackWarGreymon,・Dark Terra Force,Dragon Man,5,1,1,5800,5300,2000,129,129
+134.data,17,セラフィモン,seraphimon,Seraphimon,Seraphimon,・Strike of the Seven Stars・Testament,Seraph,5,3,0,6400,5300,1950,10,17
+134.data,18,インペリアルドラモン：ドラゴンモード,imperialdramondragonmode,Imperialdramon:Dragonmode,Imperialdramon: Dragon Mode,・Mega Death,Ancient Dragon,5,4,2,6800,4800,1950,10,17
+134.data,19,マグナモン,magnamon,Magnamon,Magnamon,・Plasma Shot・Shining Gold Solar Storm・Magna Explosion,Holy Knight,7,4,2,6300,4700,2000,5,14
+134.data,20,アルケニモン,archnemon,Archnemon,Arukenimon,・Spider Thread・Predation Spider,Dark Beast,4,1,1,5600,4800,1400,30,5
+134.data,21,ベリアルヴァンデモン,belialvamdemon,Belialvamdemon,MaloMyotismon,・Pandemonium Flame,Evil King,5,1,0,6700,5400,2100,11,21
+134.data,22,ブラックウォーグレイモン,blackwargreymon,Blackwargreymon,BlackWarGreymon,・Dark Terra Force,Dragon Man,5,1,1,5800,5300,2000,11,16
 135.data,0,プルルモン,pururumon,Pururumon,Pururumon,・Acid Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
-135.data,1,ポロモン,poromon,Poromon,Poromon,・Pororo Breeze,Mini Bird,1,0,2,65535,65535,65535,65616,65616
-135.data,2,ホークモン,hawkmon,Hawkmon,Hawkmon,・Pecking Beak・Feather Slash,Bird,2,4,2,5100,2900,950,140,140
-135.data,3,テイルモン,tailmon,Tailmon,Gatomon,・Lightning Paw・Cat's Eye,Holy Beast,3,3,1,4900,3300,1100,115,115
-135.data,4,ワームモン,wormmon,Wormmon,Wormmon,・Sticky Net・Silk Thread,Larva,2,4,1,3900,3000,1200,87,87
-135.data,5,アクィラモン,aquilamon,Aquilamon,Aquilamon,・Glide Horn・Blast Laser,Giant Bird,3,4,1,5800,3300,1200,116,116
-135.data,6,テイルモン,tailmon,Tailmon,Gatomon,・Lightning Paw・Cat's Eye,Holy Beast,3,3,0,5600,3500,1150,115,115
-135.data,7,スティングモン,stingmon,Stingmon,Stingmon,・Spiking Strike,Insectoid,3,4,1,5100,3800,1200,112,112
-135.data,8,ホルスモン,holsmon,Holsmon,Halsemon,・Mach Impulse・Tempest Wing・Udjat Gaze,Beast,7,4,0,5300,3200,1100,140,140
-135.data,9,ネフェルティモン,nefertimon,Nefertimon,Nefertimon,・Curse of the Queen・Rosetta Stone,Holy Beast,7,4,1,5700,3400,1100,143,143
-135.data,10,シュリモン,shurimon,Shurimon,Shurimon,・Double Star Strike・Double Stars,Mutant,7,4,2,5200,3100,1150,141,141
-135.data,11,シルフィーモン,silphymon,Silphymon,Silphymon,・Top Gun・Dual Sonic,Beast Man,4,4,1,6200,4800,1500,85,85
-135.data,12,エンジェウーモン,angewomon,Angewomon,Angewomon,・Celestial Arrow・Heaven's Charm,High Angel,4,3,2,6000,3900,1350,87,87
+135.data,1,ポロモン,poromon,Poromon,Poromon,・Pororo Breeze,Mini Bird,1,0,2,65535,65535,65535,65535,65535
+135.data,2,ホークモン,hawkmon,Hawkmon,Hawkmon,・Pecking Beak・Feather Slash,Bird,2,4,2,5100,2900,950,14,18
+135.data,3,テイルモン,tailmon,Tailmon,Gatomon,・Lightning Paw・Cat's Eye,Holy Beast,3,3,1,4900,3300,1100,18,14
+135.data,4,ワームモン,wormmon,Wormmon,Wormmon,・Sticky Net・Silk Thread,Larva,2,4,1,3900,3000,1200,25,18
+135.data,5,アクィラモン,aquilamon,Aquilamon,Aquilamon,・Glide Horn・Blast Laser,Giant Bird,3,4,1,5800,3300,1200,14,4
+135.data,6,テイルモン,tailmon,Tailmon,Gatomon,・Lightning Paw・Cat's Eye,Holy Beast,3,3,0,5600,3500,1150,18,14
+135.data,7,スティングモン,stingmon,Stingmon,Stingmon,・Spiking Strike,Insectoid,3,4,1,5100,3800,1200,14,4
+135.data,8,ホルスモン,holsmon,Holsmon,Halsemon,・Mach Impulse・Tempest Wing・Udjat Gaze,Beast,7,4,0,5300,3200,1100,33,12
+135.data,9,ネフェルティモン,nefertimon,Nefertimon,Nefertimon,・Curse of the Queen・Rosetta Stone,Holy Beast,7,4,1,5700,3400,1100,21,6
+135.data,10,シュリモン,shurimon,Shurimon,Shurimon,・Double Star Strike・Double Stars,Mutant,7,4,2,5200,3100,1150,12,8
+135.data,11,シルフィーモン,silphymon,Silphymon,Silphymon,・Top Gun・Dual Sonic,Beast Man,4,4,1,6200,4800,1500,10,2
+135.data,12,エンジェウーモン,angewomon,Angewomon,Angewomon,・Celestial Arrow・Heaven's Charm,High Angel,4,3,2,6000,3900,1350,9,4
 135.data,13,ディノビーモン,dinobeemon,Dinobeemon,Dinobeemon,・Hell Masquerade,Mutant,4,4,2,5900,4900,1300,25,18
 135.data,14,ヴァルキリモン,valkyrimon,Valkyrimon,Valkyrimon,・Fenrir Sword・Aurvandil's Arrow,Warrior,5,4,0,6000,5900,2050,12,4
-135.data,15,ホーリードラモン,holydramon,Holydramon,Magnadramon,・Fire Tornado,Holy Dragon,5,3,3,6400,6000,2000,85,85
-135.data,16,インペリアルドラモン：ファイターモード,imperialdramonfightermode,Imperialdramon:Fightermode,Imperialdramon: Fighter Mode,・Positron Laser・Giga Death,Ancient Dragon Man,5,4,0,6000,5800,2000,86,86
-135.data,17,インペリアルドラモン：パラディンモード,imperialdramonpaladinmode,Imperialdramon:Paladinmode,Imperialdramon: Paladin Mode,・Omni Blade,Ancient Holy Knight,5,3,0,6400,5500,2200,138,138
+135.data,15,ホーリードラモン,holydramon,Holydramon,Magnadramon,・Fire Tornado,Holy Dragon,5,3,3,6400,6000,2000,10,2
+135.data,16,インペリアルドラモン：ファイターモード,imperialdramonfightermode,Imperialdramon:Fightermode,Imperialdramon: Fighter Mode,・Positron Laser・Giga Death,Ancient Dragon Man,5,4,0,6000,5800,2000,12,2
+135.data,17,インペリアルドラモン：パラディンモード,imperialdramonpaladinmode,Imperialdramon:Paladinmode,Imperialdramon: Paladin Mode,・Omni Blade,Ancient Holy Knight,5,3,0,6400,5500,2200,12,8
 135.data,18,ウッコモン,ukkomon,Ukkomon,Ukkomon,・Whirlpool Spin・Liar Dream,Ancient Pixie,2,4,0,5150,3250,1000,12,5
-135.data,19,マミーモン,mummymon,Mummymon,Mummymon,・Snake Bandage・Necrophobia,Undead,4,1,4,5600,4900,1450,130,130
-135.data,20,キメラモン,chimairamon,Chimairamon,Kimeramon,・Heat Viper,Composite,4,2,1,6100,5100,1700,95,95
-135.data,21,アーマゲモン,armagemon,Armagemon,Armageddemon,・Black Rain・Ultimate Flare,Unidentified,5,5,3,6700,5800,2150,126,126
+135.data,19,マミーモン,mummymon,Mummymon,Mummymon,・Snake Bandage・Necrophobia,Undead,4,1,4,5600,4900,1450,23,2
+135.data,20,キメラモン,chimairamon,Chimairamon,Kimeramon,・Heat Viper,Composite,4,2,1,6100,5100,1700,4,16
+135.data,21,アーマゲモン,armagemon,Armagemon,Armageddemon,・Black Rain・Ultimate Flare,Unidentified,5,5,3,6700,5800,2150,4,17
 135.data,22,ビッグウッコモン,bigukkomon,Bigukkomon,BigUkkomon,・Violent Punisher,Ancient Pixie,5,4,0,6000,6100,2200,12,12
 136.data,0,フフモン,fufumon,Fufumon,Fufumon,・Little Iron Spikes,Slime,0,0,2,65535,65535,65535,65535,65535
 136.data,1,キョキョモン,kyokyomon,Kyokyomon,Kyokyomon,・Metal Straw,Lesser,1,0,2,65535,65535,65535,65535,65535
@@ -831,19 +831,19 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 136.data,3,コマンドラモン,commandramon,Commandramon,Commandramon,・M16 Assassin・DCD Bomb,Android,2,1,0,4900,2800,900,23,19
 136.data,4,ギンリュウモン,ginryumon,Ginryumon,Ginryumon,・Boujinha・Metal Armor Blade,Beast Dragon,3,3,2,5300,3600,1150,14,18
 136.data,5,ハイコマンドラモン,hi-commandramon,Hi-Commandramon,Hi-Commandramon,・DCD Grenade・Destroy Charge,Android,3,1,0,5000,4000,1250,13,9
-136.data,6,デルタモン,deltamon,Deltamon,Deltamon,・Triple Forces・Skull Fang,Composite,3,1,1,4800,3600,1300,139,139
-136.data,7,ヌメモン,numemon,Numemon,Numemon,・Poop Toss,Mollusk,3,1,4,4600,3500,1100,94,94
+136.data,6,デルタモン,deltamon,Deltamon,Deltamon,・Triple Forces・Skull Fang,Composite,3,1,1,4800,3600,1300,10,2
+136.data,7,ヌメモン,numemon,Numemon,Numemon,・Poop Toss,Mollusk,3,1,4,4600,3500,1100,27,15
 136.data,8,ヒシャリュウモン,hisyaryumon,Hisyaryumon,Hisyaryumon,・Legendary Dragon Blade・Juouguruma,Beast Dragon,4,3,2,6500,4500,1500,12,18
 136.data,9,カーゴドラモン,cargodramon,Cargodramon,Cargodramon,・Suppression Strike・Slaughter Blade,Machine,4,1,3,5500,5000,1400,23,8
 136.data,10,オロチモン,orochimon,Orochimon,Orochimon,・Sake Breath・Ame no Murakumo,Dark Dragon,4,1,0,4700,4700,1450,12,10
-136.data,11,もんざえモン,monzaemon,Monzaemon,Monzaemon,・Hearts Attack,Puppet,4,3,1,5100,4000,1400,118,118
-136.data,12,エテモン,etemon,Etemon,Etemon,・Love Serenade・Dark Spirits,Puppet,4,1,1,4950,4300,1300,118,118
+136.data,11,もんざえモン,monzaemon,Monzaemon,Monzaemon,・Hearts Attack,Puppet,4,3,1,5100,4000,1400,9,14
+136.data,12,エテモン,etemon,Etemon,Etemon,・Love Serenade・Dark Spirits,Puppet,4,1,1,4950,4300,1300,9,16
 136.data,13,オウリュウモン,ouryumon,Ouryumon,Ouryumon,・Eiseiryuojin・Golden Armor,Beast Dragon,5,3,2,6600,5800,1900,12,4
 136.data,14,ブリガードラモン,brigadramon,Brigadramon,Brigadramon,・Genocidal Rain・Exa Destroyer,Android,5,1,0,6100,5400,2000,23,9
 136.data,15,ニーズヘッグモン,nidhoggmon,Nidhoggmon,Nidhoggmon,・Annihilention・Rudiment,Dark Dragon,5,1,0,5000,6000,1950,11,16
 136.data,16,しんもんざえモン,shinmonzaemon,Shinmonzaemon,ShinMonzaemon,・Nightmare Rain・Fantastic Smash・Sweetheart Attack,Puppet,5,3,1,5200,5500,1900,11,5
 136.data,17,キングエテモン,kingetemon,Kingetemon,KingEtemon,・Monkey Wrench,Puppet,5,1,3,5500,5000,1800,5,1
-136.data,18,メタルエテモン,metaletemon,Metaletemon,MetalEtemon,・Banana Slip,Android,5,1,0,5100,5300,1850,93,93
+136.data,18,メタルエテモン,metaletemon,Metaletemon,MetalEtemon,・Banana Slip,Android,5,1,0,5100,5300,1850,7,14
 136.data,19,シールズドラモン,sealsdramon,Sealsdramon,Sealsdramon,・Death Behind・Scouter Monoeye,Android,3,1,1,5300,3500,1250,14,8
 136.data,20,タンクドラモン,tankdramon,Tankdramon,Tankdramon,・Striver Cannon・Blast Gatling,Machine,4,1,2,5900,4800,1600,23,9
 136.data,21,ダークドラモン,darkdramon,Darkdramon,Darkdramon,・Dark Roar・Gigastick Lance,Android,5,1,0,6100,5900,2000,20,16
@@ -854,18 +854,18 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 137.data,3,アグモン（黒）,agumon-black,Agumon-Black,Agumon (Black),・Pepper Breath,Reptile,2,1,1,4500,2700,1100,0,0
 137.data,4,ドルガモン,dorugamon,Dorugamon,Dorugamon,・Cannonball・Power Metal,Beast Dragon,3,2,1,5200,3500,1200,11,3
 137.data,5,デクスドルガモン,death-x-dorugamon,Death-X-Dorugamon,DexDorugamon,・Cannonball・Metal Cast,Undead,3,1,3,4900,3200,1300,24,4
-137.data,6,ダークティラノモン,darktyranomon,Darktyranomon,DarkTyrannomon,・Fire Blast,Dinosaur,3,1,2,4700,3300,1250,83,83
-137.data,7,エアドラモン,airdramon,Airdramon,Airdramon,・Spinning Needle,Mythical Beast,3,3,1,4900,3200,1200,116,116
+137.data,6,ダークティラノモン,darktyranomon,Darktyranomon,DarkTyrannomon,・Fire Blast,Dinosaur,3,1,2,4700,3300,1250,24,0
+137.data,7,エアドラモン,airdramon,Airdramon,Airdramon,・Spinning Needle,Mythical Beast,3,3,1,4900,3200,1200,33,12
 137.data,8,ドルグレモン,doruguremon,Doruguremon,DoruGreymon,・Metal Meteor・Bloody Tower,Beast Dragon,4,2,0,6400,5000,1400,11,4
 137.data,9,デクスドルグレモン,death-x-doruguremon,Death-X-Doruguremon,DexDoruGreymon,・Bloody Cave・Metal Meteor,Undead,4,1,4,5400,4400,1550,11,4
 137.data,10,メタルティラノモン,metaltyranomon,Metaltyranomon,MetalTyrannomon,・Giga DestroyerII・Nuclear Laser,Android,4,1,2,4900,4500,1400,13,1
-137.data,11,メガドラモン,megadramon,Megadramon,Megadramon,・Eradication Attack・Ultimate Slicer,Android,4,1,2,4900,4300,1350,106,106
-137.data,12,ギガドラモン,gigadramon,Gigadramon,Gigadramon,・Eradication Gears・Evil Claw,Android,4,1,0,4800,4250,1250,106,106
+137.data,11,メガドラモン,megadramon,Megadramon,Megadramon,・Eradication Attack・Ultimate Slicer,Android,4,1,2,4900,4300,1350,13,9
+137.data,12,ギガドラモン,gigadramon,Gigadramon,Gigadramon,・Eradication Gears・Evil Claw,Android,4,1,0,4800,4250,1250,13,9
 137.data,13,ドルゴラモン,dorugoramon,Dorugoramon,Dorugoramon,・Brave Metal・DORU-Din,Beast Dragon,5,2,1,6100,5900,1950,4,4
 137.data,14,デクスドルゴラモン,death-x-dorugoramon,Death-X-Dorugoramon,DexDorugoramon,・Metal Impulse・DORU-Din,Undead,5,1,3,5900,5500,2050,11,4
 137.data,15,カオスドラモン,chaosdramon,Chaosdramon,Chaosdramon,・Hyper Infinity Cannon,Machine,5,1,1,4900,6100,2000,4,0
-137.data,16,メタルシードラモン,metalseadramon,Metalseadramon,MetalSeadramon,・River of Power,Android,5,2,1,5000,5400,1800,85,85
-137.data,17,ムゲンドラモン,mugendramon,Mugendramon,Machinedramon,・Infinity Cannon,Machine,5,1,2,4800,5450,1850,85,85
+137.data,16,メタルシードラモン,metalseadramon,Metalseadramon,MetalSeadramon,・River of Power,Android,5,2,1,5000,5400,1800,10,2
+137.data,17,ムゲンドラモン,mugendramon,Mugendramon,Machinedramon,・Infinity Cannon,Machine,5,1,2,4800,5450,1850,13,16
 137.data,18,ガンドラモン,gundramon,Gundramon,Gundramon,・Der Blitz・Platzenkreuz・Gewalt Schwarmer,Machine,5,1,2,5200,5000,1800,23,18
 137.data,19,ラプタードラモン,raptordramon,Raptordramon,Raptordramon,・Crash Charge・Ambush Crunch,Android,3,3,0,5700,3400,1200,14,4
 137.data,20,グレイドモン,grademon,Grademon,Grademon,・Cross Blade・Grade Slash,Warrior,4,3,1,6000,4700,1650,12,8
@@ -878,11 +878,11 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 138.data,4,シャウトモン,shoutmon,Shoutmon,Shoutmon,・Rock Soul・Soul Crusher・Rowdy Rocker,Mini Dragon,2,2,1,4700,3100,1100,38,0
 138.data,5,バルクモン,bulkmon,Bulkmon,Bulkmon,・Electrical Fist・Thunder Dread,Dragon Man,3,3,0,5200,3600,1300,15,14
 138.data,6,レッパモン,reppamon,Reppamon,Reppamon,・Rolling Tackle・Lion Claw・Razor Wind,Holy Beast,3,3,2,5000,3700,1200,12,8
-138.data,7,サンダーボールモン,thunderballmon,Thunderballmon,Thundermon,・Thunder Ball,Mutant,3,2,2,4800,3300,1150,92,92
+138.data,7,サンダーボールモン,thunderballmon,Thunderballmon,Thundermon,・Thunder Ball,Mutant,3,2,2,4800,3300,1150,10,2
 138.data,8,ブレイドクワガーモン,bladekuwagamon,Bladekuwagamon,BladeKuwagamon,・Spark Blade・Air Knife,Machine,3,1,1,5000,3000,1100,12,8
 138.data,9,バウトモン,boutmon,Boutmon,Boutmon,・Lightning Heel・Buden Blast・Storm of Blows,Beast Man,4,3,0,5230,4500,1600,6,18
 138.data,10,チィリンモン,tyilinmon,Tyilinmon,Chirinmon,・Wind Cutter Sword・Knowledge of Swiftness・Holy Wave,Holy Beast,4,3,0,5400,4200,1500,14,4
-138.data,11,ギロモン,giromon,Giromon,Giromon,・Deadly Bomb,Mine,4,3,3,5000,4400,1450,96,96
+138.data,11,ギロモン,giromon,Giromon,Giromon,・Deadly Bomb,Mine,4,3,3,5000,4400,1450,32,19
 138.data,12,キュウキモン,kyukimon,Kyukimon,Kyukimon,・Blade Twister・Sanrensei,Mysterious Beast,4,1,0,5100,3900,1450,33,12
 138.data,13,メタリフェクワガーモン,metallifekuwagamon,Metallifekuwagamon,MetallifeKuwagamon,・Homing Laser・Blade Emission,Insectoid,4,1,1,4800,4000,1400,10,8
 138.data,14,ミタマモン,mitamamon,Mitamamon,Mitamamon,・Gouenrin・Kaijinraidou・Kyouka Suigetsu,God Beast,5,3,1,5600,5700,1900,4,13
