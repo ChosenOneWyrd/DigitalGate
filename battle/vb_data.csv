@@ -667,27 +667,27 @@ file,row_index,col0,col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col
 129.data,0,プチモン,petitmon,Petitmon,Petitmon,・Hot Breath,Slime,0,0,2,65535,65535,65535,65535,65535
 129.data,1,ベビドモン,babydmon,Babydmon,Bebydomon,・Hot Gas,Baby Dragon,1,0,2,65535,65535,65535,65535,65535
 129.data,2,アグモン（２００６アニメ版）,agumon-2006,Agumon-2006,Agumon (2006 Anime Version),・Pepper Breath・Baby Burner,Dinosaur,2,3,2,4500,3300,1000,0,0
-129.data,3,ドラコモン,dracomon,Dracomon,Dracomon,・Baby Breath・Tail Smash・Great Strike,Dragon,2,2,3,4800,3000,1000,0,0
+129.data,3,ドラコモン,dracomon,Dracomon,Dracomon,・Baby Breath・Tail Smash・Great Strike,Dragon,2,2,3,4800,3000,1000,81,92
 129.data,4,ハックモン,huckmon,Huckmon,Huckmon,・Fifth Rush・Teen Ram・Pepper Breath,Mini Dragon,2,2,1,5200,2950,1000,24,4
 129.data,5,ジオグレイモン,geogreymon,Geogreymon,GeoGreymon,・Mega Flame・Mega Burst・Horn Impulse,Dinosaur,3,3,2,3800,3600,1300,0,0
-129.data,6,コアドラモン（青）,coredramon_b,Coredramon_B,Coredramon (Blue),・Blue Flare Breath・Strike Bomber・Great StrikeII,Dragon,3,3,1,5800,3300,1100,5,1
+129.data,6,コアドラモン（青）,coredramon_b,Coredramon_B,Coredramon (Blue),・Blue Flare Breath・Strike Bomber・Great StrikeII,Dragon,3,3,1,5800,3300,1100,84,152
 129.data,7,バオハックモン,baohuckmon,Baohuckmon,BaoHuckmon,・Fif Cross・Teen Blade・Blazing Flame・Dragless Spiker,Dinosaur,3,2,1,5600,3500,1300,24,4
 129.data,8,コアドラモン（緑）,coredramon_g,Coredramon_G,Coredramon (Green),・Green Flare Breath・Strike Bomber・Great StrikeII,Dragon,3,1,3,3500,3600,1250,24,13
 129.data,9,ライズグレイモン,rizegreymon,Rizegreymon,RizeGreymon,・Trident Revolver・Rising Destroyer・Solid Strike,Android,4,3,2,4000,4600,1550,10,17
-129.data,10,ウイングドラモン,wingdramon,Wingdramon,Wingdramon,・Blaze Sonic Breath・Exploding Sonic Lance・Wing Blast,Sky Dragon,4,3,1,6200,4000,1500,5,4
+129.data,10,ウイングドラモン,wingdramon,Wingdramon,Wingdramon,・Blaze Sonic Breath・Exploding Sonic Lance・Wing Blast,Sky Dragon,4,3,1,6200,4000,1500,146,146
 129.data,11,セイバーハックモン,saviorhuckmon,Saviorhuckmon,SaviorHuckmon,・Ledge Stride・Meteor Flame・Trident Saber,Dragon Man,4,2,1,5800,4600,1600,14,8
 129.data,12,グラウンドラモン,groundramon,Groundramon,Groundramon,・Scrapless Claw・Megaton Hammer Crush・Giga Crack,Earth Dragon,4,1,1,3800,4600,1580,24,6
 129.data,13,シャイングレイモン,shinegreymon,Shinegreymon,ShineGreymon,・Glorious Burst・Shining Blast・GeoGrey Sword,Shining Dragon,5,3,2,4500,6000,2000,10,2
-129.data,14,スレイヤードラモン,slayerdramon,Slayerdramon,Slayerdramon,・Tenryu Slash・Shoryu Slash・Koryu Slash,Dragon Man,5,3,1,6300,4800,1950,12,8
+129.data,14,スレイヤードラモン,slayerdramon,Slayerdramon,Slayerdramon,・Tenryu Slash・Shoryu Slash・Koryu Slash,Dragon Man,5,3,1,6300,4800,1950,147,149
 129.data,15,ジエスモン,jesmon,Jesmon,Jesmon,・Judgment of the Blade・Weltgeist・Aus Generics,Holy Knight,5,2,1,6000,5500,2000,12,8
 129.data,16,ブレイクドラモン,breakdramon,Breakdramon,Breakdramon,・Destroyed Rush・Infinity Bowling・Gravity Crush,Machine Dragon,5,1,3,4000,6000,1980,7,6
-129.data,17,エグザモン,examon,Examon,Examon,・Avalon's Gate・Pendragon's Glory・Dragonic Impact,Holy Knight,5,2,2,6700,5900,2100,14,4
+129.data,17,エグザモン,examon,Examon,Examon,・Avalon's Gate・Pendragon's Glory・Dragonic Impact,Holy Knight,5,2,2,6700,5900,2100,153,154
 129.data,18,シャイングレイモン：バーストモード,shinegreymonburstmode,Shinegreymon:Burstmode,ShineGreymon: Burst Mode,・Corona Blaze Sword・Final Shining Burst・Torrid Weiss,Shining Dragon,5,3,1,6000,6100,2100,4,0
 129.data,19,ガムドラモン,gumdramon,Gumdramon,Gumdramon,・Ran-gum Break・Jacked Hammer・Fire Vortex,Mini Dragon,2,3,1,5300,3000,950,7,0
 129.data,20,アレスタードラモン,arresterdramon,Arresterdramon,Arresterdramon,・Mach Flicker・Flog Shot・Spin Caliber・Spiral Shredder・Prism Garrett,Dragon,3,3,1,5700,3600,1250,16,8
 129.data,21,アレスタードラモン：スペリオルモード,arresterdramon_superior,Arresterdramon_Superior,Arresterdramon: Superior Mode,・Blaze Spiker・Mach Flicker・Flog Shot・Spin Caliber・Spiral Shredder・Prism Garrett,Dragon,5,3,1,6100,4400,1550,16,0
 129.data,22,マグナキッドモン,magnakidmon,Magnakidmon,MagnaKidmon,・Bind Red Trigger・Happy Bullet Showering・Chaos Triangular,Dragon Man,5,1,2,6300,5800,2000,23,9
-130.data,0,ボタモン,botamon,Botamon,Botamon,・Acid Bubbles,Slime,0,0,2,65535,65535,65535,65535,65535
+130.data,0,エグザモン,examonx,Examon X,Examon X,・Avalon's Gate・Pendragon's Glory・Dragonic Impact,Holy Knight,5,2,2,9000,7000,3000,153,154
 130.data,1,ワニャモン,wanyamon,Wanyamon,Wanyamon,・Smile Fang,Lesser,1,0,2,65535,65535,65535,65535,65535
 130.data,2,ガオモン,gaomon,Gaomon,Gaomon,・Rolling Upper・Double Backhand・Gao Rush,Beast,2,2,1,5200,2850,1000,15,14
 130.data,3,コロナモン,coronamon,Coronamon,Coronamon,・Corona-Knuckles・Corona Flame・Petit Prominence,Beast,2,3,2,4400,3100,1050,16,0

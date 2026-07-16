@@ -24,10 +24,6 @@ function getPlacedSpriteSaveData(sprite) {
 
 function getCurrentMapVisualState() {
   return {
-    digivice: {
-      visible: !digiviceSprite.classList.contains("hidden"),
-      src: digiviceSprite.getAttribute("src") || "",
-    },
     placedSprites: Array.from(placedSprites.querySelectorAll(".placed-sprite")).map(
       getPlacedSpriteSaveData
     ),
@@ -40,12 +36,19 @@ function saveActiveMapState() {
   state.mapStates[state.currentMap] = getCurrentMapVisualState();
 }
 
+function getCurrentDigiviceState() {
+  return {
+    visible: !digiviceSprite.classList.contains("hidden"),
+    src: digiviceSprite.getAttribute("src") || "",
+  };
+}
+
+function saveGlobalDigiviceState() {
+  state.digivice = getCurrentDigiviceState();
+}
+
 function createEmptyMapVisualState() {
   return {
-    digivice: {
-      visible: false,
-      src: "",
-    },
     placedSprites: [],
   };
 }
@@ -61,13 +64,6 @@ function ensureMapVisualState(mapPath) {
 
   if (!Array.isArray(state.mapStates[mapPath].placedSprites)) {
     state.mapStates[mapPath].placedSprites = [];
-  }
-
-  if (!state.mapStates[mapPath].digivice) {
-    state.mapStates[mapPath].digivice = {
-      visible: false,
-      src: "",
-    };
   }
 
   return state.mapStates[mapPath];
@@ -137,8 +133,9 @@ function getHighestSpriteIdInMapStates(mapStates) {
 }
 
 function createCurrentSaveState() {
-  // Important: capture the currently visible map before exporting.
+  // Important: capture the currently visible map and global Digivice before exporting.
   saveActiveMapState();
+  saveGlobalDigiviceState();
 
   const mapStates = cloneMapStatesForSave();
 
@@ -152,6 +149,7 @@ function createCurrentSaveState() {
     },
     currentMap: state.currentMap,
     nextSpriteId: state.nextSpriteId,
+    digivice: state.digivice,
     mapStates,
   };
 }
@@ -218,12 +216,22 @@ function clearCurrentScreenState() {
 }
 
 function clearDigiviceVisualState() {
+  state.digivice = {
+    visible: false,
+    src: "",
+  };
+
   digiviceSprite.classList.add("hidden");
   digiviceSprite.removeAttribute("src");
 }
 
 function restoreDigiviceVisualState(digiviceState) {
   if (digiviceState?.visible && digiviceState?.src) {
+    state.digivice = {
+      visible: true,
+      src: digiviceState.src,
+    };
+
     digiviceSprite.src = digiviceState.src;
     digiviceSprite.classList.remove("hidden");
   } else {
@@ -282,10 +290,10 @@ async function restoreImportedSprite(item) {
 async function restoreMapVisualState(mapPath) {
   clearCurrentScreenState();
 
+  // Digivice is global now, so restore the same Digivice on every map.
+  restoreDigiviceVisualState(state.digivice);
+
   const mapState = getMapVisualState(mapPath);
-
-  restoreDigiviceVisualState(mapState.digivice);
-
   const sprites = Array.isArray(mapState.placedSprites) ? mapState.placedSprites : [];
 
   for (const item of sprites) {
@@ -305,11 +313,7 @@ function normalizeImportedMapStates(saveData) {
 
   return {
     [importedMap]: {
-      digivice: saveData.digivice || {
-        visible: false,
-        src: "",
-      },
-      placedSprites: Array.isArray(saveData.placedSprites) ? saveData.placedSprites : [],
+        placedSprites: Array.isArray(saveData.placedSprites) ? saveData.placedSprites : [],
     },
   };
 }
@@ -344,9 +348,19 @@ async function importSavedStateObject(saveData) {
 
   state.mapStates = JSON.parse(JSON.stringify(importedMapStates));
 
-  const importedMap = typeof saveData.currentMap === "string" && saveData.currentMap
-    ? saveData.currentMap
-    : DEFAULT_MAP;
+  const importedMap = typeof saveData.currentMap === "string" && saveData.currentMap ? saveData.currentMap : DEFAULT_MAP;
+  const importedDigivice =
+    saveData.digivice ||
+    importedMapStates?.[importedMap]?.digivice ||
+    {
+        visible: false,
+        src: "",
+    };
+  
+  state.digivice = {
+    visible: Boolean(importedDigivice.visible && importedDigivice.src),
+    src: importedDigivice.src || "",
+  };
 
   state.currentMap = importedMap;
   mapImage.src = importedMap;
