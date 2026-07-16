@@ -826,7 +826,7 @@ function updateKeyboardMovementFrame(sprite, now, forceRunAnimation = false) {
   const running = forceRunAnimation || isKeyboardRunActive();
   const frames = running ? [4, 5] : [2, 3];
 
-  if (now - keyboardMovementFrameChangedAt >= SPRITE_KEYBOARD_FRAME_MS) {
+  if (now - keyboardMovementFrameChangedAt >= SPRITE_WALK_RUN_FRAME_MS) {
     keyboardMovementFrameIndex = keyboardMovementFrameIndex === 0 ? 1 : 0;
     keyboardMovementFrameChangedAt = now;
   }
