@@ -25,25 +25,42 @@ function renderInstructionsPanel() {
     <h2 class="panel-title">Instructions</h2>
 
     <div class="instructions-section">
-      <h3>Getting Started</h3>
-      <p>Open the Digital Gate, then use the settings menu to choose maps, add Tamers, add Digimon, add Enemies, play music, battle, or save and load your current world.</p>
+      <h3>Demo Video</h3>
+      <p><a href="https://drive.google.com/file/d/11XuSXSe3T5EkmDCEG0mJb53JwdTAT1bX/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="color: #ffffff;">Watch the demo video</a></p>
     </div>
 
     <div class="instructions-section">
-      <h3>Adding Characters</h3>
-      <p>Use <strong>Add Tamer</strong>, <strong>Add Digimon</strong>, or <strong>Add Enemy</strong>. Selecting a character places it on the current map.</p>
-      <p>Click or tap a placed character to select it. Drag a character to move it manually.</p>
+      <h3>Maps</h3>
+      <p>Click on the <strong>Maps</strong> option in the Settings menu and scroll below to change the current map. You can also navigate between maps by moving a character to the edges of the screen by selecting them with Left Click and then using the arrow keys.</p>
+      <p>All characters are saved on each map unless defeated or deleted until the browser window is refreshed. You are also allowed to save and load your progress at any time.</p>
+    </div>
+
+    <div class="instructions-section">
+      <h3>Digivice</h3>
+      <p>Click on <strong>Digivice</strong> and scroll below to select a digivice. Once added to the screen, click on the Digivice icon to evolve any digimon present on the screen.</p>
+    </div>
+
+    <div class="instructions-section">
+      <h3>Adding Characters / Digivice</h3>
+      <p>Click on <strong>Add Tamer</strong>, <strong>Add Digimon</strong>, or <strong>Add Enemy</strong> and scroll below to add characters to the current map.</p>
+    </div>
+
+    <div class="instructions-section">
+      <h3>Moving Characters</h3>
+      <p>Click or tap a placed character to select it. To move the characters, use the arrow keys or drag the character to move it manually.</p>
+      <p>To select multiple characters, hold Shift and click or tap the characters you want to select.</p>
     </div>
 
     <div class="instructions-section">
       <h3>Keyboard Controls</h3>
       <ul>
-        <li><strong>Arrow Keys</strong>: Move selected character.</li>
-        <li><strong>Shift + Arrow Keys</strong>: Run.</li>
-        <li><strong>Caps Lock</strong>: Toggle FLY / run-in-place animation.</li>
-        <li><strong>B</strong>: Battle a nearby Enemy.</li>
-        <li><strong>T</strong>: Add temporary dialogue above the selected character.</li>
+        <li><strong>Left Click</strong>: Select a character.</li>
         <li><strong>Shift + Click</strong>: Select multiple characters.</li>
+        <li><strong>Arrow Keys</strong>: Move selected character.</li>
+        <li><strong>Shift + Arrow Keys</strong>: Fly or Run.</li>
+        <li><strong>Caps Lock</strong>: Toggle Fly / Run-in-place animation.</li>
+        <li><strong>B</strong>: Battle a nearby Enemy.</li>
+        <li><strong>T</strong>: Add temporary dialogue above the selected character to make it talk.</li>
         <li><strong>Shift + T</strong>: Add the same dialogue to all selected characters.</li>
       </ul>
     </div>
@@ -60,15 +77,20 @@ function renderInstructionsPanel() {
     </div>
 
     <div class="instructions-section">
-      <h3>Changing Maps</h3>
-      <p>Move a selected Tamer or Digimon to the left or right edge of the screen to travel to the previous or next map.</p>
-      <p>Enemies stay on their own map and cannot move between maps.</p>
+      <h3>Battles</h3>
+      <p>Battles happen between one digimon and one enemy at a time. To start abattle, move your Digimon near an Enemy by clicking and using arrow keys, then press the <strong>B</strong> button.</p>
+      <p>Alternatively, you can use the Battle option in Settings menu, scroll down and start a battle.</p>
     </div>
 
     <div class="instructions-section">
-      <h3>Battles</h3>
-      <p>Add at least one Digimon and one Enemy. Move your Digimon near an Enemy, then press <strong>B</strong> or tap the mobile <strong>B</strong> button.</p>
-      <p>During battle, attack, dodge, win, and lose sprites will play automatically.</p>
+      <h3>Talk</h3>
+      <p>Select a character with Left Click. Then use the <strong>T</strong> key to add temporary dialogue above the selected character and type in your dialogue, press Enter to confirm.</p>
+      <p>Press <strong>Shift + T</strong> to add the same dialogue to all selected characters.</p>
+    </div>
+
+    <div class="instructions-section">
+      <h3>Music</h3>
+      <p>Use the <strong>Music</strong> option in the Settings menu to play a background music and click Stop Music to stop it.</p>
     </div>
 
     <div class="instructions-section">
