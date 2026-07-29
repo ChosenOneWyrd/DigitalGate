@@ -105,7 +105,11 @@ function pruneSelectedSprites() {
 function clearAllSelectedSprites() {
   for (const sprite of selectedPlacedSprites) {
     if (sprite && sprite.isConnected) {
-      sprite.classList.remove("selected-sprite", "primary-selected-sprite", "keyboard-backward");
+        sprite.classList.remove("selected-sprite", "primary-selected-sprite", "keyboard-backward");
+
+        if (canMovementControlSpriteFrame(sprite)) {
+        restoreKeyboardIdleFrame(sprite);
+        }
     }
   }
 
@@ -258,7 +262,14 @@ function hasMovementKeysPressed() {
 }
 
 function updateCapsLockState(event) {
-  if (event && typeof event.getModifierState === "function") {
+  // Only the actual CapsLock key should change the app's CapsLock mode.
+  // This prevents ArrowUp/ArrowDown/ArrowLeft/ArrowRight keyup events from
+  // turning CapsLock mode back on after a map change reset.
+  if (
+    event &&
+    event.key === "CapsLock" &&
+    typeof event.getModifierState === "function"
+  ) {
     capsLockRunning = event.getModifierState("CapsLock");
   }
 
@@ -275,6 +286,31 @@ function startCapsLockRunLoopIfNeeded() {
   if (shouldRunInPlaceWithCapsLock()) {
     startKeyboardMovementLoop();
   }
+}
+
+function resetCapsLockRunMode(options = {}) {
+  const { restoreFrames = true } = options;
+
+  capsLockRunning = false;
+  keyboardMovementRunning = false;
+  pressedMovementKeys.clear();
+
+  if (keyboardMovementFrameRequest) {
+    cancelAnimationFrame(keyboardMovementFrameRequest);
+    keyboardMovementFrameRequest = null;
+  }
+
+  if (restoreFrames) {
+    const sprites = placedSprites.querySelectorAll(".placed-sprite");
+
+    for (const sprite of sprites) {
+      if (canMovementControlSpriteFrame(sprite)) {
+        restoreKeyboardIdleFrame(sprite);
+      }
+    }
+  }
+
+  syncMobileCapsButtonState();
 }
 
 function isKeyboardRunActive() {
@@ -790,7 +826,7 @@ function updateKeyboardMovementFrame(sprite, now, forceRunAnimation = false) {
   const running = forceRunAnimation || isKeyboardRunActive();
   const frames = running ? [4, 5] : [2, 3];
 
-  if (now - keyboardMovementFrameChangedAt >= SPRITE_KEYBOARD_FRAME_MS) {
+  if (now - keyboardMovementFrameChangedAt >= SPRITE_WALK_RUN_FRAME_MS) {
     keyboardMovementFrameIndex = keyboardMovementFrameIndex === 0 ? 1 : 0;
     keyboardMovementFrameChangedAt = now;
   }

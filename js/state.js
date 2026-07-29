@@ -1,5 +1,9 @@
 const state = {
   currentMap: DEFAULT_MAP,
+  digivice: {
+    visible: false,
+    src: "",
+  },
   mapStates: {},
   assets: {
     maps: [DEFAULT_MAP],

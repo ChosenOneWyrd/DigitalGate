@@ -21,11 +21,16 @@ function renderDigivicePanel() {
     button.title = assetLabel(path);
     button.innerHTML = `<img src="${path}" alt="${assetLabel(path)}" loading="lazy">`;
     button.addEventListener("click", () => {
-      playOneShot(DIGIVICE_BEEPS_SOUND);
+        playOneShot(DIGIVICE_BEEPS_SOUND);
 
-      digiviceSprite.src = path;
-      digiviceSprite.classList.remove("hidden");
-      toggleMenu(false);
+        state.digivice = {
+            visible: true,
+            src: path,
+        };
+
+        digiviceSprite.src = path;
+        digiviceSprite.classList.remove("hidden");
+        toggleMenu(false);
     });
     grid.appendChild(button);
   }
@@ -35,6 +40,11 @@ function renderDigivicePanel() {
   clear.type = "button";
   clear.textContent = "Hide Digivice";
   clear.addEventListener("click", () => {
+    state.digivice = {
+        visible: false,
+        src: "",
+    };
+
     digiviceSprite.classList.add("hidden");
     digiviceSprite.removeAttribute("src");
   });

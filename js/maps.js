@@ -56,6 +56,14 @@ async function setMap(path) {
     return;
   }
 
+  // Reset app CapsLock/FLY mode on every map change.
+  // This prevents restored sprites on the next map from getting stuck in run frames.
+  if (typeof resetCapsLockRunMode === "function") {
+    resetCapsLockRunMode({
+        restoreFrames: true,
+    });
+  }
+
   state.mapTransitioning = true;
   toggleMenu(false);
 

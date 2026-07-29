@@ -406,9 +406,9 @@ function isSpriteSelectedForCapsLockRun(sprite) {
 }
 
 function getCapsLockBattleRunFrame(now = performance.now()) {
-  const frameMs = typeof SPRITE_KEYBOARD_FRAME_MS === "number"
-    ? SPRITE_KEYBOARD_FRAME_MS
-    : 140;
+  const frameMs = typeof SPRITE_WALK_RUN_FRAME_MS === "number"
+    ? SPRITE_WALK_RUN_FRAME_MS
+    : 300;
 
   return Math.floor(now / frameMs) % 2 === 0 ? 4 : 5;
 }

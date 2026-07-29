@@ -250,6 +250,45 @@ input {
   line-height: 1.4;
 }
 
+.instructions-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.instructions-section {
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.instructions-section h3 {
+  margin: 0 0 6px;
+  color: #fff3a6;
+  font-size: 14px;
+}
+
+.instructions-section p {
+  margin: 6px 0;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.45;
+}
+
+.instructions-section ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
+
+.instructions-section li {
+  margin: 5px 0;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.35;
+}
+
+.instructions-section strong {
+  color: #ffffff;
+}
+
 .search-row {
   display: flex;
   gap: 8px;

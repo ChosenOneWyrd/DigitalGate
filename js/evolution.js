@@ -8,6 +8,14 @@ function findPlacedSpriteById(spriteId) {
   );
 }
 
+function isEvolutionTargetBusy(sprite) {
+  if (!sprite) return true;
+  if (sprite.classList.contains("evolving")) return true;
+  if (sprite.dataset.battling === "1") return true;
+
+  return false;
+}
+
 function formatEvolutionTargetOption(sprite) {
   return sprite.dataset.label || sprite.title || "Unknown Digimon";
 }
@@ -106,11 +114,16 @@ async function hideEvolutionEffect(effect) {
 }
 
 async function evolvePlacedDigimon(targetSpriteId, evolutionPath, evolutionLabel) {
-  if (state.battleRunning || state.evolutionRunning) return;
+  // Only block another evolution, not battles.
+  if (state.evolutionRunning) return;
 
   const sprite = findPlacedSpriteById(targetSpriteId);
 
   if (!sprite || sprite.dataset.kind !== "digimon") return;
+
+  // Do not evolve the Digimon that is currently battling.
+  // Other Digimon on the screen can still evolve.
+  if (isEvolutionTargetBusy(sprite)) return;
 
   const visual = sprite.querySelector(".sprite-visual-sheet");
 
@@ -223,8 +236,26 @@ function renderEvolutionPanel() {
   for (const sprite of placedDigimon) {
     const option = document.createElement("option");
     option.value = sprite.dataset.spriteId;
-    option.textContent = formatEvolutionTargetOption(sprite);
+
+    if (sprite.dataset.battling === "1") {
+        option.textContent = `${formatEvolutionTargetOption(sprite)} - battling`;
+        option.disabled = true;
+    } else if (sprite.classList.contains("evolving")) {
+        option.textContent = `${formatEvolutionTargetOption(sprite)} - evolving`;
+        option.disabled = true;
+    } else {
+        option.textContent = formatEvolutionTargetOption(sprite);
+    }
+
     targetSelect.appendChild(option);
+  }
+
+  const firstAvailableOption = Array.from(targetSelect.options).find((option) => {
+    return !option.disabled;
+  });
+
+  if (firstAvailableOption) {
+    targetSelect.value = firstAvailableOption.value;
   }
 
   targetRow.appendChild(targetLabel);
