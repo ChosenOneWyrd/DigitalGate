@@ -1,17 +1,17 @@
 {
   "maps": [
-    "maps/adv_colosseum.png",
-    "maps/adv_digital_forest.png",
-    "maps/adv_freezeland.png",
-    "maps/savers_holy_capital.png",
-    "maps/savers_server_tree.png",
-    "maps/savers_wanderers_cape.png",
-    "maps/tamers_land_of_the_sovereign.png",
-    "maps/tamers_western_village.png",
-    "maps/tamers_wind_valley.png",
-    "maps/xroswars_forest_zone.png",
-    "maps/xroswars_green_zone.png",
-    "maps/xroswars_heaven_zone.png"
+    "maps/adv_1_digital_forest.png",
+    "maps/adv_2_colosseum.png",
+    "maps/adv_3_freezeland.png",
+    "maps/savers_1_wanderers_cape.png",
+    "maps/savers_2_holy_capital.png",
+    "maps/savers_3_server_tree.png",
+    "maps/tamers_1_western_village.png",
+    "maps/tamers_2_wind_valley.png",
+    "maps/tamers_3_land_of_the_sovereign.png",
+    "maps/xroswars_1_green_zone.png",
+    "maps/xroswars_2_forest_zone.png",
+    "maps/xroswars_3-heaven_zone.png"
   ],
   "digivices": [
     "digivices/D-3_Black.png",
