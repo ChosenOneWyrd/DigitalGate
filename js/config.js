@@ -42,6 +42,7 @@ const MAP_GROUPS = {
   Adventure: "adv_",
   Tamers: "tamers_",
   Savers: "savers_",
+  Xros_Wars: "xroswars_",
 };
 
 const SPRITE_FOLDERS = {
