@@ -1,7 +1,7 @@
 function mapsForPrefix(prefix) {
   return state.assets.maps
     .filter((path) => stripExtension(basename(path)).startsWith(prefix))
-    .sort((a, b) => a.localeCompare(b));
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
 }
 
 function getOrderedMapPaths() {
