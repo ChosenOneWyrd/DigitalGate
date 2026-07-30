@@ -20,6 +20,7 @@ PUBLIC_ITEMS = [
     "index.html",
     "style.css",
     "_headers",
+    "_redirects",
 ]
 
 def copy_item(name: str) -> None:

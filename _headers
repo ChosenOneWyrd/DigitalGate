@@ -4,11 +4,17 @@
 /assets_manifest.json
   Cache-Control: no-cache
 
+/robots.txt
+  Cache-Control: no-cache
+
+/sitemap.xml
+  Cache-Control: no-cache
+
 /style.css
-  Cache-Control: public, max-age=3600
+  Cache-Control: no-cache
 
 /js/*
-  Cache-Control: public, max-age=3600
+  Cache-Control: no-cache
 
 /maps/*
   Cache-Control: public, max-age=604800
@@ -26,6 +32,9 @@
   Cache-Control: public, max-age=604800
 
 /sounds/*
+  Cache-Control: public, max-age=604800
+
+/favicon/*
   Cache-Control: public, max-age=604800
 
 /*.mp4
