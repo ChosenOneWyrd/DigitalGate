@@ -21,6 +21,8 @@ PUBLIC_ITEMS = [
     "style.css",
     "_headers",
     "_redirects",
+    "sitemap.xml",
+    "robots.txt",
 ]
 
 def copy_item(name: str) -> None:
