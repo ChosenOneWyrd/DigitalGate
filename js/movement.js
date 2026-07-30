@@ -668,11 +668,14 @@ function getSpriteMapTransferDirection(sprite, edgeInfo, vector) {
     return null;
   }
 
-  if (edgeInfo.hitRight && vector.dx > 0) {
+  // Your world scrolls right-to-left:
+  // walking into the left edge advances to the next map.
+  if (edgeInfo.hitLeft && vector.dx < 0) {
     return "next";
   }
 
-  if (edgeInfo.hitLeft && vector.dx < 0) {
+  // Walking into the right edge goes back to the previous map.
+  if (edgeInfo.hitRight && vector.dx > 0) {
     return "previous";
   }
 
@@ -742,12 +745,26 @@ async function transferSelectedSpritesToAdjacentMap(direction) {
   // Moving left into previous map: spawn near right edge.
   function getTransferredXRatio(item) {
     if (mapDirection === "next") {
-      const relativeOffset = item.xRatio - minXRatio;
-      return clamp(MAP_EDGE_SPAWN_RATIO + relativeOffset, MAP_EDGE_SPAWN_RATIO, 0.92);
+      // Moving left into the next map:
+      // appear near the right edge of the new map.
+      const relativeOffset = maxXRatio - item.xRatio;
+
+      return clamp(
+        1 - MAP_EDGE_SPAWN_RATIO - relativeOffset,
+        0.08,
+        1 - MAP_EDGE_SPAWN_RATIO
+      );
     }
 
-    const relativeOffset = maxXRatio - item.xRatio;
-    return clamp(1 - MAP_EDGE_SPAWN_RATIO - relativeOffset, 0.08, 1 - MAP_EDGE_SPAWN_RATIO);
+    // Moving right into the previous map:
+    // appear near the left edge of the new map.
+    const relativeOffset = item.xRatio - minXRatio;
+
+    return clamp(
+      MAP_EDGE_SPAWN_RATIO + relativeOffset,
+      MAP_EDGE_SPAWN_RATIO,
+      0.92
+    );
   }
 
   // Save current map before moving selected sprites between map states.
